@@ -1,0 +1,11 @@
+C:\Users\Jesus Castro\Desktop\RDGweb\RDGweb\bin\Debug\RDGweb.exe.config
+C:\Users\Jesus Castro\Desktop\RDGweb\RDGweb\bin\Debug\RDGweb.exe
+C:\Users\Jesus Castro\Desktop\RDGweb\RDGweb\bin\Debug\RDGweb.pdb
+C:\Users\Jesus Castro\Desktop\RDGweb\RDGweb\obj\Debug\RDGweb.csproj.AssemblyReference.cache
+C:\Users\Jesus Castro\Desktop\RDGweb\RDGweb\obj\Debug\RDGweb.Properties.Resources.resources
+C:\Users\Jesus Castro\Desktop\RDGweb\RDGweb\obj\Debug\RDGweb.csproj.GenerateResource.cache
+C:\Users\Jesus Castro\Desktop\RDGweb\RDGweb\obj\Debug\RDGweb.csproj.CoreCompileInputs.cache
+C:\Users\Jesus Castro\Desktop\RDGweb\RDGweb\obj\Debug\RDGweb.exe
+C:\Users\Jesus Castro\Desktop\RDGweb\RDGweb\obj\Debug\RDGweb.pdb
+C:\Users\Jesus Castro\Desktop\RDGweb\RDGweb\obj\Debug\RDGweb.FormRegistro.resources
+C:\Users\Jesus Castro\Desktop\RDGweb\RDGweb\obj\Debug\RDGweb.FormLogin.resources

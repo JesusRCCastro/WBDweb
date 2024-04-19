@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace RDGweb
 {
-    public partial class FormLogin : Form
+    public partial class FormRegistro : Form
     {
-        public FormLogin()
+        public FormRegistro()
         {
             InitializeComponent();
-        }
-
-        private void LklRegistro_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            Form FormRegistro = new FormRegistro();
-            FormRegistro.Show();
         }
     }
 }
