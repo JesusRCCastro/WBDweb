@@ -39,6 +39,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.LklRegistro = new System.Windows.Forms.LinkLabel();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -106,6 +107,7 @@
             this.BtnInicioSesion.TabIndex = 6;
             this.BtnInicioSesion.Text = "Iniciar Sesión";
             this.BtnInicioSesion.UseVisualStyleBackColor = true;
+            this.BtnInicioSesion.Click += new System.EventHandler(this.BtnInicioSesion_Click);
             // 
             // pictureBox3
             // 
@@ -137,12 +139,22 @@
             this.LklRegistro.Text = "Registrarme";
             this.LklRegistro.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LklRegistro_LinkClicked);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(118, 420);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(142, 16);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "¿No estás registtrado?";
+            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(388, 491);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.LklRegistro);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox3);
@@ -176,6 +188,7 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.LinkLabel LklRegistro;
+        private System.Windows.Forms.Label label2;
     }
 }
 
