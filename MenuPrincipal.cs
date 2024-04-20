@@ -37,5 +37,10 @@ namespace RDGweb
                 this.Close();
             }
         }
+
+        private void BtnIncidencias_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
