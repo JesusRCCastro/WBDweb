@@ -90,5 +90,15 @@ namespace RDGweb
         {
 
         }
+
+        private void BtnPruebaMenu_Click(object sender, EventArgs e)
+        {
+            // Crear una instancia del formulario MenuPrincipal
+            MenuPrincipal formularioMenuPrincipal = new MenuPrincipal();
+
+            // Mostrar el formulario MenuPrincipal
+            formularioMenuPrincipal.Show();
+        }
+
     }
 }

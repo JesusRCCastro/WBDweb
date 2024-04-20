@@ -40,7 +40,12 @@ namespace RDGweb
 
         private void BtnIncidencias_Click(object sender, EventArgs e)
         {
+            // Crear una instancia del formulario de incidencias
+            Incidencias formularioIncidencias = new Incidencias();
 
+            // Mostrar el formulario de incidencias
+            formularioIncidencias.Show();
         }
+
     }
 }
