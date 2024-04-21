@@ -130,3 +130,4 @@ C:\Users\casa\Source\Repos\JesusRCCastro\WBDweb\obj\Debug\RDGweb.csproj.CoreComp
 C:\Users\casa\Source\Repos\JesusRCCastro\WBDweb\obj\Debug\RDGweb.csproj.Up2Date
 C:\Users\casa\Source\Repos\JesusRCCastro\WBDweb\obj\Debug\RDGweb.exe
 C:\Users\casa\Source\Repos\JesusRCCastro\WBDweb\obj\Debug\RDGweb.pdb
+C:\Users\casa\source\repos\JesusRCCastro\WBDweb\obj\Debug\RDGweb.IDNiños.resources

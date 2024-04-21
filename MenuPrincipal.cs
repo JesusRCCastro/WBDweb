@@ -47,5 +47,13 @@ namespace RDGweb
             formularioIncidencias.Show();
         }
 
+        private void button6_Click(object sender, EventArgs e)
+        {
+            // Crear una instancia del formulario de incidencias
+            IDNiños formularioIDNiños = new IDNiños();
+
+            // Mostrar el formulario de incidencias
+            formularioIDNiños.Show();
+        }
     }
 }

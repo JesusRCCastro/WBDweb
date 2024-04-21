@@ -59,7 +59,7 @@
             this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(211, 554);
             this.panel1.TabIndex = 0;
@@ -72,7 +72,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.InitialImage = null;
             this.pictureBox1.Location = new System.Drawing.Point(4, 15);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(203, 160);
             this.pictureBox1.TabIndex = 6;
@@ -83,17 +83,18 @@
             // button6
             // 
             this.button6.Location = new System.Drawing.Point(16, 439);
-            this.button6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button6.Margin = new System.Windows.Forms.Padding(4);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(173, 49);
             this.button6.TabIndex = 5;
-            this.button6.Text = "button6";
+            this.button6.Text = "Perfil de niño";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // BtnIncidencias
             // 
             this.BtnIncidencias.Location = new System.Drawing.Point(16, 395);
-            this.BtnIncidencias.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnIncidencias.Margin = new System.Windows.Forms.Padding(4);
             this.BtnIncidencias.Name = "BtnIncidencias";
             this.BtnIncidencias.Size = new System.Drawing.Size(173, 49);
             this.BtnIncidencias.TabIndex = 4;
@@ -104,7 +105,7 @@
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(16, 347);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(173, 49);
             this.button4.TabIndex = 3;
@@ -114,7 +115,7 @@
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(16, 299);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(173, 49);
             this.button3.TabIndex = 2;
@@ -124,7 +125,7 @@
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(16, 251);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(173, 49);
             this.button2.TabIndex = 1;
@@ -134,7 +135,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(16, 206);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(173, 49);
             this.button1.TabIndex = 0;
@@ -150,7 +151,7 @@
             this.panel2.Controls.Add(this.label2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(211, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(856, 76);
             this.panel2.TabIndex = 1;
@@ -158,7 +159,7 @@
             // button7
             // 
             this.button7.Location = new System.Drawing.Point(667, 46);
-            this.button7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button7.Margin = new System.Windows.Forms.Padding(4);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(173, 27);
             this.button7.TabIndex = 7;
@@ -169,7 +170,7 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(577, 15);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(261, 22);
             this.dateTimePicker1.TabIndex = 2;
@@ -203,7 +204,7 @@
             this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MenuPrincipal";
             this.Text = "MenuPrincipal";
             this.panel1.ResumeLayout(false);
