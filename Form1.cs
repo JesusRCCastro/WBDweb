@@ -41,8 +41,9 @@ namespace RDGweb
         }
         private void LklRegistro_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Form FormRegistro = new FormRegistro();
-            FormRegistro.Show();
+            this.Hide();
+            FormRegistro Registro = new FormRegistro();
+            Registro.Show();
         }
 
         private void BtnInicioSesion_Click(object sender, EventArgs e)
@@ -51,7 +52,7 @@ namespace RDGweb
             string contraseña = TbxPassword.Text;
 
             
-
+            //Ingresa a la base de datos
             MySqlConnection con = new MySqlConnection("Server = localhost; Database = Guarderia; User Id = root; Password =  ");
             try
             {
@@ -62,6 +63,7 @@ namespace RDGweb
                 MessageBox.Show("Error" + ex.ToString());
                 throw;
             }
+            //Toma la informacion de la base de datos
             string sql = "Select correo, contrasena from usuarios where correo = '" + nombreUsuario + "' AND contrasena = '" + contraseña + "'";
             MySqlCommand cmd = new MySqlCommand(sql, con);
             MySqlDataReader read = cmd.ExecuteReader();
@@ -71,7 +73,6 @@ namespace RDGweb
             if (read.Read()) 
             {
                 this.Hide();
-                //MessageBox.Show("Bienvenido " + nombreUsuario);//quitar esto para poner el nuevo form
                 MenuPrincipal menuPrincipal = new MenuPrincipal();// esta parte abre el menu pricipal despues de aver autenticado el usuario
                 menuPrincipal.Show();// se muestra el menu
             }

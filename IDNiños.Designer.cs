@@ -152,6 +152,7 @@
             this.Controls.Add(this.LblUser);
             this.Controls.Add(this.panel1);
             this.Name = "IDNiños";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "IDNiños";
             ((System.ComponentModel.ISupportInitialize)(this.PicBoxFaceChild)).EndInit();
             this.panel1.ResumeLayout(false);

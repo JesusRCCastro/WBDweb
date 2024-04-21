@@ -75,6 +75,7 @@
             this.BtnGuardarDatos.TabIndex = 4;
             this.BtnGuardarDatos.Text = "Guardar";
             this.BtnGuardarDatos.UseVisualStyleBackColor = true;
+            this.BtnGuardarDatos.Click += new System.EventHandler(this.BtnGuardarDatos_Click);
             // 
             // FormRegistro
             // 

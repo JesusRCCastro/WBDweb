@@ -134,6 +134,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Name = "Incidencias";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Incidencias";
             ((System.ComponentModel.ISupportInitialize)(this.PicBoxFaceChild)).EndInit();
             this.ResumeLayout(false);
