@@ -38,6 +38,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.PicBoxFaceChild)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // BtnBackMenu
@@ -60,9 +61,9 @@
             // PicBoxFaceChild
             // 
             this.PicBoxFaceChild.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.PicBoxFaceChild.Location = new System.Drawing.Point(665, 12);
+            this.PicBoxFaceChild.Location = new System.Drawing.Point(639, 12);
             this.PicBoxFaceChild.Name = "PicBoxFaceChild";
-            this.PicBoxFaceChild.Size = new System.Drawing.Size(110, 105);
+            this.PicBoxFaceChild.Size = new System.Drawing.Size(110, 98);
             this.PicBoxFaceChild.TabIndex = 2;
             this.PicBoxFaceChild.TabStop = false;
             // 
@@ -77,7 +78,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 145);
+            this.textBox1.Location = new System.Drawing.Point(12, 143);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(776, 229);
@@ -112,6 +113,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panel2.Controls.Add(this.PicBoxFaceChild);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.ForeColor = System.Drawing.SystemColors.Desktop;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -128,7 +130,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.LblUser);
-            this.Controls.Add(this.PicBoxFaceChild);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.BtnBackMenu);
             this.Controls.Add(this.panel1);
@@ -137,6 +138,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Incidencias";
             ((System.ComponentModel.ISupportInitialize)(this.PicBoxFaceChild)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
