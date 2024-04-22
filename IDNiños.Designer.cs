@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.LblUser = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.ComBoxIDCliente = new System.Windows.Forms.ComboBox();
+            this.TextBoxNombreNiño = new System.Windows.Forms.TextBox();
+            this.TextBoxFechaNac = new System.Windows.Forms.TextBox();
+            this.TextBoxEdad = new System.Windows.Forms.TextBox();
+            this.TextBoxGenero = new System.Windows.Forms.TextBox();
             this.PicBoxFaceChild = new System.Windows.Forms.PictureBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.TextBoxNumContacto = new System.Windows.Forms.TextBox();
+            this.TextBoxCliente_idCliente = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.BtnBackMenu = new System.Windows.Forms.Button();
@@ -53,45 +53,45 @@
             this.LblUser.TabIndex = 6;
             this.LblUser.Text = "ID del Cliente ";
             // 
-            // comboBox1
+            // ComBoxIDCliente
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(150, 48);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(124, 24);
-            this.comboBox1.TabIndex = 7;
+            this.ComBoxIDCliente.FormattingEnabled = true;
+            this.ComBoxIDCliente.Location = new System.Drawing.Point(150, 48);
+            this.ComBoxIDCliente.Name = "ComBoxIDCliente";
+            this.ComBoxIDCliente.Size = new System.Drawing.Size(124, 24);
+            this.ComBoxIDCliente.TabIndex = 7;
             // 
-            // textBox2
+            // TextBoxNombreNiño
             // 
-            this.textBox2.Location = new System.Drawing.Point(41, 84);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(233, 24);
-            this.textBox2.TabIndex = 9;
+            this.TextBoxNombreNiño.Location = new System.Drawing.Point(41, 84);
+            this.TextBoxNombreNiño.Multiline = true;
+            this.TextBoxNombreNiño.Name = "TextBoxNombreNiño";
+            this.TextBoxNombreNiño.Size = new System.Drawing.Size(233, 24);
+            this.TextBoxNombreNiño.TabIndex = 9;
             // 
-            // textBox1
+            // TextBoxFechaNac
             // 
-            this.textBox1.Location = new System.Drawing.Point(41, 127);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(233, 24);
-            this.textBox1.TabIndex = 10;
+            this.TextBoxFechaNac.Location = new System.Drawing.Point(41, 127);
+            this.TextBoxFechaNac.Multiline = true;
+            this.TextBoxFechaNac.Name = "TextBoxFechaNac";
+            this.TextBoxFechaNac.Size = new System.Drawing.Size(233, 24);
+            this.TextBoxFechaNac.TabIndex = 10;
             // 
-            // textBox3
+            // TextBoxEdad
             // 
-            this.textBox3.Location = new System.Drawing.Point(294, 84);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(131, 24);
-            this.textBox3.TabIndex = 11;
+            this.TextBoxEdad.Location = new System.Drawing.Point(268, 93);
+            this.TextBoxEdad.Multiline = true;
+            this.TextBoxEdad.Name = "TextBoxEdad";
+            this.TextBoxEdad.Size = new System.Drawing.Size(131, 24);
+            this.TextBoxEdad.TabIndex = 11;
             // 
-            // textBox4
+            // TextBoxGenero
             // 
-            this.textBox4.Location = new System.Drawing.Point(294, 127);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(131, 24);
-            this.textBox4.TabIndex = 12;
+            this.TextBoxGenero.Location = new System.Drawing.Point(268, 50);
+            this.TextBoxGenero.Multiline = true;
+            this.TextBoxGenero.Name = "TextBoxGenero";
+            this.TextBoxGenero.Size = new System.Drawing.Size(131, 24);
+            this.TextBoxGenero.TabIndex = 12;
             // 
             // PicBoxFaceChild
             // 
@@ -102,26 +102,28 @@
             this.PicBoxFaceChild.TabIndex = 13;
             this.PicBoxFaceChild.TabStop = false;
             // 
-            // textBox5
+            // TextBoxNumContacto
             // 
-            this.textBox5.Location = new System.Drawing.Point(41, 168);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(233, 24);
-            this.textBox5.TabIndex = 14;
+            this.TextBoxNumContacto.Location = new System.Drawing.Point(41, 168);
+            this.TextBoxNumContacto.Multiline = true;
+            this.TextBoxNumContacto.Name = "TextBoxNumContacto";
+            this.TextBoxNumContacto.Size = new System.Drawing.Size(233, 24);
+            this.TextBoxNumContacto.TabIndex = 14;
             // 
-            // textBox6
+            // TextBoxCliente_idCliente
             // 
-            this.textBox6.Location = new System.Drawing.Point(294, 168);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(131, 24);
-            this.textBox6.TabIndex = 15;
+            this.TextBoxCliente_idCliente.Location = new System.Drawing.Point(294, 168);
+            this.TextBoxCliente_idCliente.Multiline = true;
+            this.TextBoxCliente_idCliente.Name = "TextBoxCliente_idCliente";
+            this.TextBoxCliente_idCliente.Size = new System.Drawing.Size(131, 24);
+            this.TextBoxCliente_idCliente.TabIndex = 15;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.CornflowerBlue;
             this.panel1.Controls.Add(this.PicBoxFaceChild);
+            this.panel1.Controls.Add(this.TextBoxGenero);
+            this.panel1.Controls.Add(this.TextBoxEdad);
             this.panel1.Location = new System.Drawing.Point(26, 34);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(560, 166);
@@ -136,6 +138,7 @@
             this.button1.TabIndex = 17;
             this.button1.Text = "Dar de baja ";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // BtnBackMenu
             // 
@@ -145,7 +148,7 @@
             this.BtnBackMenu.TabIndex = 18;
             this.BtnBackMenu.Text = "Regresar a menu";
             this.BtnBackMenu.UseVisualStyleBackColor = true;
-            this.BtnBackMenu.Click += new System.EventHandler(this.BtnBackMenu_Click);
+            this.BtnBackMenu.Click += new System.EventHandler(this.BtnBackMenu_Click_1);
             // 
             // IDNiños
             // 
@@ -154,13 +157,11 @@
             this.ClientSize = new System.Drawing.Size(610, 247);
             this.Controls.Add(this.BtnBackMenu);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.TextBoxCliente_idCliente);
+            this.Controls.Add(this.TextBoxNumContacto);
+            this.Controls.Add(this.TextBoxFechaNac);
+            this.Controls.Add(this.TextBoxNombreNiño);
+            this.Controls.Add(this.ComBoxIDCliente);
             this.Controls.Add(this.LblUser);
             this.Controls.Add(this.panel1);
             this.Name = "IDNiños";
@@ -168,6 +169,7 @@
             this.Text = "IDNiños";
             ((System.ComponentModel.ISupportInitialize)(this.PicBoxFaceChild)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -176,14 +178,14 @@
         #endregion
 
         private System.Windows.Forms.Label LblUser;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.ComboBox ComBoxIDCliente;
+        private System.Windows.Forms.TextBox TextBoxNombreNiño;
+        private System.Windows.Forms.TextBox TextBoxFechaNac;
+        private System.Windows.Forms.TextBox TextBoxEdad;
+        private System.Windows.Forms.TextBox TextBoxGenero;
         private System.Windows.Forms.PictureBox PicBoxFaceChild;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox TextBoxNumContacto;
+        private System.Windows.Forms.TextBox TextBoxCliente_idCliente;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button BtnBackMenu;
