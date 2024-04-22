@@ -57,5 +57,12 @@ namespace RDGweb
             // Cerrar el formulario actual
             this.Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //crea una instancia que muestre el formulario de lista de trabajadores
+            
+
+        }
     }
 }
