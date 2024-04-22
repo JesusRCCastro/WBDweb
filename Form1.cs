@@ -51,36 +51,40 @@ namespace RDGweb
             string nombreUsuario = TbxUser.Text;
             string contraseña = TbxPassword.Text;
 
-            
-            //Ingresa a la base de datos
-            MySqlConnection con = new MySqlConnection("Server = localhost; Database = Guarderia; User Id = root; Password =  ");
+            // Ingresa a la base de datos
+            MySqlConnection con = new MySqlConnection("Server=localhost;Database=Guarderia;Uid=root;Password=");
             try
             {
                 con.Open();
             }
-            catch (MySqlException ex) 
+            catch (MySqlException ex)
             {
-                MessageBox.Show("Error" + ex.ToString());
-                throw;
+                MessageBox.Show("Error: " + ex.Message);
+                return;
             }
-            //Toma la informacion de la base de datos
-            string sql = "Select correo, contrasena from usuarios where correo = '" + nombreUsuario + "' AND contrasena = '" + contraseña + "'";
+
+            // Toma la información de la base de datos
+            string sql = "SELECT correo, contrasena FROM usuarios WHERE correo = @nombreUsuario AND contrasena = @contraseña";
             MySqlCommand cmd = new MySqlCommand(sql, con);
+            cmd.Parameters.AddWithValue("@nombreUsuario", nombreUsuario);
+            cmd.Parameters.AddWithValue("@contraseña", contraseña);
+
             MySqlDataReader read = cmd.ExecuteReader();
 
-            
-
-            if (read.Read()) 
+            if (read.Read())
             {
                 this.Hide();
-                MenuPrincipal menuPrincipal = new MenuPrincipal();// esta parte abre el menu pricipal despues de aver autenticado el usuario
-                menuPrincipal.Show();// se muestra el menu
+                MenuPrincipal menuPrincipal = new MenuPrincipal();
+                menuPrincipal.Show();
             }
             else
             {
-                MessageBox.Show("El Usuario o la contraseña son incorrectas favor de verificar");// mensaje que se mostrara en caso de que el usuario o la contraseñas sean erroneas
+                MessageBox.Show("El Usuario o la contraseña son incorrectas. Favor de verificar.");
             }
+
+            con.Close(); // Cerrar la conexión a la base de datos después de usarla
         }
+
 
         private void TbxPassword_TextChanged(object sender, EventArgs e)
         {
@@ -96,7 +100,6 @@ namespace RDGweb
         {
             // Crear una instancia del formulario MenuPrincipal
             MenuPrincipal formularioMenuPrincipal = new MenuPrincipal();
-
             // Mostrar el formulario MenuPrincipal
             formularioMenuPrincipal.Show();
         }

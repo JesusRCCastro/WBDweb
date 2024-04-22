@@ -39,6 +39,7 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
+            this.BtnBackMenu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PicBoxFaceChild)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -129,18 +130,29 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.IndianRed;
-            this.button1.Location = new System.Drawing.Point(241, 207);
+            this.button1.Location = new System.Drawing.Point(26, 208);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(121, 28);
             this.button1.TabIndex = 17;
             this.button1.Text = "Dar de baja ";
             this.button1.UseVisualStyleBackColor = false;
             // 
+            // BtnBackMenu
+            // 
+            this.BtnBackMenu.Location = new System.Drawing.Point(449, 208);
+            this.BtnBackMenu.Name = "BtnBackMenu";
+            this.BtnBackMenu.Size = new System.Drawing.Size(137, 27);
+            this.BtnBackMenu.TabIndex = 18;
+            this.BtnBackMenu.Text = "Regresar a menu";
+            this.BtnBackMenu.UseVisualStyleBackColor = true;
+            this.BtnBackMenu.Click += new System.EventHandler(this.BtnBackMenu_Click);
+            // 
             // IDNiños
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(610, 247);
+            this.Controls.Add(this.BtnBackMenu);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.textBox5);
@@ -174,5 +186,6 @@
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BtnBackMenu;
     }
 }

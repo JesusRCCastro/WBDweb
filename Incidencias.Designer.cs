@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.BtnBackMenu = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.ComBIDNiños = new System.Windows.Forms.ComboBox();
             this.PicBoxFaceChild = new System.Windows.Forms.PictureBox();
             this.LblUser = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TextBoxInf_Incidencias = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.TexBoxFechaIncidencias = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.PicBoxFaceChild)).BeginInit();
@@ -43,20 +43,21 @@
             // 
             // BtnBackMenu
             // 
-            this.BtnBackMenu.Location = new System.Drawing.Point(665, 411);
+            this.BtnBackMenu.Location = new System.Drawing.Point(656, 411);
             this.BtnBackMenu.Name = "BtnBackMenu";
-            this.BtnBackMenu.Size = new System.Drawing.Size(123, 27);
+            this.BtnBackMenu.Size = new System.Drawing.Size(132, 27);
             this.BtnBackMenu.TabIndex = 0;
             this.BtnBackMenu.Text = "Regresar a menu";
             this.BtnBackMenu.UseVisualStyleBackColor = true;
+            this.BtnBackMenu.Click += new System.EventHandler(this.BtnBackMenu_Click);
             // 
-            // comboBox1
+            // ComBIDNiños
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(12, 52);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 1;
+            this.ComBIDNiños.FormattingEnabled = true;
+            this.ComBIDNiños.Location = new System.Drawing.Point(12, 52);
+            this.ComBIDNiños.Name = "ComBIDNiños";
+            this.ComBIDNiños.Size = new System.Drawing.Size(121, 24);
+            this.ComBIDNiños.TabIndex = 1;
             // 
             // PicBoxFaceChild
             // 
@@ -76,30 +77,30 @@
             this.LblUser.TabIndex = 5;
             this.LblUser.Text = "Nombre de niño";
             // 
-            // textBox1
+            // TextBoxInf_Incidencias
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 143);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(776, 229);
-            this.textBox1.TabIndex = 6;
+            this.TextBoxInf_Incidencias.Location = new System.Drawing.Point(12, 143);
+            this.TextBoxInf_Incidencias.Multiline = true;
+            this.TextBoxInf_Incidencias.Name = "TextBoxInf_Incidencias";
+            this.TextBoxInf_Incidencias.Size = new System.Drawing.Size(776, 229);
+            this.TextBoxInf_Incidencias.TabIndex = 6;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(333, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 16);
+            this.label1.Size = new System.Drawing.Size(45, 16);
             this.label1.TabIndex = 7;
-            this.label1.Text = "Tutor";
+            this.label1.Text = "Fecha";
             // 
-            // textBox2
+            // TexBoxFechaIncidencias
             // 
-            this.textBox2.Location = new System.Drawing.Point(239, 52);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(233, 24);
-            this.textBox2.TabIndex = 8;
+            this.TexBoxFechaIncidencias.Location = new System.Drawing.Point(239, 52);
+            this.TexBoxFechaIncidencias.Multiline = true;
+            this.TexBoxFechaIncidencias.Name = "TexBoxFechaIncidencias";
+            this.TexBoxFechaIncidencias.Size = new System.Drawing.Size(233, 24);
+            this.TexBoxFechaIncidencias.TabIndex = 8;
             // 
             // panel1
             // 
@@ -126,11 +127,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.TexBoxFechaIncidencias);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TextBoxInf_Incidencias);
             this.Controls.Add(this.LblUser);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.ComBIDNiños);
             this.Controls.Add(this.BtnBackMenu);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
@@ -147,12 +148,12 @@
         #endregion
 
         private System.Windows.Forms.Button BtnBackMenu;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox ComBIDNiños;
         private System.Windows.Forms.PictureBox PicBoxFaceChild;
         private System.Windows.Forms.Label LblUser;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TextBoxInf_Incidencias;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox TexBoxFechaIncidencias;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
     }

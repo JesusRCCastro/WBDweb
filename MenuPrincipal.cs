@@ -42,18 +42,20 @@ namespace RDGweb
         {
             // Crear una instancia del formulario de incidencias
             Incidencias formularioIncidencias = new Incidencias();
-
             // Mostrar el formulario de incidencias
             formularioIncidencias.Show();
+            // Cerrar el formulario actual
+            this.Close();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
             // Crear una instancia del formulario de incidencias
             IDNiños formularioIDNiños = new IDNiños();
-
             // Mostrar el formulario de incidencias
             formularioIDNiños.Show();
+            // Cerrar el formulario actual
+            this.Close();
         }
     }
 }
