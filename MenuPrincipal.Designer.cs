@@ -67,7 +67,7 @@
             // button7
             // 
             this.button7.BackColor = System.Drawing.Color.DarkSalmon;
-            this.button7.Location = new System.Drawing.Point(84, 521);
+            this.button7.Location = new System.Drawing.Point(84, 520);
             this.button7.Margin = new System.Windows.Forms.Padding(0);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(100, 27);
