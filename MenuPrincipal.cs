@@ -74,5 +74,15 @@ namespace RDGweb
             // Cerrar el formulario actual
             this.Close();
         }
+
+        private void BtnClientesPadres_Click(object sender, EventArgs e)
+        {
+            // Crear una instancia del formulario de incidencias
+            Clientes FormClientes = new Clientes();
+            // Mostrar el formulario de incidencias
+            FormClientes.Show();
+            // Cerrar el formulario actual
+            this.Close();
+        }
     }
 }
