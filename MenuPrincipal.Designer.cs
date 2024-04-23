@@ -160,6 +160,7 @@
             this.BtnClientesPadres.TabIndex = 1;
             this.BtnClientesPadres.Text = "Clientes";
             this.BtnClientesPadres.UseVisualStyleBackColor = false;
+            this.BtnClientesPadres.Click += new System.EventHandler(this.BtnClientesPadres_Click);
             // 
             // panel2
             // 
