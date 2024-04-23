@@ -64,5 +64,15 @@ namespace RDGweb
             
 
         }
+
+        private void BtnAsistencia_Click(object sender, EventArgs e)
+        {
+            // Crear una instancia del formulario de incidencias
+            Asistencia FormAsistencia = new Asistencia();
+            // Mostrar el formulario de incidencias
+            FormAsistencia.Show();
+            // Cerrar el formulario actual
+            this.Close();
+        }
     }
 }

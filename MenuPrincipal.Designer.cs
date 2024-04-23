@@ -149,6 +149,7 @@
             this.BtnAsistencia.TabIndex = 2;
             this.BtnAsistencia.Text = "Asistencia";
             this.BtnAsistencia.UseVisualStyleBackColor = false;
+            this.BtnAsistencia.Click += new System.EventHandler(this.BtnAsistencia_Click);
             // 
             // BtnClientesPadres
             // 
@@ -170,12 +171,12 @@
             this.panel2.Location = new System.Drawing.Point(203, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(864, 76);
+            this.panel2.Size = new System.Drawing.Size(864, 140);
             this.panel2.TabIndex = 1;
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(577, 15);
+            this.dateTimePicker1.Location = new System.Drawing.Point(576, 59);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(261, 22);
@@ -185,7 +186,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(67, 11);
+            this.label2.Location = new System.Drawing.Point(62, 44);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(463, 52);
@@ -196,7 +197,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
