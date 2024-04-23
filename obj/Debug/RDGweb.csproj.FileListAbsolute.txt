@@ -224,3 +224,4 @@ C:\Users\angel\Source\Repos\WBDweb\obj\Debug\RDGweb.csproj.CoreCompileInputs.cac
 C:\Users\angel\Source\Repos\WBDweb\obj\Debug\RDGweb.csproj.CopyComplete
 C:\Users\angel\Source\Repos\WBDweb\obj\Debug\RDGweb.exe
 C:\Users\angel\Source\Repos\WBDweb\obj\Debug\RDGweb.pdb
+C:\Users\angel\Source\Repos\WBDweb\obj\Debug\RDGweb.PersonalTrabajo.resources

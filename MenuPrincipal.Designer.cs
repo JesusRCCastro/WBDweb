@@ -33,11 +33,11 @@
             this.button7 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BtnIDNiños = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.BtnListaDeTrabajadores = new System.Windows.Forms.Button();
             this.BtnIncidencias = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.BtnEventos = new System.Windows.Forms.Button();
+            this.BtnAsistencia = new System.Windows.Forms.Button();
+            this.BtnClientesPadres = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
@@ -52,11 +52,11 @@
             this.panel1.Controls.Add(this.button7);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.BtnIDNiños);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.BtnListaDeTrabajadores);
             this.panel1.Controls.Add(this.BtnIncidencias);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.BtnEventos);
+            this.panel1.Controls.Add(this.BtnAsistencia);
+            this.panel1.Controls.Add(this.BtnClientesPadres);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
@@ -104,17 +104,17 @@
             this.BtnIDNiños.UseVisualStyleBackColor = false;
             this.BtnIDNiños.Click += new System.EventHandler(this.button6_Click);
             // 
-            // button1
+            // BtnListaDeTrabajadores
             // 
-            this.button1.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.button1.Location = new System.Drawing.Point(13, 448);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(173, 49);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Lista de Trabajadores";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.BtnListaDeTrabajadores.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.BtnListaDeTrabajadores.Location = new System.Drawing.Point(13, 448);
+            this.BtnListaDeTrabajadores.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnListaDeTrabajadores.Name = "BtnListaDeTrabajadores";
+            this.BtnListaDeTrabajadores.Size = new System.Drawing.Size(173, 49);
+            this.BtnListaDeTrabajadores.TabIndex = 0;
+            this.BtnListaDeTrabajadores.Text = "Lista de Trabajadores";
+            this.BtnListaDeTrabajadores.UseVisualStyleBackColor = false;
+            this.BtnListaDeTrabajadores.Click += new System.EventHandler(this.button1_Click);
             // 
             // BtnIncidencias
             // 
@@ -128,38 +128,38 @@
             this.BtnIncidencias.UseVisualStyleBackColor = false;
             this.BtnIncidencias.Click += new System.EventHandler(this.BtnIncidencias_Click);
             // 
-            // button4
+            // BtnEventos
             // 
-            this.button4.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.button4.Location = new System.Drawing.Point(13, 331);
-            this.button4.Margin = new System.Windows.Forms.Padding(4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(173, 49);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = false;
+            this.BtnEventos.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.BtnEventos.Location = new System.Drawing.Point(13, 331);
+            this.BtnEventos.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnEventos.Name = "BtnEventos";
+            this.BtnEventos.Size = new System.Drawing.Size(173, 49);
+            this.BtnEventos.TabIndex = 3;
+            this.BtnEventos.Text = "Eventos";
+            this.BtnEventos.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // BtnAsistencia
             // 
-            this.button3.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.button3.Location = new System.Drawing.Point(13, 272);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(173, 49);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = false;
+            this.BtnAsistencia.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.BtnAsistencia.Location = new System.Drawing.Point(13, 272);
+            this.BtnAsistencia.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnAsistencia.Name = "BtnAsistencia";
+            this.BtnAsistencia.Size = new System.Drawing.Size(173, 49);
+            this.BtnAsistencia.TabIndex = 2;
+            this.BtnAsistencia.Text = "Asistencia";
+            this.BtnAsistencia.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // BtnClientesPadres
             // 
-            this.button2.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.button2.Location = new System.Drawing.Point(13, 214);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(173, 49);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = false;
+            this.BtnClientesPadres.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.BtnClientesPadres.Location = new System.Drawing.Point(13, 214);
+            this.BtnClientesPadres.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnClientesPadres.Name = "BtnClientesPadres";
+            this.BtnClientesPadres.Size = new System.Drawing.Size(173, 49);
+            this.BtnClientesPadres.TabIndex = 1;
+            this.BtnClientesPadres.Text = "Clientes";
+            this.BtnClientesPadres.UseVisualStyleBackColor = false;
             // 
             // panel2
             // 
@@ -217,10 +217,10 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button BtnIDNiños;
         private System.Windows.Forms.Button BtnIncidencias;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BtnEventos;
+        private System.Windows.Forms.Button BtnAsistencia;
+        private System.Windows.Forms.Button BtnClientesPadres;
+        private System.Windows.Forms.Button BtnListaDeTrabajadores;
         private System.Windows.Forms.Panel panel2;
         public System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
