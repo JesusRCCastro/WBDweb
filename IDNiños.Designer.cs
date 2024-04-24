@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(IDNiños));
             this.LblUser = new System.Windows.Forms.Label();
             this.ComBoxIDCliente = new System.Windows.Forms.ComboBox();
             this.TextBoxNombreNiño = new System.Windows.Forms.TextBox();
@@ -40,6 +41,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.BtnBackMenu = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.PicBoxFaceChild)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -47,7 +50,7 @@
             // LblUser
             // 
             this.LblUser.AutoSize = true;
-            this.LblUser.Location = new System.Drawing.Point(42, 53);
+            this.LblUser.Location = new System.Drawing.Point(84, 113);
             this.LblUser.Name = "LblUser";
             this.LblUser.Size = new System.Drawing.Size(89, 16);
             this.LblUser.TabIndex = 6;
@@ -56,14 +59,14 @@
             // ComBoxIDCliente
             // 
             this.ComBoxIDCliente.FormattingEnabled = true;
-            this.ComBoxIDCliente.Location = new System.Drawing.Point(150, 48);
+            this.ComBoxIDCliente.Location = new System.Drawing.Point(192, 108);
             this.ComBoxIDCliente.Name = "ComBoxIDCliente";
             this.ComBoxIDCliente.Size = new System.Drawing.Size(124, 24);
             this.ComBoxIDCliente.TabIndex = 7;
             // 
             // TextBoxNombreNiño
             // 
-            this.TextBoxNombreNiño.Location = new System.Drawing.Point(41, 84);
+            this.TextBoxNombreNiño.Location = new System.Drawing.Point(83, 144);
             this.TextBoxNombreNiño.Multiline = true;
             this.TextBoxNombreNiño.Name = "TextBoxNombreNiño";
             this.TextBoxNombreNiño.Size = new System.Drawing.Size(233, 24);
@@ -71,7 +74,7 @@
             // 
             // TextBoxFechaNac
             // 
-            this.TextBoxFechaNac.Location = new System.Drawing.Point(41, 127);
+            this.TextBoxFechaNac.Location = new System.Drawing.Point(83, 187);
             this.TextBoxFechaNac.Multiline = true;
             this.TextBoxFechaNac.Name = "TextBoxFechaNac";
             this.TextBoxFechaNac.Size = new System.Drawing.Size(233, 24);
@@ -104,7 +107,7 @@
             // 
             // TextBoxNumContacto
             // 
-            this.TextBoxNumContacto.Location = new System.Drawing.Point(41, 168);
+            this.TextBoxNumContacto.Location = new System.Drawing.Point(83, 228);
             this.TextBoxNumContacto.Multiline = true;
             this.TextBoxNumContacto.Name = "TextBoxNumContacto";
             this.TextBoxNumContacto.Size = new System.Drawing.Size(233, 24);
@@ -112,7 +115,7 @@
             // 
             // TextBoxCliente_idCliente
             // 
-            this.TextBoxCliente_idCliente.Location = new System.Drawing.Point(294, 168);
+            this.TextBoxCliente_idCliente.Location = new System.Drawing.Point(336, 228);
             this.TextBoxCliente_idCliente.Multiline = true;
             this.TextBoxCliente_idCliente.Name = "TextBoxCliente_idCliente";
             this.TextBoxCliente_idCliente.Size = new System.Drawing.Size(131, 24);
@@ -120,11 +123,11 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.panel1.BackColor = System.Drawing.Color.LightSkyBlue;
             this.panel1.Controls.Add(this.PicBoxFaceChild);
             this.panel1.Controls.Add(this.TextBoxGenero);
             this.panel1.Controls.Add(this.TextBoxEdad);
-            this.panel1.Location = new System.Drawing.Point(26, 34);
+            this.panel1.Location = new System.Drawing.Point(68, 94);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(560, 166);
             this.panel1.TabIndex = 16;
@@ -132,7 +135,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.IndianRed;
-            this.button1.Location = new System.Drawing.Point(26, 208);
+            this.button1.Location = new System.Drawing.Point(68, 268);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(121, 28);
             this.button1.TabIndex = 17;
@@ -142,7 +145,7 @@
             // 
             // BtnBackMenu
             // 
-            this.BtnBackMenu.Location = new System.Drawing.Point(449, 208);
+            this.BtnBackMenu.Location = new System.Drawing.Point(491, 268);
             this.BtnBackMenu.Name = "BtnBackMenu";
             this.BtnBackMenu.Size = new System.Drawing.Size(137, 27);
             this.BtnBackMenu.TabIndex = 18;
@@ -150,11 +153,35 @@
             this.BtnBackMenu.UseVisualStyleBackColor = true;
             this.BtnBackMenu.Click += new System.EventHandler(this.BtnBackMenu_Click_1);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(198, 31);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(291, 35);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "Información del niño";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ControlText;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 345);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(705, 19);
+            this.panel2.TabIndex = 20;
+            // 
             // IDNiños
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(610, 247);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(705, 364);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.BtnBackMenu);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.TextBoxCliente_idCliente);
@@ -189,5 +216,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button BtnBackMenu;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel2;
     }
 }

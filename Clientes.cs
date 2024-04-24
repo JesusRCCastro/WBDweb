@@ -26,6 +26,13 @@ namespace RDGweb
             {
                 string selectedText = Convert.ToString(CombBoxNumeroPadres.SelectedItem);
                 NombreCliente(selectedText);
+                EdadCliente(selectedText);
+                DireccionCliente(selectedText);
+                CelularCliente(selectedText);
+                NSSCliente(selectedText);
+                OficioCliente(selectedText);
+                CorreoCliente(selectedText);
+                
             }
             else
             {
@@ -94,6 +101,199 @@ namespace RDGweb
                 catch (Exception ex)
                 {
                     MessageBox.Show("Error al cargar el nombre: " + ex.Message);
+                }
+            }
+        }
+
+        private void EdadCliente(string telefono)
+        {
+            string connectionString = "server=localhost;user=root;password=;database=guarderia;";
+            string query = "SELECT Edad FROM cliente WHERE telefono = @telefono;";
+
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@telefono", telefono);
+
+                    MySqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        TextBoxEdadCliente.Text = reader["Edad"].ToString() + "  años";
+                    }
+                    else
+                    {
+                        TextBoxEdadCliente.Text = "No se encontró descripción.";
+                    }
+
+                    reader.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al cargar la edad: " + ex.Message);
+                }
+            }
+
+        }
+
+        private void DireccionCliente(string telefono)
+        {
+            string connectionString = "server=localhost;user=root;password=;database=guarderia;";
+            string query = "SELECT `Dirección` FROM cliente WHERE telefono = @telefono;";
+
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@telefono", telefono);
+
+                    MySqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        TextBoxDirrecionCliente.Text = reader["Dirección"].ToString();
+                    }
+                    else
+                    {
+                        TextBoxDirrecionCliente.Text = "No se encontró descripción.";
+                    }
+
+                    reader.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al cargar la dirección: " + ex.ToString());
+                }
+            }
+        }
+
+        private void CelularCliente(string telefono)
+        {
+            string connectionString = "server=localhost;user=root;password=;database=guarderia;";
+            string query = "SELECT `Telefono` FROM cliente WHERE telefono = @telefono;";
+
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@telefono", telefono);
+
+                    MySqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        TextBoxCelularCliente.Text = reader["Telefono"].ToString();
+                    }
+                    else
+                    {
+                        TextBoxCelularCliente.Text = "No se encontró celular.";
+                    }
+
+                    reader.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al cargar la dirección: " + ex.ToString());
+                }
+            }
+        }
+
+        private void NSSCliente(string telefono)
+        {
+            string connectionString = "server=localhost;user=root;password=;database=guarderia;";
+            string query = "SELECT `NSS` FROM cliente WHERE telefono = @telefono;";
+
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@telefono", telefono);
+
+                    MySqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        TextBoxNSS.Text = reader["NSS"].ToString();
+                    }
+                    else
+                    {
+                        TextBoxNSS.Text = "No se encontró NSS.";
+                    }
+
+                    reader.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al cargar la NSS: " + ex.ToString());
+                }
+            }
+        }
+
+        private void OficioCliente(string telefono)
+        {
+            string connectionString = "server=localhost;user=root;password=;database=guarderia;";
+            string query = "SELECT `Oficio` FROM cliente WHERE telefono = @telefono;";
+
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@telefono", telefono);
+
+                    MySqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        TextBoxOficio.Text = reader["Oficio"].ToString();
+                    }
+                    else
+                    {
+                        TextBoxOficio.Text = "No se encontró oficio.";
+                    }
+
+                    reader.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al cargar la oficio: " + ex.ToString());
+                }
+            }
+        }
+
+        private void CorreoCliente(string telefono)
+        {
+            string connectionString = "server=localhost;user=root;password=;database=guarderia;";
+            string query = "SELECT `Correo` FROM cliente WHERE telefono = @telefono;";
+
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@telefono", telefono);
+
+                    MySqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        TextBoxCorreo.Text = reader["Correo"].ToString();
+                    }
+                    else
+                    {
+                        TextBoxCorreo.Text = "No se encontró correo.";
+                    }
+
+                    reader.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al cargar la correo: " + ex.ToString());
                 }
             }
         }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Incidencias));
             this.BtnBackMenu = new System.Windows.Forms.Button();
             this.ComBIDNiños = new System.Windows.Forms.ComboBox();
             this.PicBoxFaceChild = new System.Windows.Forms.PictureBox();
@@ -79,10 +80,11 @@
             // 
             // TextBoxInf_Incidencias
             // 
-            this.TextBoxInf_Incidencias.Location = new System.Drawing.Point(12, 143);
+            this.TextBoxInf_Incidencias.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.TextBoxInf_Incidencias.Location = new System.Drawing.Point(30, 146);
             this.TextBoxInf_Incidencias.Multiline = true;
             this.TextBoxInf_Incidencias.Name = "TextBoxInf_Incidencias";
-            this.TextBoxInf_Incidencias.Size = new System.Drawing.Size(776, 229);
+            this.TextBoxInf_Incidencias.Size = new System.Drawing.Size(737, 218);
             this.TextBoxInf_Incidencias.TabIndex = 6;
             // 
             // label1
@@ -126,6 +128,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.TexBoxFechaIncidencias);
             this.Controls.Add(this.label1);

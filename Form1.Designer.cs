@@ -48,6 +48,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(124, 22);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -158,10 +159,10 @@
             // 
             // BtnPruebaMenu
             // 
-            this.BtnPruebaMenu.Location = new System.Drawing.Point(49, 377);
+            this.BtnPruebaMenu.Location = new System.Drawing.Point(90, 377);
             this.BtnPruebaMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnPruebaMenu.Name = "BtnPruebaMenu";
-            this.BtnPruebaMenu.Size = new System.Drawing.Size(241, 25);
+            this.BtnPruebaMenu.Size = new System.Drawing.Size(200, 25);
             this.BtnPruebaMenu.TabIndex = 12;
             this.BtnPruebaMenu.Text = "Prueba menu";
             this.BtnPruebaMenu.UseVisualStyleBackColor = true;
@@ -172,6 +173,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(388, 491);
             this.Controls.Add(this.BtnPruebaMenu);
             this.Controls.Add(this.label2);
