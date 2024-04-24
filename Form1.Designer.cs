@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.TbxUser = new System.Windows.Forms.TextBox();
             this.TbxPassword = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -41,22 +40,10 @@
             this.LklRegistro = new System.Windows.Forms.LinkLabel();
             this.label2 = new System.Windows.Forms.Label();
             this.BtnPruebaMenu = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(124, 22);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(141, 144);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // TbxUser
             // 
@@ -70,7 +57,7 @@
             // TbxPassword
             // 
             this.TbxPassword.BackColor = System.Drawing.Color.White;
-            this.TbxPassword.Location = new System.Drawing.Point(97, 265);
+            this.TbxPassword.Location = new System.Drawing.Point(97, 270);
             this.TbxPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TbxPassword.Name = "TbxPassword";
             this.TbxPassword.Size = new System.Drawing.Size(193, 22);
@@ -79,8 +66,9 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(49, 197);
+            this.pictureBox2.Location = new System.Drawing.Point(49, 186);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(43, 50);
@@ -91,24 +79,26 @@
             // LblUser
             // 
             this.LblUser.AutoSize = true;
-            this.LblUser.Location = new System.Drawing.Point(97, 193);
+            this.LblUser.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblUser.Location = new System.Drawing.Point(97, 188);
             this.LblUser.Name = "LblUser";
-            this.LblUser.Size = new System.Drawing.Size(116, 16);
+            this.LblUser.Size = new System.Drawing.Size(129, 19);
             this.LblUser.TabIndex = 4;
             this.LblUser.Text = "Ingrese su usuario";
             // 
             // LblPassword
             // 
             this.LblPassword.AutoSize = true;
-            this.LblPassword.Location = new System.Drawing.Point(97, 246);
+            this.LblPassword.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPassword.Location = new System.Drawing.Point(97, 247);
             this.LblPassword.Name = "LblPassword";
-            this.LblPassword.Size = new System.Drawing.Size(141, 16);
+            this.LblPassword.Size = new System.Drawing.Size(155, 19);
             this.LblPassword.TabIndex = 5;
             this.LblPassword.Text = "Ingrese su Contraseña";
             // 
             // BtnInicioSesion
             // 
-            this.BtnInicioSesion.Location = new System.Drawing.Point(124, 318);
+            this.BtnInicioSesion.Location = new System.Drawing.Point(135, 316);
             this.BtnInicioSesion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnInicioSesion.Name = "BtnInicioSesion";
             this.BtnInicioSesion.Size = new System.Drawing.Size(117, 25);
@@ -119,8 +109,9 @@
             // 
             // pictureBox3
             // 
+            this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(49, 254);
+            this.pictureBox3.Location = new System.Drawing.Point(49, 248);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(43, 41);
@@ -168,6 +159,19 @@
             this.BtnPruebaMenu.UseVisualStyleBackColor = true;
             this.BtnPruebaMenu.Click += new System.EventHandler(this.BtnPruebaMenu_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.SystemColors.Window;
+            this.label3.Font = new System.Drawing.Font("Bernard MT Condensed", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Image = ((System.Drawing.Image)(resources.GetObject("label3.Image")));
+            this.label3.Location = new System.Drawing.Point(26, 67);
+            this.label3.Margin = new System.Windows.Forms.Padding(0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(335, 72);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Guarderia :3";
+            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -185,14 +189,13 @@
             this.Controls.Add(this.LblUser);
             this.Controls.Add(this.TbxPassword);
             this.Controls.Add(this.TbxUser);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.label3);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.FormLogin_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
@@ -201,8 +204,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox TbxUser;
         private System.Windows.Forms.TextBox TbxPassword;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -214,6 +215,7 @@
         private System.Windows.Forms.LinkLabel LklRegistro;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button BtnPruebaMenu;
+        private System.Windows.Forms.Label label3;
     }
 }
 
