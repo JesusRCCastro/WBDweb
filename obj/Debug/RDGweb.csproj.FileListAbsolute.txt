@@ -278,3 +278,4 @@ C:\Users\Aram\Source\Repos\WBDweb\obj\Debug\RDGweb.pdb
 C:\Users\Aram\Source\Repos\WBDweb\obj\Debug\RDGweb.Clientes.resources
 C:\Users\angel\Source\Repos\WBDweb\obj\Debug\RDGweb.Asistencia.resources
 C:\Users\angel\Source\Repos\WBDweb\obj\Debug\RDGweb.Clientes.resources
+C:\Users\Jesus Castro\Source\Repos\WBDweb\obj\Debug\RDGweb.Clientes.resources

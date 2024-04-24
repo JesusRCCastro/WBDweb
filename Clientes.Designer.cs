@@ -265,6 +265,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.TextBoxNombreCliente);
             this.Name = "Clientes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Clientes";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
