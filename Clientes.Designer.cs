@@ -47,9 +47,9 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.BtnBackMenu = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.BtnAgregarCliente = new System.Windows.Forms.Button();
+            this.BtnActualizarInfCliente = new System.Windows.Forms.Button();
+            this.BtnEliminarCliente = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -210,33 +210,35 @@
             this.BtnBackMenu.TabIndex = 19;
             this.BtnBackMenu.Text = "Regresar a menu";
             this.BtnBackMenu.UseVisualStyleBackColor = true;
+            this.BtnBackMenu.Click += new System.EventHandler(this.BtnBackMenu_Click);
             // 
-            // button1
+            // BtnAgregarCliente
             // 
-            this.button1.Location = new System.Drawing.Point(416, 156);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(137, 27);
-            this.button1.TabIndex = 20;
-            this.button1.Text = "Agregar cliente";
-            this.button1.UseVisualStyleBackColor = true;
+            this.BtnAgregarCliente.Location = new System.Drawing.Point(416, 156);
+            this.BtnAgregarCliente.Name = "BtnAgregarCliente";
+            this.BtnAgregarCliente.Size = new System.Drawing.Size(137, 27);
+            this.BtnAgregarCliente.TabIndex = 20;
+            this.BtnAgregarCliente.Text = "Agregar cliente";
+            this.BtnAgregarCliente.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // BtnActualizarInfCliente
             // 
-            this.button2.Location = new System.Drawing.Point(416, 199);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(137, 27);
-            this.button2.TabIndex = 21;
-            this.button2.Text = "Actualizar cliente";
-            this.button2.UseVisualStyleBackColor = true;
+            this.BtnActualizarInfCliente.Location = new System.Drawing.Point(416, 199);
+            this.BtnActualizarInfCliente.Name = "BtnActualizarInfCliente";
+            this.BtnActualizarInfCliente.Size = new System.Drawing.Size(137, 27);
+            this.BtnActualizarInfCliente.TabIndex = 21;
+            this.BtnActualizarInfCliente.Text = "Actualizar cliente";
+            this.BtnActualizarInfCliente.UseVisualStyleBackColor = true;
+            this.BtnActualizarInfCliente.Click += new System.EventHandler(this.BtnActualizarInfCliente_Click);
             // 
-            // button3
+            // BtnEliminarCliente
             // 
-            this.button3.Location = new System.Drawing.Point(416, 247);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(137, 27);
-            this.button3.TabIndex = 22;
-            this.button3.Text = "Eliminar cliente";
-            this.button3.UseVisualStyleBackColor = true;
+            this.BtnEliminarCliente.Location = new System.Drawing.Point(416, 247);
+            this.BtnEliminarCliente.Name = "BtnEliminarCliente";
+            this.BtnEliminarCliente.Size = new System.Drawing.Size(137, 27);
+            this.BtnEliminarCliente.TabIndex = 22;
+            this.BtnEliminarCliente.Text = "Eliminar cliente";
+            this.BtnEliminarCliente.UseVisualStyleBackColor = true;
             // 
             // Clientes
             // 
@@ -245,9 +247,9 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(571, 421);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.BtnEliminarCliente);
+            this.Controls.Add(this.BtnActualizarInfCliente);
+            this.Controls.Add(this.BtnAgregarCliente);
             this.Controls.Add(this.BtnBackMenu);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -294,8 +296,8 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button BtnBackMenu;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button BtnAgregarCliente;
+        private System.Windows.Forms.Button BtnActualizarInfCliente;
+        private System.Windows.Forms.Button BtnEliminarCliente;
     }
 }

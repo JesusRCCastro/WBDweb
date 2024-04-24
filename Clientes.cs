@@ -17,6 +17,7 @@ namespace RDGweb
         {
             InitializeComponent();
             LoadIdCliente();
+            this.BtnActualizarInfCliente.Click += new System.EventHandler(this.BtnActualizarInfCliente_Click);
             CombBoxNumeroPadres.SelectedIndexChanged += CombBoxNumeroPadres_SelectedIndexChanged;
         }
 
@@ -296,6 +297,67 @@ namespace RDGweb
                     MessageBox.Show("Error al cargar la correo: " + ex.ToString());
                 }
             }
+        }
+
+        private void BtnBackMenu_Click(object sender, EventArgs e)
+        {
+            // Crear una instancia del formulario MenuPrincipal
+            MenuPrincipal formularioMenuPrincipal = new MenuPrincipal();
+            // Mostrar el formulario MenuPrincipal
+            formularioMenuPrincipal.Show();
+            // Cerrar el formulario actual
+            this.Close();
+        }
+
+        //----------------------------------------------------------------------------------------------------------//
+
+
+        private void UpdateCliente()
+        {
+            string connectionString = "server=localhost;user=root;password=;database=guarderia;";
+
+            // Comando SQL para actualizar los datos del cliente
+            string query = "UPDATE cliente SET Nombre = @Nombre, Edad = @Edad, Dirección = @Dirección, " +
+                           "Telefono = @Telefono, NSS = @NSS, Oficio = @Oficio, Correo = @Correo " +
+                           "WHERE Telefono = @Telefono;"; // Asumiendo que el teléfono es la clave para encontrar el cliente
+
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+
+                    // Añade los parámetros con los valores de los TextBox
+                    cmd.Parameters.AddWithValue("@Nombre", TextBoxNombreCliente.Text);
+                    cmd.Parameters.AddWithValue("@Edad", TextBoxEdadCliente.Text);
+                    cmd.Parameters.AddWithValue("@Dirección", TextBoxDirrecionCliente.Text);
+                    cmd.Parameters.AddWithValue("@Telefono", TextBoxCelularCliente.Text);
+                    cmd.Parameters.AddWithValue("@NSS", TextBoxNSS.Text);
+                    cmd.Parameters.AddWithValue("@Oficio", TextBoxOficio.Text);
+                    cmd.Parameters.AddWithValue("@Correo", TextBoxCorreo.Text);
+
+                    // Ejecuta la consulta
+                    int result = cmd.ExecuteNonQuery();
+                    if (result > 0)
+                    {
+                        MessageBox.Show("Datos actualizados correctamente O Si.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se actualizó ningún dato.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al actualizar los datos: " + ex.Message);
+                }
+            }
+        }
+
+        private void BtnActualizarInfCliente_Click(object sender, EventArgs e)
+        {
+            UpdateCliente();
         }
     }
 }
