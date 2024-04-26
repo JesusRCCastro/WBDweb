@@ -31,15 +31,16 @@
             this.TbxIdNiño = new System.Windows.Forms.TextBox();
             this.BtnTomarAsistencia = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.BtnFalta = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button2 = new System.Windows.Forms.Button();
+            this.BtnFalta = new System.Windows.Forms.Button();
+            this.DgvAsistencia = new System.Windows.Forms.DataGridView();
             this.ColNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColAsistencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColFalta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BtnBuscarNiño = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvAsistencia)).BeginInit();
             this.SuspendLayout();
             // 
             // TbxIdNiño
@@ -63,6 +64,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.panel1.Controls.Add(this.BtnBuscarNiño);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.TbxIdNiño);
@@ -71,26 +73,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(563, 100);
             this.panel1.TabIndex = 2;
-            // 
-            // BtnFalta
-            // 
-            this.BtnFalta.Location = new System.Drawing.Point(342, 198);
-            this.BtnFalta.Name = "BtnFalta";
-            this.BtnFalta.Size = new System.Drawing.Size(160, 38);
-            this.BtnFalta.TabIndex = 3;
-            this.BtnFalta.Text = "Marcar Falta";
-            this.BtnFalta.UseVisualStyleBackColor = true;
-            this.BtnFalta.Click += new System.EventHandler(this.BtnFalta_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(3, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(126, 30);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Volver al menu";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label1
             // 
@@ -102,20 +84,40 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Ingrese el ID del Niño";
             // 
-            // dataGridView1
+            // button2
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.button2.Location = new System.Drawing.Point(3, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(126, 30);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "Volver al menu";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // BtnFalta
+            // 
+            this.BtnFalta.Location = new System.Drawing.Point(342, 198);
+            this.BtnFalta.Name = "BtnFalta";
+            this.BtnFalta.Size = new System.Drawing.Size(160, 38);
+            this.BtnFalta.TabIndex = 3;
+            this.BtnFalta.Text = "Marcar Falta";
+            this.BtnFalta.UseVisualStyleBackColor = true;
+            this.BtnFalta.Click += new System.EventHandler(this.BtnFalta_Click);
+            // 
+            // DgvAsistencia
+            // 
+            this.DgvAsistencia.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.DgvAsistencia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvAsistencia.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColNombre,
             this.ColAsistencia,
             this.ColFalta});
-            this.dataGridView1.Location = new System.Drawing.Point(0, 106);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(563, 67);
-            this.dataGridView1.TabIndex = 4;
+            this.DgvAsistencia.Location = new System.Drawing.Point(0, 106);
+            this.DgvAsistencia.Name = "DgvAsistencia";
+            this.DgvAsistencia.RowHeadersWidth = 51;
+            this.DgvAsistencia.RowTemplate.Height = 24;
+            this.DgvAsistencia.Size = new System.Drawing.Size(563, 67);
+            this.DgvAsistencia.TabIndex = 4;
             // 
             // ColNombre
             // 
@@ -138,13 +140,23 @@
             this.ColFalta.Name = "ColFalta";
             this.ColFalta.Width = 125;
             // 
+            // BtnBuscarNiño
+            // 
+            this.BtnBuscarNiño.Location = new System.Drawing.Point(379, 47);
+            this.BtnBuscarNiño.Name = "BtnBuscarNiño";
+            this.BtnBuscarNiño.Size = new System.Drawing.Size(123, 35);
+            this.BtnBuscarNiño.TabIndex = 6;
+            this.BtnBuscarNiño.Text = "Buscar Niño";
+            this.BtnBuscarNiño.UseVisualStyleBackColor = true;
+            this.BtnBuscarNiño.Click += new System.EventHandler(this.BtnBuscarNiño_Click);
+            // 
             // Asistencia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(563, 257);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.DgvAsistencia);
             this.Controls.Add(this.BtnFalta);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.BtnTomarAsistencia);
@@ -153,7 +165,7 @@
             this.Text = "Asistencia";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvAsistencia)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -166,9 +178,10 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button BtnFalta;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DgvAsistencia;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColNombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColAsistencia;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColFalta;
+        private System.Windows.Forms.Button BtnBuscarNiño;
     }
 }
