@@ -220,6 +220,7 @@
             this.BtnAgregarCliente.TabIndex = 20;
             this.BtnAgregarCliente.Text = "Agregar cliente";
             this.BtnAgregarCliente.UseVisualStyleBackColor = true;
+            this.BtnAgregarCliente.Click += new System.EventHandler(this.BtnAgregarCliente_Click);
             // 
             // BtnActualizarInfCliente
             // 
@@ -239,6 +240,7 @@
             this.BtnEliminarCliente.TabIndex = 22;
             this.BtnEliminarCliente.Text = "Eliminar cliente";
             this.BtnEliminarCliente.UseVisualStyleBackColor = true;
+            this.BtnEliminarCliente.Click += new System.EventHandler(this.BtnEliminarCliente_Click);
             // 
             // Clientes
             // 

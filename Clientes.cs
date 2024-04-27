@@ -1,13 +1,16 @@
 ﻿using MySql.Data.MySqlClient;
+using Org.BouncyCastle.Pqc.Crypto.Lms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Mysqlx.Crud.Order.Types;
 
 namespace RDGweb
 {
@@ -359,5 +362,62 @@ namespace RDGweb
         {
             UpdateCliente();
         }
+
+        //----------------------------------------------------------------------------------------------------------//
+
+
+        public void EliminarCliente(string telefono)
+        {
+            string connectionString = "server=localhost;user=root;password=;database=guarderia;";
+            string query = "DELETE FROM cliente WHERE telefono = @telefono;";
+
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@telefono", telefono);
+
+                    int rowsAffected = cmd.ExecuteNonQuery();
+
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("La fila se eliminó correctamente.");
+                        // Puedes agregar aquí cualquier otra lógica que necesites después de eliminar la fila.
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se encontró ninguna fila para eliminar con el ID proporcionado.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al eliminar la fila: " + ex.Message);
+                }
+            }
+        }
+
+        private void BtnEliminarCliente_Click(object sender, EventArgs e)
+        {
+            string selectedText = Convert.ToString(CombBoxNumeroPadres.SelectedItem);
+            EliminarCliente(selectedText);
+        }
+
+        //----------------------------------------------------------------------------------------------------------//
+
+        private void BtnAgregarCliente_Click(object sender, EventArgs e)
+        {
+            // Crear una instancia del formulario de nuevos clientes
+            NuevoCliente formularioNuevosCliente = new NuevoCliente();
+            // Mostrar el formulario de nuevos clientes
+            formularioNuevosCliente.Show();
+            // Ocultar el formulario actual
+            this.Hide();
+        }
+
+
+        //----------------------------------------------------------------------------------------------------------//
+
     }
 }
