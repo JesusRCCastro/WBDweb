@@ -41,6 +41,7 @@ namespace RDGweb
         }
         private void LklRegistro_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+
             this.Hide();
             FormRegistro Registro = new FormRegistro();
             Registro.Show();
@@ -50,6 +51,20 @@ namespace RDGweb
         {
             string nombreUsuario = TbxUser.Text;
             string contraseña = TbxPassword.Text;
+
+            //verificar si lo campos estan vacios
+            if (string.IsNullOrWhiteSpace(nombreUsuario) || string.IsNullOrWhiteSpace(contraseña))
+            {
+                MessageBox.Show("Por favor, ingresa tanto el nombre de usuario como la contraseña.");
+                return;
+            }
+
+            //verificar la longitud minima de la contraseña
+            if (contraseña.Length < 8) //requerimos una contraseña de almenos 8 caracteres 
+            {
+                MessageBox.Show("la contraseña debe tener al menos 8 caracteres");
+                return;
+            }
 
             // Ingresa a la base de datos
             MySqlConnection con = new MySqlConnection("Server=localhost;Database=Guarderia;Uid=root;Password=");

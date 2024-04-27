@@ -31,6 +31,7 @@
             this.TbxIdNiño = new System.Windows.Forms.TextBox();
             this.BtnTomarAsistencia = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.BtnBuscarNiño = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.BtnFalta = new System.Windows.Forms.Button();
@@ -38,24 +39,25 @@
             this.ColNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColAsistencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColFalta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BtnBuscarNiño = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvAsistencia)).BeginInit();
             this.SuspendLayout();
             // 
             // TbxIdNiño
             // 
-            this.TbxIdNiño.Location = new System.Drawing.Point(213, 53);
+            this.TbxIdNiño.Location = new System.Drawing.Point(160, 43);
+            this.TbxIdNiño.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TbxIdNiño.Multiline = true;
             this.TbxIdNiño.Name = "TbxIdNiño";
-            this.TbxIdNiño.Size = new System.Drawing.Size(135, 27);
+            this.TbxIdNiño.Size = new System.Drawing.Size(102, 23);
             this.TbxIdNiño.TabIndex = 0;
             // 
             // BtnTomarAsistencia
             // 
-            this.BtnTomarAsistencia.Location = new System.Drawing.Point(58, 198);
+            this.BtnTomarAsistencia.Location = new System.Drawing.Point(44, 161);
+            this.BtnTomarAsistencia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnTomarAsistencia.Name = "BtnTomarAsistencia";
-            this.BtnTomarAsistencia.Size = new System.Drawing.Size(160, 38);
+            this.BtnTomarAsistencia.Size = new System.Drawing.Size(120, 31);
             this.BtnTomarAsistencia.TabIndex = 1;
             this.BtnTomarAsistencia.Text = "Tomar Asistencia";
             this.BtnTomarAsistencia.UseVisualStyleBackColor = true;
@@ -70,25 +72,39 @@
             this.panel1.Controls.Add(this.TbxIdNiño);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(563, 100);
+            this.panel1.Size = new System.Drawing.Size(422, 81);
             this.panel1.TabIndex = 2;
+            // 
+            // BtnBuscarNiño
+            // 
+            this.BtnBuscarNiño.Location = new System.Drawing.Point(284, 38);
+            this.BtnBuscarNiño.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnBuscarNiño.Name = "BtnBuscarNiño";
+            this.BtnBuscarNiño.Size = new System.Drawing.Size(92, 28);
+            this.BtnBuscarNiño.TabIndex = 6;
+            this.BtnBuscarNiño.Text = "Buscar Niño";
+            this.BtnBuscarNiño.UseVisualStyleBackColor = true;
+            this.BtnBuscarNiño.Click += new System.EventHandler(this.BtnBuscarNiño_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(191, 11);
+            this.label1.Location = new System.Drawing.Point(143, 9);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(181, 22);
+            this.label1.Size = new System.Drawing.Size(147, 18);
             this.label1.TabIndex = 5;
             this.label1.Text = "Ingrese el ID del Niño";
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(3, 3);
+            this.button2.Location = new System.Drawing.Point(2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(126, 30);
+            this.button2.Size = new System.Drawing.Size(94, 24);
             this.button2.TabIndex = 4;
             this.button2.Text = "Volver al menu";
             this.button2.UseVisualStyleBackColor = true;
@@ -96,9 +112,10 @@
             // 
             // BtnFalta
             // 
-            this.BtnFalta.Location = new System.Drawing.Point(342, 198);
+            this.BtnFalta.Location = new System.Drawing.Point(256, 161);
+            this.BtnFalta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnFalta.Name = "BtnFalta";
-            this.BtnFalta.Size = new System.Drawing.Size(160, 38);
+            this.BtnFalta.Size = new System.Drawing.Size(120, 31);
             this.BtnFalta.TabIndex = 3;
             this.BtnFalta.Text = "Marcar Falta";
             this.BtnFalta.UseVisualStyleBackColor = true;
@@ -112,11 +129,12 @@
             this.ColNombre,
             this.ColAsistencia,
             this.ColFalta});
-            this.DgvAsistencia.Location = new System.Drawing.Point(0, 106);
+            this.DgvAsistencia.Location = new System.Drawing.Point(0, 86);
+            this.DgvAsistencia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DgvAsistencia.Name = "DgvAsistencia";
             this.DgvAsistencia.RowHeadersWidth = 51;
             this.DgvAsistencia.RowTemplate.Height = 24;
-            this.DgvAsistencia.Size = new System.Drawing.Size(563, 67);
+            this.DgvAsistencia.Size = new System.Drawing.Size(422, 54);
             this.DgvAsistencia.TabIndex = 4;
             // 
             // ColNombre
@@ -140,29 +158,21 @@
             this.ColFalta.Name = "ColFalta";
             this.ColFalta.Width = 125;
             // 
-            // BtnBuscarNiño
-            // 
-            this.BtnBuscarNiño.Location = new System.Drawing.Point(379, 47);
-            this.BtnBuscarNiño.Name = "BtnBuscarNiño";
-            this.BtnBuscarNiño.Size = new System.Drawing.Size(123, 35);
-            this.BtnBuscarNiño.TabIndex = 6;
-            this.BtnBuscarNiño.Text = "Buscar Niño";
-            this.BtnBuscarNiño.UseVisualStyleBackColor = true;
-            this.BtnBuscarNiño.Click += new System.EventHandler(this.BtnBuscarNiño_Click);
-            // 
             // Asistencia
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(563, 257);
+            this.ClientSize = new System.Drawing.Size(422, 209);
             this.Controls.Add(this.DgvAsistencia);
             this.Controls.Add(this.BtnFalta);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.BtnTomarAsistencia);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Asistencia";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Asistencia";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Asistencia_FormClosing);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvAsistencia)).EndInit();
