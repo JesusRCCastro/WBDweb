@@ -150,3 +150,6 @@ C:\Users\Jesus Castro\Source\Repos\WBDweb\obj\Debug\RDGweb.exe
 C:\Users\Jesus Castro\Source\Repos\WBDweb\obj\Debug\RDGweb.pdb
 C:\Users\Jesus Castro\Source\Repos\WBDweb\obj\Debug\RDGweb.Eventos.resources
 C:\Users\Jesus Castro\Source\Repos\WBDweb\obj\Debug\RDGweb.Trabajadores.resources
+C:\Users\araml\Source\Repos\JesusRCCastro\WBDweb\obj\Debug\RDGweb.Eventos.resources
+C:\Users\araml\Source\Repos\JesusRCCastro\WBDweb\obj\Debug\RDGweb.NuevoCliente.resources
+C:\Users\araml\Source\Repos\JesusRCCastro\WBDweb\obj\Debug\RDGweb.Trabajadores.resources
