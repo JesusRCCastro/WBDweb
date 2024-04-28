@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
+            this.BtnCerrarSesion = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BtnIDNiños = new System.Windows.Forms.Button();
             this.BtnListaDeTrabajadores = new System.Windows.Forms.Button();
@@ -49,7 +49,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel1.Controls.Add(this.button7);
+            this.panel1.Controls.Add(this.BtnCerrarSesion);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.BtnIDNiños);
             this.panel1.Controls.Add(this.BtnListaDeTrabajadores);
@@ -64,33 +64,32 @@
             this.panel1.Size = new System.Drawing.Size(203, 554);
             this.panel1.TabIndex = 0;
             // 
-            // button7
+            // BtnCerrarSesion
             // 
-            this.button7.BackColor = System.Drawing.Color.DarkSalmon;
-            this.button7.Location = new System.Drawing.Point(84, 520);
-            this.button7.Margin = new System.Windows.Forms.Padding(0);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(100, 27);
-            this.button7.TabIndex = 7;
-            this.button7.Text = "Cerrar Sesion";
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.BtnCerrarSesion.BackColor = System.Drawing.Color.DarkSalmon;
+            this.BtnCerrarSesion.Location = new System.Drawing.Point(84, 520);
+            this.BtnCerrarSesion.Margin = new System.Windows.Forms.Padding(0);
+            this.BtnCerrarSesion.Name = "BtnCerrarSesion";
+            this.BtnCerrarSesion.Size = new System.Drawing.Size(100, 27);
+            this.BtnCerrarSesion.TabIndex = 7;
+            this.BtnCerrarSesion.Text = "Cerrar Sesion";
+            this.BtnCerrarSesion.UseVisualStyleBackColor = false;
+            this.BtnCerrarSesion.Click += new System.EventHandler(this.BtnCerrarSesion_Click);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.pictureBox1.ErrorImage = null;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(-38, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(428, 140);
+            this.pictureBox1.Size = new System.Drawing.Size(203, 140);
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.UseWaitCursor = true;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // BtnIDNiños
             // 
@@ -102,7 +101,7 @@
             this.BtnIDNiños.TabIndex = 5;
             this.BtnIDNiños.Text = "Perfil de niño";
             this.BtnIDNiños.UseVisualStyleBackColor = false;
-            this.BtnIDNiños.Click += new System.EventHandler(this.button6_Click);
+            this.BtnIDNiños.Click += new System.EventHandler(this.BtnIDNiños_Click);
             // 
             // BtnListaDeTrabajadores
             // 
@@ -114,7 +113,7 @@
             this.BtnListaDeTrabajadores.TabIndex = 0;
             this.BtnListaDeTrabajadores.Text = "Lista de Trabajadores";
             this.BtnListaDeTrabajadores.UseVisualStyleBackColor = false;
-            this.BtnListaDeTrabajadores.Click += new System.EventHandler(this.button1_Click);
+            this.BtnListaDeTrabajadores.Click += new System.EventHandler(this.BtnListaDeTrabajadores_Click);
             // 
             // BtnIncidencias
             // 
@@ -138,6 +137,7 @@
             this.BtnEventos.TabIndex = 3;
             this.BtnEventos.Text = "Eventos";
             this.BtnEventos.UseVisualStyleBackColor = false;
+            this.BtnEventos.Click += new System.EventHandler(this.BtnEventos_Click);
             // 
             // BtnAsistencia
             // 
@@ -177,10 +177,12 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(576, 59);
+            this.dateTimePicker1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(630, 59);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(261, 22);
+            this.dateTimePicker1.Size = new System.Drawing.Size(127, 22);
             this.dateTimePicker1.TabIndex = 2;
             // 
             // label2
@@ -226,7 +228,7 @@
         private System.Windows.Forms.Panel panel2;
         public System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button BtnCerrarSesion;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

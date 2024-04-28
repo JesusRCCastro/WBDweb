@@ -16,15 +16,9 @@ namespace RDGweb
         {
             InitializeComponent();
 
-            button7.Click += button7_Click;
+            BtnCerrarSesion.Click += BtnCerrarSesion_Click;
         }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button7_Click(object sender, EventArgs e)
+        private void BtnCerrarSesion_Click(object sender, EventArgs e)
         {
             // no le cambie el nombre pero es el de cerrar sesion xd
             DialogResult result = MessageBox.Show("¿Desea Cerrar Sesion?","Confirmar Cierre de Sesion", MessageBoxButtons.YesNo,MessageBoxIcon.Question);
@@ -48,28 +42,22 @@ namespace RDGweb
             this.Close();
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void BtnIDNiños_Click(object sender, EventArgs e)
         {
-            // Crear una instancia del formulario de incidencias
+            // Crear una instancia del formulario de los niños
             IDNiños formularioIDNiños = new IDNiños();
-            // Mostrar el formulario de incidencias
+            // Mostrar el formulario de los niños
             formularioIDNiños.Show();
             // Cerrar el formulario actual
             this.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //crea una instancia que muestre el formulario de lista de trabajadores
-            
-
-        }
 
         private void BtnAsistencia_Click(object sender, EventArgs e)
         {
-            // Crear una instancia del formulario de incidencias
+            // Crear una instancia del formulario de asistencia
             Asistencia FormAsistencia = new Asistencia();
-            // Mostrar el formulario de incidencias
+            // Mostrar el formulario de asistencia
             FormAsistencia.Show();
             // Cerrar el formulario actual
             this.Close();
@@ -77,10 +65,30 @@ namespace RDGweb
 
         private void BtnClientesPadres_Click(object sender, EventArgs e)
         {
-            // Crear una instancia del formulario de incidencias
+            // Crear una instancia del formulario de los clientes
             Clientes FormClientes = new Clientes();
-            // Mostrar el formulario de incidencias
+            // Mostrar el formulario de los clientes
             FormClientes.Show();
+            // Cerrar el formulario actual
+            this.Close();
+        }
+
+        private void BtnEventos_Click(object sender, EventArgs e)
+        {
+            // Crear una instancia del formulario de eventos
+            Eventos FormEventos = new Eventos();
+            // Mostrar el formulario de eventos
+            FormEventos.Show();
+            // Cerrar el formulario actual
+            this.Close();
+        }
+
+        private void BtnListaDeTrabajadores_Click(object sender, EventArgs e)
+        {
+            // Crear una instancia del formulario de lso trabajadores
+            Trabajadores FormTrabajadores = new Trabajadores();
+            // Mostrar el formulario de trabajadores
+            FormTrabajadores.Show();
             // Cerrar el formulario actual
             this.Close();
         }

@@ -144,7 +144,7 @@ namespace RDGweb
             int id = Convert.ToInt32(TbxIdNiño.Text);
 
             // Marcar falta en la tercera columna del DataGridView
-            DgvAsistencia.Rows[indiceFila].Cells[2].Value = "Falta";
+            DgvAsistencia.Rows[indiceFila].Cells[1].Value = "Falta";
 
             // Guardar en la base de datos la falta del niño
             string consulta = "UPDATE asistencia SET Ausente = 1 WHERE idNiño = @id";
