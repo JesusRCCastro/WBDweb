@@ -46,7 +46,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.BtnBackMenu = new System.Windows.Forms.Button();
             this.BtnAgregarCliente = new System.Windows.Forms.Button();
             this.BtnActualizarInfCliente = new System.Windows.Forms.Button();
             this.BtnEliminarCliente = new System.Windows.Forms.Button();
@@ -202,16 +201,6 @@
             this.label8.TabIndex = 15;
             this.label8.Text = "Correo electronico";
             // 
-            // BtnBackMenu
-            // 
-            this.BtnBackMenu.Location = new System.Drawing.Point(416, 382);
-            this.BtnBackMenu.Name = "BtnBackMenu";
-            this.BtnBackMenu.Size = new System.Drawing.Size(137, 27);
-            this.BtnBackMenu.TabIndex = 19;
-            this.BtnBackMenu.Text = "Regresar a menu";
-            this.BtnBackMenu.UseVisualStyleBackColor = true;
-            this.BtnBackMenu.Click += new System.EventHandler(this.BtnBackMenu_Click);
-            // 
             // BtnAgregarCliente
             // 
             this.BtnAgregarCliente.Location = new System.Drawing.Point(416, 156);
@@ -252,7 +241,6 @@
             this.Controls.Add(this.BtnEliminarCliente);
             this.Controls.Add(this.BtnActualizarInfCliente);
             this.Controls.Add(this.BtnAgregarCliente);
-            this.Controls.Add(this.BtnBackMenu);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -297,7 +285,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button BtnBackMenu;
         private System.Windows.Forms.Button BtnAgregarCliente;
         private System.Windows.Forms.Button BtnActualizarInfCliente;
         private System.Windows.Forms.Button BtnEliminarCliente;

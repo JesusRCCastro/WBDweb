@@ -175,15 +175,5 @@ namespace RDGweb
                 conexion.Close();
             }
         }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            // Crear una instancia del formulario MenuPrincipal
-            MenuPrincipal formularioMenuPrincipal = new MenuPrincipal();
-            // Mostrar el formulario MenuPrincipal
-            formularioMenuPrincipal.Show();
-            // Cerrar el formulario actual
-            this.Close();
-        }
     }
 }

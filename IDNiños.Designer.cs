@@ -39,7 +39,6 @@
             this.TextBoxNumContacto = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.BtnBackMenu = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.PicBoxFaceChild)).BeginInit();
@@ -126,23 +125,13 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.IndianRed;
-            this.button1.Location = new System.Drawing.Point(68, 268);
+            this.button1.Location = new System.Drawing.Point(281, 258);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(121, 28);
             this.button1.TabIndex = 17;
             this.button1.Text = "Dar de baja ";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // BtnBackMenu
-            // 
-            this.BtnBackMenu.Location = new System.Drawing.Point(491, 268);
-            this.BtnBackMenu.Name = "BtnBackMenu";
-            this.BtnBackMenu.Size = new System.Drawing.Size(137, 27);
-            this.BtnBackMenu.TabIndex = 18;
-            this.BtnBackMenu.Text = "Regresar a menu";
-            this.BtnBackMenu.UseVisualStyleBackColor = true;
-            this.BtnBackMenu.Click += new System.EventHandler(this.BtnBackMenu_Click_1);
             // 
             // label1
             // 
@@ -173,7 +162,6 @@
             this.ClientSize = new System.Drawing.Size(705, 364);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.BtnBackMenu);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.TextBoxNumContacto);
             this.Controls.Add(this.TextBoxFechaNac);
@@ -204,7 +192,6 @@
         private System.Windows.Forms.TextBox TextBoxNumContacto;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button BtnBackMenu;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
     }

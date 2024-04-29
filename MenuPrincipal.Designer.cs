@@ -40,6 +40,7 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.LblVersion = new System.Windows.Forms.Label();
+            this.panelCentral = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -170,14 +171,23 @@
             // LblVersion
             // 
             this.LblVersion.AutoSize = true;
-            this.LblVersion.BackColor = System.Drawing.Color.AliceBlue;
-            this.LblVersion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LblVersion.BackColor = System.Drawing.Color.White;
             this.LblVersion.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.LblVersion.Location = new System.Drawing.Point(888, 529);
+            this.LblVersion.ForeColor = System.Drawing.Color.Black;
+            this.LblVersion.Location = new System.Drawing.Point(870, 77);
             this.LblVersion.Name = "LblVersion";
-            this.LblVersion.Size = new System.Drawing.Size(75, 18);
+            this.LblVersion.Size = new System.Drawing.Size(93, 16);
             this.LblVersion.TabIndex = 3;
-            this.LblVersion.Text = "Versión 1.0";
+            this.LblVersion.Text = "Versión 1.0.0.9";
+            // 
+            // panelCentral
+            // 
+            this.panelCentral.BackColor = System.Drawing.Color.White;
+            this.panelCentral.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelCentral.Location = new System.Drawing.Point(203, 96);
+            this.panelCentral.Name = "panelCentral";
+            this.panelCentral.Size = new System.Drawing.Size(772, 458);
+            this.panelCentral.TabIndex = 4;
             // 
             // MenuPrincipal
             // 
@@ -187,6 +197,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(975, 554);
+            this.Controls.Add(this.panelCentral);
             this.Controls.Add(this.LblVersion);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label2);
@@ -214,5 +225,6 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button BtnCerrarSesion;
         private System.Windows.Forms.Label LblVersion;
+        private System.Windows.Forms.Panel panelCentral;
     }
 }

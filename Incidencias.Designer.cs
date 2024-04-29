@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Incidencias));
-            this.BtnBackMenu = new System.Windows.Forms.Button();
             this.ComBIDNiños = new System.Windows.Forms.ComboBox();
             this.PicBoxFaceChild = new System.Windows.Forms.PictureBox();
             this.LblUser = new System.Windows.Forms.Label();
@@ -41,16 +40,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.PicBoxFaceChild)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // BtnBackMenu
-            // 
-            this.BtnBackMenu.Location = new System.Drawing.Point(656, 411);
-            this.BtnBackMenu.Name = "BtnBackMenu";
-            this.BtnBackMenu.Size = new System.Drawing.Size(132, 27);
-            this.BtnBackMenu.TabIndex = 0;
-            this.BtnBackMenu.Text = "Regresar a menu";
-            this.BtnBackMenu.UseVisualStyleBackColor = true;
-            this.BtnBackMenu.Click += new System.EventHandler(this.BtnBackMenu_Click);
             // 
             // ComBIDNiños
             // 
@@ -136,7 +125,6 @@
             this.Controls.Add(this.TextBoxInf_Incidencias);
             this.Controls.Add(this.LblUser);
             this.Controls.Add(this.ComBIDNiños);
-            this.Controls.Add(this.BtnBackMenu);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Name = "Incidencias";
@@ -150,8 +138,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button BtnBackMenu;
         private System.Windows.Forms.ComboBox ComBIDNiños;
         private System.Windows.Forms.PictureBox PicBoxFaceChild;
         private System.Windows.Forms.Label LblUser;

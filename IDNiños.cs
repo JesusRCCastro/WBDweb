@@ -261,18 +261,6 @@ namespace RDGweb
             }
         }
 
-
-
-        private void BtnBackMenu_Click_1(object sender, EventArgs e)
-        {
-            // Crear una instancia del formulario MenuPrincipal
-            MenuPrincipal formularioMenuPrincipal = new MenuPrincipal();
-            // Mostrar el formulario MenuPrincipal
-            formularioMenuPrincipal.Show();
-            // Cerrar el formulario actual
-            this.Close();
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             if (ComBoxIDCliente.SelectedItem != null)

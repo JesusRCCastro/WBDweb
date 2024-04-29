@@ -50,17 +50,6 @@ namespace RDGweb
                 MessageBox.Show("Error al cargar los datos: " + ex.Message);
             }
         }
-
-        private void BtnVolverMenuEvento_Click(object sender, EventArgs e)
-        {
-            // Crear una instancia del formulario MenuPrincipal
-            MenuPrincipal formularioMenuPrincipal = new MenuPrincipal();
-            // Mostrar el formulario MenuPrincipal
-            formularioMenuPrincipal.Show();
-            // Cerrar el formulario actual
-            this.Close();
-        }
-
         private void BtnagregarEvento_Click(object sender, EventArgs e)
         {
             // Comprobar que los campos no estén vacíos

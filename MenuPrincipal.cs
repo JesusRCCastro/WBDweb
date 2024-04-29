@@ -15,8 +15,25 @@ namespace RDGweb
         public MenuPrincipal()
         {
             InitializeComponent();
-
+            MostrarFormulario(new FormInicio());
             BtnCerrarSesion.Click += BtnCerrarSesion_Click;
+        }
+        private void MostrarFormulario(Form formulario)
+        {
+            //limpar el panel
+            panelCentral.Controls.Clear();
+
+            //mostar el formulario en el panel central
+            formulario.TopLevel = false;
+            formulario.FormBorderStyle = FormBorderStyle.None;
+            //ajustar el tamaño
+            formulario.Size = panelCentral.ClientSize;
+            //establecer el form para que se ajuste al tamaño del panel
+            formulario.Dock = DockStyle.Fill;
+            //agrega el form al panel
+            panelCentral.Controls.Add(formulario);
+            //mostrar el form
+            formulario.Show();
         }
         private void BtnCerrarSesion_Click(object sender, EventArgs e)
         {
@@ -46,63 +63,33 @@ namespace RDGweb
 
         private void BtnIncidencias_Click(object sender, EventArgs e)
         {
-            // Crear una instancia del formulario de incidencias
-            Incidencias formularioIncidencias = new Incidencias();
-            // Mostrar el formulario de incidencias
-            formularioIncidencias.Show();
-            // Cerrar el formulario actual
-            this.Close();
+            MostrarFormulario(new Incidencias());
         }
 
         private void BtnIDNiños_Click(object sender, EventArgs e)
         {
-            // Crear una instancia del formulario de los niños
-            IDNiños formularioIDNiños = new IDNiños();
-            // Mostrar el formulario de los niños
-            formularioIDNiños.Show();
-            // Cerrar el formulario actual
-            this.Close();
+            MostrarFormulario(new IDNiños());
         }
 
 
         private void BtnAsistencia_Click(object sender, EventArgs e)
         {
-            // Crear una instancia del formulario de asistencia
-            Asistencia FormAsistencia = new Asistencia();
-            // Mostrar el formulario de asistencia
-            FormAsistencia.Show();
-            // Cerrar el formulario actual
-            this.Close();
+            MostrarFormulario(new Asistencia());
         }
 
         private void BtnClientesPadres_Click(object sender, EventArgs e)
         {
-            // Crear una instancia del formulario de los clientes
-            Clientes FormClientes = new Clientes();
-            // Mostrar el formulario de los clientes
-            FormClientes.Show();
-            // Cerrar el formulario actual
-            this.Close();
+            MostrarFormulario(new Clientes());
         }
 
         private void BtnEventos_Click(object sender, EventArgs e)
         {
-            // Crear una instancia del formulario de eventos
-            Eventos FormEventos = new Eventos();
-            // Mostrar el formulario de eventos
-            FormEventos.Show();
-            // Cerrar el formulario actual
-            this.Close();
+            MostrarFormulario(new Eventos());
         }
 
         private void BtnListaDeTrabajadores_Click(object sender, EventArgs e)
         {
-            // Crear una instancia del formulario de lso trabajadores
-            Trabajadores FormTrabajadores = new Trabajadores();
-            // Mostrar el formulario de trabajadores
-            FormTrabajadores.Show();
-            // Cerrar el formulario actual
-            this.Close();
+            MostrarFormulario(new Trabajadores());
         }
     }
 }

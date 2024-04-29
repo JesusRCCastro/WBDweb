@@ -33,7 +33,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.BtnBuscarNiño = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             this.BtnFalta = new System.Windows.Forms.Button();
             this.DgvAsistencia = new System.Windows.Forms.DataGridView();
             this.ColNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,7 +43,7 @@
             // 
             // TbxIdNiño
             // 
-            this.TbxIdNiño.Location = new System.Drawing.Point(213, 53);
+            this.TbxIdNiño.Location = new System.Drawing.Point(149, 51);
             this.TbxIdNiño.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TbxIdNiño.Multiline = true;
             this.TbxIdNiño.Name = "TbxIdNiño";
@@ -53,7 +52,7 @@
             // 
             // BtnTomarAsistencia
             // 
-            this.BtnTomarAsistencia.Location = new System.Drawing.Point(59, 198);
+            this.BtnTomarAsistencia.Location = new System.Drawing.Point(403, 113);
             this.BtnTomarAsistencia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnTomarAsistencia.Name = "BtnTomarAsistencia";
             this.BtnTomarAsistencia.Size = new System.Drawing.Size(160, 38);
@@ -67,7 +66,6 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.panel1.Controls.Add(this.BtnBuscarNiño);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.TbxIdNiño);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -78,7 +76,7 @@
             // 
             // BtnBuscarNiño
             // 
-            this.BtnBuscarNiño.Location = new System.Drawing.Point(379, 47);
+            this.BtnBuscarNiño.Location = new System.Drawing.Point(315, 45);
             this.BtnBuscarNiño.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnBuscarNiño.Name = "BtnBuscarNiño";
             this.BtnBuscarNiño.Size = new System.Drawing.Size(123, 34);
@@ -91,26 +89,15 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(191, 11);
+            this.label1.Location = new System.Drawing.Point(127, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(181, 22);
             this.label1.TabIndex = 5;
             this.label1.Text = "Ingrese el ID del Niño";
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(3, 2);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(125, 30);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Volver al menu";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // BtnFalta
             // 
-            this.BtnFalta.Location = new System.Drawing.Point(341, 198);
+            this.BtnFalta.Location = new System.Drawing.Point(403, 263);
             this.BtnFalta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnFalta.Name = "BtnFalta";
             this.BtnFalta.Size = new System.Drawing.Size(160, 38);
@@ -126,12 +113,13 @@
             this.DgvAsistencia.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColNombre,
             this.ColAsistencia});
-            this.DgvAsistencia.Location = new System.Drawing.Point(87, 104);
+            this.DgvAsistencia.Dock = System.Windows.Forms.DockStyle.Left;
+            this.DgvAsistencia.Location = new System.Drawing.Point(0, 100);
             this.DgvAsistencia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DgvAsistencia.Name = "DgvAsistencia";
             this.DgvAsistencia.RowHeadersWidth = 51;
             this.DgvAsistencia.RowTemplate.Height = 24;
-            this.DgvAsistencia.Size = new System.Drawing.Size(399, 76);
+            this.DgvAsistencia.Size = new System.Drawing.Size(402, 243);
             this.DgvAsistencia.TabIndex = 4;
             // 
             // ColNombre
@@ -153,7 +141,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(563, 257);
+            this.ClientSize = new System.Drawing.Size(563, 343);
             this.Controls.Add(this.DgvAsistencia);
             this.Controls.Add(this.BtnFalta);
             this.Controls.Add(this.panel1);
@@ -175,7 +163,6 @@
         private System.Windows.Forms.TextBox TbxIdNiño;
         private System.Windows.Forms.Button BtnTomarAsistencia;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button BtnFalta;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView DgvAsistencia;

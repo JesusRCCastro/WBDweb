@@ -35,7 +35,6 @@
             this.BtnagregarEvento = new System.Windows.Forms.Button();
             this.TbxEstablecerFecha = new System.Windows.Forms.TextBox();
             this.TbxNombreActividad = new System.Windows.Forms.TextBox();
-            this.BtnVolverMenuEvento = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.DgvEventos = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
@@ -106,17 +105,6 @@
             this.TbxNombreActividad.Size = new System.Drawing.Size(135, 22);
             this.TbxNombreActividad.TabIndex = 1;
             // 
-            // BtnVolverMenuEvento
-            // 
-            this.BtnVolverMenuEvento.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.BtnVolverMenuEvento.Location = new System.Drawing.Point(442, 450);
-            this.BtnVolverMenuEvento.Name = "BtnVolverMenuEvento";
-            this.BtnVolverMenuEvento.Size = new System.Drawing.Size(114, 23);
-            this.BtnVolverMenuEvento.TabIndex = 4;
-            this.BtnVolverMenuEvento.Text = "Volver a Menu";
-            this.BtnVolverMenuEvento.UseVisualStyleBackColor = true;
-            this.BtnVolverMenuEvento.Click += new System.EventHandler(this.BtnVolverMenuEvento_Click);
-            // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -160,7 +148,6 @@
             this.ClientSize = new System.Drawing.Size(661, 486);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.DgvEventos);
-            this.Controls.Add(this.BtnVolverMenuEvento);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Name = "Eventos";
@@ -176,7 +163,6 @@
 
         #endregion
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button BtnVolverMenuEvento;
         private System.Windows.Forms.Button BtnagregarEvento;
         private System.Windows.Forms.TextBox TbxEstablecerFecha;
         private System.Windows.Forms.TextBox TbxNombreActividad;

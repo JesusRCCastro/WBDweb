@@ -32,7 +32,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.CbxNombre = new System.Windows.Forms.ComboBox();
-            this.BtnVolvermenutrabajdores = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,9 +43,9 @@
             this.BtnAgregar = new System.Windows.Forms.Button();
             this.BtnEliminar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.BtnListaEmpleados = new System.Windows.Forms.Button();
             this.TbxNombreTrabajador = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.BtnListaEmpleados = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -92,18 +91,6 @@
             this.CbxNombre.Size = new System.Drawing.Size(159, 24);
             this.CbxNombre.TabIndex = 0;
             this.CbxNombre.SelectedIndexChanged += new System.EventHandler(this.CbxNombre_SelectedIndexChanged);
-            // 
-            // BtnVolvermenutrabajdores
-            // 
-            this.BtnVolvermenutrabajdores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.BtnVolvermenutrabajdores.Location = new System.Drawing.Point(360, 13);
-            this.BtnVolvermenutrabajdores.Margin = new System.Windows.Forms.Padding(4);
-            this.BtnVolvermenutrabajdores.Name = "BtnVolvermenutrabajdores";
-            this.BtnVolvermenutrabajdores.Size = new System.Drawing.Size(119, 25);
-            this.BtnVolvermenutrabajdores.TabIndex = 23;
-            this.BtnVolvermenutrabajdores.Text = "Volver al menu";
-            this.BtnVolvermenutrabajdores.UseVisualStyleBackColor = false;
-            this.BtnVolvermenutrabajdores.Click += new System.EventHandler(this.BtnVolvermenutrabajdores_Click);
             // 
             // label5
             // 
@@ -205,13 +192,22 @@
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Info;
             this.panel2.Controls.Add(this.BtnListaEmpleados);
-            this.panel2.Controls.Add(this.BtnVolvermenutrabajdores);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 311);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(490, 49);
             this.panel2.TabIndex = 23;
+            // 
+            // BtnListaEmpleados
+            // 
+            this.BtnListaEmpleados.Location = new System.Drawing.Point(29, 14);
+            this.BtnListaEmpleados.Name = "BtnListaEmpleados";
+            this.BtnListaEmpleados.Size = new System.Drawing.Size(147, 24);
+            this.BtnListaEmpleados.TabIndex = 24;
+            this.BtnListaEmpleados.Text = "Lista de empleados";
+            this.BtnListaEmpleados.UseVisualStyleBackColor = true;
+            this.BtnListaEmpleados.Click += new System.EventHandler(this.BtnListaEmpleados_Click);
             // 
             // TbxNombreTrabajador
             // 
@@ -230,16 +226,6 @@
             this.label7.Size = new System.Drawing.Size(56, 16);
             this.label7.TabIndex = 24;
             this.label7.Text = "Nombre";
-            // 
-            // BtnListaEmpleados
-            // 
-            this.BtnListaEmpleados.Location = new System.Drawing.Point(29, 14);
-            this.BtnListaEmpleados.Name = "BtnListaEmpleados";
-            this.BtnListaEmpleados.Size = new System.Drawing.Size(147, 24);
-            this.BtnListaEmpleados.TabIndex = 24;
-            this.BtnListaEmpleados.Text = "Lista de empleados";
-            this.BtnListaEmpleados.UseVisualStyleBackColor = true;
-            this.BtnListaEmpleados.Click += new System.EventHandler(this.BtnListaEmpleados_Click);
             // 
             // Trabajadores
             // 
@@ -292,7 +278,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox TbxNombreTrabajador;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button BtnVolvermenutrabajdores;
         private System.Windows.Forms.Button BtnListaEmpleados;
     }
 }
