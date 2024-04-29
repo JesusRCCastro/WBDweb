@@ -94,25 +94,31 @@ namespace RDGweb
         {
             try
             {
-                con.Open();
-                string query = "SELECT Nombre FROM `personal`";
-                MySqlCommand cmd = new MySqlCommand(query, con);
-                MySqlDataReader reader = cmd.ExecuteReader();
-                CbxNombre.Items.Clear();
-                while (reader.Read())
+                using (MySqlConnection con = new MySqlConnection("server=localhost;user=root;password=;database=guarderia;"))
                 {
-                    CbxNombre.Items.Add(reader["Nombre"].ToString());
+                    con.Open();
+                    string query = "SELECT Nombre FROM `personal`";
+                    // El comando también está dentro de un bloque 'using'.
+                    using (MySqlCommand cmd = new MySqlCommand(query, con))
+                    {
+                        // El lector de datos también se gestiona mediante 'using'.
+                        using (MySqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            CbxNombre.Items.Clear();
+                            while (reader.Read())
+                            {
+                                CbxNombre.Items.Add(reader["Nombre"].ToString());
+                            }
+                        }
+                    }
                 }
             }
             catch (MySqlException ex)
             {
                 MessageBox.Show("Error al cargar los trabajadores: " + ex.Message);
             }
-            finally
-            {
-                con.Close();
-            }
         }
+
 
         private void CbxNombre_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -173,9 +179,10 @@ namespace RDGweb
             this.Close();
         }
 
-        private void Trabajadores_Load(object sender, EventArgs e)
+        private void BtnListaEmpleados_Click(object sender, EventArgs e)
         {
-
+            PersonalTrabajo formularioPersonalTrabajo = new PersonalTrabajo();
+            formularioPersonalTrabajo.Show();
         }
     }
 }

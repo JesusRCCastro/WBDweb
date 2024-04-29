@@ -15,12 +15,42 @@ namespace RDGweb
 {
     public partial class Eventos : Form
     {
-       
+        MySqlConnection conexion;
+        MySqlCommand comando;
         public Eventos()
         {
             InitializeComponent();
-           
+            // Inicializar la conexión a la base de datos
+            string cadenaConexion = "server=localhost;user=root;password=;database=guarderia;";
+            conexion = new MySqlConnection(cadenaConexion);
+            LlenarGridConActividades();
+
         }
+        private void LlenarGridConActividades()
+        {
+            try
+            {
+                using (MySqlConnection conexion = new MySqlConnection("server=localhost;user=root;password=;database=guarderia;"))
+                {
+                    conexion.Open();
+                    string query = "SELECT * FROM actividades";
+                    using (MySqlCommand comando = new MySqlCommand(query, conexion))
+                    {
+                        using (MySqlDataAdapter adaptador = new MySqlDataAdapter(comando))
+                        {
+                            DataTable dt = new DataTable();
+                            adaptador.Fill(dt);
+                            DgvEventos.DataSource = dt;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar los datos: " + ex.Message);
+            }
+        }
+
         private void BtnVolverMenuEvento_Click(object sender, EventArgs e)
         {
             // Crear una instancia del formulario MenuPrincipal
@@ -30,9 +60,50 @@ namespace RDGweb
             // Cerrar el formulario actual
             this.Close();
         }
-        private void CbxSeleccionactividad_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
+        private void BtnagregarEvento_Click(object sender, EventArgs e)
+        {
+            // Comprobar que los campos no estén vacíos
+            if (string.IsNullOrWhiteSpace(TbxNombreActividad.Text) || string.IsNullOrWhiteSpace(TbxEstablecerFecha.Text))
+            {
+                MessageBox.Show("Por favor, rellene todos los campos.");
+            }
+            else
+            {
+                InsertarActividad(TbxNombreActividad.Text, TbxEstablecerFecha.Text);
+            }
+
+        }
+        private void InsertarActividad(string nombreActividad, string fechaActividad)
+        {
+            try
+            {
+                using (MySqlConnection conexion = new MySqlConnection("server=localhost;user=root;password=;database=guarderia;"))
+                {
+                    conexion.Open();
+                    string query = "INSERT INTO actividades (NombreAct, Horario) VALUES (@nombre, @fecha)";
+                    using (MySqlCommand comando = new MySqlCommand(query, conexion))
+                    {
+                        comando.Parameters.AddWithValue("@nombre", nombreActividad);
+                        comando.Parameters.AddWithValue("@fecha", fechaActividad);
+
+                        int resultado = comando.ExecuteNonQuery();
+                        if (resultado > 0)
+                        {
+                            MessageBox.Show("Datos guardados correctamente.");
+                            LlenarGridConActividades(); // Actualizar DataGridView si es necesario
+                        }
+                        else
+                        {
+                            MessageBox.Show("No se pudieron guardar los datos.");
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al guardar los datos: " + ex.Message);
+            }
         }
     }  
 }

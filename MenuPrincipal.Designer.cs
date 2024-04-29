@@ -31,26 +31,23 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal));
             this.panel1 = new System.Windows.Forms.Panel();
             this.BtnCerrarSesion = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BtnIDNiños = new System.Windows.Forms.Button();
             this.BtnListaDeTrabajadores = new System.Windows.Forms.Button();
             this.BtnIncidencias = new System.Windows.Forms.Button();
             this.BtnEventos = new System.Windows.Forms.Button();
             this.BtnAsistencia = new System.Windows.Forms.Button();
             this.BtnClientesPadres = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
+            this.LblVersion = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.Controls.Add(this.BtnCerrarSesion);
-            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.BtnIDNiños);
             this.panel1.Controls.Add(this.BtnListaDeTrabajadores);
             this.panel1.Controls.Add(this.BtnIncidencias);
@@ -76,25 +73,10 @@
             this.BtnCerrarSesion.UseVisualStyleBackColor = false;
             this.BtnCerrarSesion.Click += new System.EventHandler(this.BtnCerrarSesion_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox1.ErrorImage = null;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(203, 140);
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.UseWaitCursor = true;
-            // 
             // BtnIDNiños
             // 
             this.BtnIDNiños.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.BtnIDNiños.Location = new System.Drawing.Point(13, 157);
+            this.BtnIDNiños.Location = new System.Drawing.Point(13, 61);
             this.BtnIDNiños.Margin = new System.Windows.Forms.Padding(4);
             this.BtnIDNiños.Name = "BtnIDNiños";
             this.BtnIDNiños.Size = new System.Drawing.Size(173, 49);
@@ -106,7 +88,7 @@
             // BtnListaDeTrabajadores
             // 
             this.BtnListaDeTrabajadores.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.BtnListaDeTrabajadores.Location = new System.Drawing.Point(13, 448);
+            this.BtnListaDeTrabajadores.Location = new System.Drawing.Point(13, 436);
             this.BtnListaDeTrabajadores.Margin = new System.Windows.Forms.Padding(4);
             this.BtnListaDeTrabajadores.Name = "BtnListaDeTrabajadores";
             this.BtnListaDeTrabajadores.Size = new System.Drawing.Size(173, 49);
@@ -118,7 +100,7 @@
             // BtnIncidencias
             // 
             this.BtnIncidencias.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.BtnIncidencias.Location = new System.Drawing.Point(13, 391);
+            this.BtnIncidencias.Location = new System.Drawing.Point(13, 361);
             this.BtnIncidencias.Margin = new System.Windows.Forms.Padding(4);
             this.BtnIncidencias.Name = "BtnIncidencias";
             this.BtnIncidencias.Size = new System.Drawing.Size(173, 49);
@@ -130,7 +112,7 @@
             // BtnEventos
             // 
             this.BtnEventos.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.BtnEventos.Location = new System.Drawing.Point(13, 331);
+            this.BtnEventos.Location = new System.Drawing.Point(13, 286);
             this.BtnEventos.Margin = new System.Windows.Forms.Padding(4);
             this.BtnEventos.Name = "BtnEventos";
             this.BtnEventos.Size = new System.Drawing.Size(173, 49);
@@ -142,7 +124,7 @@
             // BtnAsistencia
             // 
             this.BtnAsistencia.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.BtnAsistencia.Location = new System.Drawing.Point(13, 272);
+            this.BtnAsistencia.Location = new System.Drawing.Point(11, 211);
             this.BtnAsistencia.Margin = new System.Windows.Forms.Padding(4);
             this.BtnAsistencia.Name = "BtnAsistencia";
             this.BtnAsistencia.Size = new System.Drawing.Size(173, 49);
@@ -154,7 +136,7 @@
             // BtnClientesPadres
             // 
             this.BtnClientesPadres.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.BtnClientesPadres.Location = new System.Drawing.Point(13, 214);
+            this.BtnClientesPadres.Location = new System.Drawing.Point(11, 135);
             this.BtnClientesPadres.Margin = new System.Windows.Forms.Padding(4);
             this.BtnClientesPadres.Name = "BtnClientesPadres";
             this.BtnClientesPadres.Size = new System.Drawing.Size(173, 49);
@@ -163,24 +145,12 @@
             this.BtnClientesPadres.UseVisualStyleBackColor = false;
             this.BtnClientesPadres.Click += new System.EventHandler(this.BtnClientesPadres_Click);
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel2.Controls.Add(this.dateTimePicker1);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(203, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(864, 140);
-            this.panel2.TabIndex = 1;
-            // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(649, 44);
+            this.dateTimePicker1.Location = new System.Drawing.Point(759, 30);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(169, 34);
@@ -190,30 +160,44 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(62, 44);
+            this.label2.Location = new System.Drawing.Point(241, 30);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(463, 52);
             this.label2.TabIndex = 0;
             this.label2.Text = "Bienvenido a RDGweb";
             // 
+            // LblVersion
+            // 
+            this.LblVersion.AutoSize = true;
+            this.LblVersion.BackColor = System.Drawing.Color.AliceBlue;
+            this.LblVersion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LblVersion.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.LblVersion.Location = new System.Drawing.Point(888, 529);
+            this.LblVersion.Name = "LblVersion";
+            this.LblVersion.Size = new System.Drawing.Size(75, 18);
+            this.LblVersion.TabIndex = 3;
+            this.LblVersion.Text = "Versión 1.0";
+            // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(1067, 554);
-            this.Controls.Add(this.panel2);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(975, 554);
+            this.Controls.Add(this.LblVersion);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MenuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MenuPrincipal";
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -226,10 +210,9 @@
         private System.Windows.Forms.Button BtnAsistencia;
         private System.Windows.Forms.Button BtnClientesPadres;
         private System.Windows.Forms.Button BtnListaDeTrabajadores;
-        private System.Windows.Forms.Panel panel2;
         public System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button BtnCerrarSesion;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label LblVersion;
     }
 }

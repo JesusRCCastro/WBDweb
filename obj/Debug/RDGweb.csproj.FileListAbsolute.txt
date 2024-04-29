@@ -205,3 +205,5 @@ C:\Users\Aram\Source\Repos\JesusRCCastro\WBDweb\obj\Debug\RDGweb.csproj.CoreComp
 C:\Users\Aram\Source\Repos\JesusRCCastro\WBDweb\obj\Debug\RDGweb.csproj.Up2Date
 C:\Users\Aram\Source\Repos\JesusRCCastro\WBDweb\obj\Debug\RDGweb.exe
 C:\Users\Aram\Source\Repos\JesusRCCastro\WBDweb\obj\Debug\RDGweb.pdb
+C:\Users\angel\Source\Repos\JesusRCCastro\WBDweb\obj\Debug\RDGweb.Eventos.resources
+C:\Users\angel\Source\Repos\JesusRCCastro\WBDweb\obj\Debug\RDGweb.Trabajadores.resources
