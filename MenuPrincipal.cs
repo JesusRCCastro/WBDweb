@@ -26,9 +26,21 @@ namespace RDGweb
             if (result == DialogResult.Yes)
             {
                 //cerrar sesion y regresar al formulario del loggin
-                Form FormLogin =new FormLogin();
-                FormLogin.Show();
-                this.Close();
+                // Verificar si ya hay una instancia del formulario de inicio de sesión
+                FormLogin formLogin = Application.OpenForms.OfType<FormLogin>().FirstOrDefault();
+                if (formLogin != null)
+                {
+                    // Si ya hay una instancia, mostrarla y cerrar el formulario actual
+                    formLogin.Show();
+                    this.Close();
+                }
+                else
+                {
+                    // Si no hay una instancia, crear una nueva instancia y mostrarla
+                    formLogin = new FormLogin();
+                    formLogin.Show();
+                    this.Close();
+                }
             }
         }
 
