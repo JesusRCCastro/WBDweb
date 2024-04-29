@@ -72,5 +72,12 @@ namespace RDGweb
             }
             
         }
+
+        private void BtnRegresarlogin_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormLogin Login = new FormLogin();
+            Login.Show();
+        }
     }
 }

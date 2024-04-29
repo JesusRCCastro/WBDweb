@@ -33,6 +33,7 @@
             this.TbxRegistroUser = new System.Windows.Forms.TextBox();
             this.TbxRegistroPassword = new System.Windows.Forms.TextBox();
             this.BtnGuardarDatos = new System.Windows.Forms.Button();
+            this.BtnRegresarlogin = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -69,13 +70,29 @@
             // 
             // BtnGuardarDatos
             // 
-            this.BtnGuardarDatos.Location = new System.Drawing.Point(128, 264);
+            this.BtnGuardarDatos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.BtnGuardarDatos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnGuardarDatos.ForeColor = System.Drawing.Color.Green;
+            this.BtnGuardarDatos.Location = new System.Drawing.Point(128, 238);
             this.BtnGuardarDatos.Name = "BtnGuardarDatos";
             this.BtnGuardarDatos.Size = new System.Drawing.Size(124, 32);
             this.BtnGuardarDatos.TabIndex = 4;
             this.BtnGuardarDatos.Text = "Guardar";
-            this.BtnGuardarDatos.UseVisualStyleBackColor = true;
+            this.BtnGuardarDatos.UseVisualStyleBackColor = false;
             this.BtnGuardarDatos.Click += new System.EventHandler(this.BtnGuardarDatos_Click);
+            // 
+            // BtnRegresarlogin
+            // 
+            this.BtnRegresarlogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.BtnRegresarlogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnRegresarlogin.ForeColor = System.Drawing.Color.Red;
+            this.BtnRegresarlogin.Location = new System.Drawing.Point(128, 307);
+            this.BtnRegresarlogin.Name = "BtnRegresarlogin";
+            this.BtnRegresarlogin.Size = new System.Drawing.Size(124, 32);
+            this.BtnRegresarlogin.TabIndex = 5;
+            this.BtnRegresarlogin.Text = "Regresar";
+            this.BtnRegresarlogin.UseVisualStyleBackColor = false;
+            this.BtnRegresarlogin.Click += new System.EventHandler(this.BtnRegresarlogin_Click);
             // 
             // FormRegistro
             // 
@@ -83,6 +100,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(383, 351);
+            this.Controls.Add(this.BtnRegresarlogin);
             this.Controls.Add(this.BtnGuardarDatos);
             this.Controls.Add(this.TbxRegistroPassword);
             this.Controls.Add(this.TbxRegistroUser);
@@ -103,5 +121,6 @@
         private System.Windows.Forms.TextBox TbxRegistroUser;
         private System.Windows.Forms.TextBox TbxRegistroPassword;
         private System.Windows.Forms.Button BtnGuardarDatos;
+        private System.Windows.Forms.Button BtnRegresarlogin;
     }
 }

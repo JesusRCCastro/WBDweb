@@ -98,6 +98,7 @@
             // 
             // BtnInicioSesion
             // 
+            this.BtnInicioSesion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnInicioSesion.Location = new System.Drawing.Point(135, 316);
             this.BtnInicioSesion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnInicioSesion.Name = "BtnInicioSesion";
@@ -150,6 +151,7 @@
             // 
             // BtnPruebaMenu
             // 
+            this.BtnPruebaMenu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnPruebaMenu.Location = new System.Drawing.Point(90, 377);
             this.BtnPruebaMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnPruebaMenu.Name = "BtnPruebaMenu";
@@ -165,12 +167,12 @@
             this.label3.BackColor = System.Drawing.SystemColors.Window;
             this.label3.Font = new System.Drawing.Font("Bernard MT Condensed", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Image = ((System.Drawing.Image)(resources.GetObject("label3.Image")));
-            this.label3.Location = new System.Drawing.Point(26, 67);
+            this.label3.Location = new System.Drawing.Point(78, 54);
             this.label3.Margin = new System.Windows.Forms.Padding(0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(335, 72);
+            this.label3.Size = new System.Drawing.Size(227, 72);
             this.label3.TabIndex = 13;
-            this.label3.Text = "Guarderia :3";
+            this.label3.Text = "RDGweb";
             // 
             // FormLogin
             // 
