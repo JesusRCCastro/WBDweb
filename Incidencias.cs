@@ -96,7 +96,7 @@ namespace RDGweb
         private void LoadFechaIncidencia(int idIncidencia)
         {
             string connectionString = "server=localhost;user=root;password=;database=guarderia;";
-            string query = "SELECT `Fecha Incidencia` FROM incidencias WHERE idIncidencia = @idIncidencia;";
+            string query = "SELECT `FechaIncidencia` FROM incidencias WHERE idIncidencia = @idIncidencia;";
 
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
@@ -109,7 +109,7 @@ namespace RDGweb
                     MySqlDataReader reader = cmd.ExecuteReader();
                     if (reader.Read())
                     {
-                        TexBoxFechaIncidencias.Text = reader["Fecha Incidencia"].ToString();
+                        TexBoxFechaIncidencias.Text = reader["FechaIncidencia"].ToString();
                     }
                     else
                     {

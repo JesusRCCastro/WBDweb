@@ -29,7 +29,6 @@ namespace RDGweb
                 GeneroCliente(selectedIdCliente);
                 FechaNacCliente(selectedIdCliente);
                 NumCliente(selectedIdCliente);
-                Cliente_idCliente(selectedIdCliente); 
             }
         }
 
@@ -169,7 +168,7 @@ namespace RDGweb
         private void FechaNacCliente(int idNiño)
         {
             string connectionString = "server=localhost;user=root;password=;database=guarderia;";
-            string query = "SELECT `Fecha de Nacimiento` FROM niños WHERE idNiño = @idNiño;";
+            string query = "SELECT `FechaNacimiento` FROM niños WHERE idNiño = @idNiño;";
 
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
@@ -183,7 +182,7 @@ namespace RDGweb
                     {
                         if (reader.Read())
                         {
-                            TextBoxFechaNac.Text = reader["Fecha de Nacimiento"].ToString();
+                            TextBoxFechaNac.Text = reader["FechaNacimiento"].ToString();
                         }
                         else
                         {
@@ -230,40 +229,6 @@ namespace RDGweb
             }
 
         }
-
-        private void Cliente_idCliente(int idNiño)
-        {
-            string connectionString = "server=localhost;user=root;password=;database=guarderia;";
-            string query = "SELECT Cliente_idCliente FROM niños WHERE idNiño = @idNiño;";
-
-            using (MySqlConnection conn = new MySqlConnection(connectionString))
-            {
-                try
-                {
-                    conn.Open();
-                    MySqlCommand cmd = new MySqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@idNiño", idNiño);
-
-                    MySqlDataReader reader = cmd.ExecuteReader();
-                    if (reader.Read())
-                    {
-                        TextBoxCliente_idCliente.Text = reader["Cliente_idCliente"].ToString();
-                    }
-                    else
-                    {
-                        TextBoxCliente_idCliente.Text = "No se encontró numero.";
-                    }
-
-                    reader.Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error al cargar el numero: " + ex.Message);
-                }
-            }
-
-        }
-
         private void DarDeBaja(int idNiño)
         {
             string connectionString = "server=localhost;user=root;password=;database=guarderia;";

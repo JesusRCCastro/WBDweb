@@ -22,7 +22,7 @@ namespace RDGweb
         {
             string connectionString = "server=localhost;user=root;database=guarderia;port=3306;password=";
             string queryCliente = "INSERT INTO cliente (Nombre, Edad, Dirección, Telefono, NSS, Oficio, Correo) VALUES (@Nombre, @Edad, @Dirección, @Telefono, @NSS, @Oficio, @Correo)";
-            string queryNiños = "INSERT INTO niños (Nombre, `Fecha de Nacimiento`, NumContacto, Edad, Actividad_idActividades) VALUES (@NombreNiño, @FechaNacimiento, @NumContacto, @EdadNiño, @ActividadId)";
+            string queryNiños = "INSERT INTO niños (Nombre, `FechaNacimiento`, NumContacto, Edad, Genero) VALUES (@NombreNiño, @FechaNacimiento, @NumContacto, @EdadNiño, @GeneroNiño)";
 
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
@@ -51,7 +51,7 @@ namespace RDGweb
                         cmd.Parameters.AddWithValue("@FechaNacimiento", TextBoxNuevaFechaNiño.Text);
                         cmd.Parameters.AddWithValue("@NumContacto", TextBoxNuevoNumeroContacto.Text);
                         cmd.Parameters.AddWithValue("@EdadNiño", TextBoxNuevaEdadNiño.Text);
-                        cmd.Parameters.AddWithValue("@ActividadId", TextBoxActividad.Text);
+                        cmd.Parameters.AddWithValue("@GeneroNiño", TextBoxActividad.Text);
 
                         cmd.ExecuteNonQuery();
                     }

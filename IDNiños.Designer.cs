@@ -37,7 +37,6 @@
             this.TextBoxGenero = new System.Windows.Forms.TextBox();
             this.PicBoxFaceChild = new System.Windows.Forms.PictureBox();
             this.TextBoxNumContacto = new System.Windows.Forms.TextBox();
-            this.TextBoxCliente_idCliente = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.BtnBackMenu = new System.Windows.Forms.Button();
@@ -82,7 +81,7 @@
             // 
             // TextBoxEdad
             // 
-            this.TextBoxEdad.Location = new System.Drawing.Point(268, 93);
+            this.TextBoxEdad.Location = new System.Drawing.Point(268, 113);
             this.TextBoxEdad.Multiline = true;
             this.TextBoxEdad.Name = "TextBoxEdad";
             this.TextBoxEdad.Size = new System.Drawing.Size(131, 24);
@@ -90,7 +89,7 @@
             // 
             // TextBoxGenero
             // 
-            this.TextBoxGenero.Location = new System.Drawing.Point(268, 50);
+            this.TextBoxGenero.Location = new System.Drawing.Point(268, 70);
             this.TextBoxGenero.Multiline = true;
             this.TextBoxGenero.Name = "TextBoxGenero";
             this.TextBoxGenero.Size = new System.Drawing.Size(131, 24);
@@ -112,14 +111,6 @@
             this.TextBoxNumContacto.Name = "TextBoxNumContacto";
             this.TextBoxNumContacto.Size = new System.Drawing.Size(233, 24);
             this.TextBoxNumContacto.TabIndex = 14;
-            // 
-            // TextBoxCliente_idCliente
-            // 
-            this.TextBoxCliente_idCliente.Location = new System.Drawing.Point(336, 228);
-            this.TextBoxCliente_idCliente.Multiline = true;
-            this.TextBoxCliente_idCliente.Name = "TextBoxCliente_idCliente";
-            this.TextBoxCliente_idCliente.Size = new System.Drawing.Size(131, 24);
-            this.TextBoxCliente_idCliente.TabIndex = 15;
             // 
             // panel1
             // 
@@ -184,7 +175,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BtnBackMenu);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.TextBoxCliente_idCliente);
             this.Controls.Add(this.TextBoxNumContacto);
             this.Controls.Add(this.TextBoxFechaNac);
             this.Controls.Add(this.TextBoxNombreNiño);
@@ -212,7 +202,6 @@
         private System.Windows.Forms.TextBox TextBoxGenero;
         private System.Windows.Forms.PictureBox PicBoxFaceChild;
         private System.Windows.Forms.TextBox TextBoxNumContacto;
-        private System.Windows.Forms.TextBox TextBoxCliente_idCliente;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button BtnBackMenu;

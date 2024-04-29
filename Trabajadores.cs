@@ -34,7 +34,7 @@ namespace RDGweb
                 try
                 {
                     con.Open();
-                    string query = "INSERT INTO `personal de la guarderia` (Nombre, Roles, Correo, telefono) VALUES (@nombre, @roles, @correo, @telefono)";
+                    string query = "INSERT INTO `personal` (Nombre, Roles, Correo, telefono) VALUES (@nombre, @roles, @correo, @telefono)";
                     MySqlCommand cmd = new MySqlCommand(query, con);
                     cmd.Parameters.AddWithValue("@nombre", Nombre);
                     cmd.Parameters.AddWithValue("@roles", Roles);
@@ -67,7 +67,7 @@ namespace RDGweb
                 try
                 {
                     con.Open();
-                    string query = "DELETE FROM `personal de la guarderia` WHERE Nombre = @nombre";
+                    string query = "DELETE FROM `personal` WHERE Nombre = @nombre";
                     MySqlCommand cmd = new MySqlCommand(query, con);
                     cmd.Parameters.AddWithValue("@nombre", nombreABuscar);
                     cmd.ExecuteNonQuery();
@@ -95,7 +95,7 @@ namespace RDGweb
             try
             {
                 con.Open();
-                string query = "SELECT Nombre FROM `personal de la guarderia`";
+                string query = "SELECT Nombre FROM `personal`";
                 MySqlCommand cmd = new MySqlCommand(query, con);
                 MySqlDataReader reader = cmd.ExecuteReader();
                 CbxNombre.Items.Clear();
@@ -122,7 +122,7 @@ namespace RDGweb
                 try
                 {
                     con.Open();
-                    string query = "SELECT * FROM `personal de la guarderia` WHERE Nombre = @nombre";
+                    string query = "SELECT * FROM `personal` WHERE Nombre = @nombre";
                     MySqlCommand cmd = new MySqlCommand(query, con);
                     cmd.Parameters.AddWithValue("@nombre", nombreABuscar);
                     MySqlDataReader reader = cmd.ExecuteReader();
