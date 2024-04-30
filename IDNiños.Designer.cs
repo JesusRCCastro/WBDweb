@@ -48,6 +48,7 @@
             // LblUser
             // 
             this.LblUser.AutoSize = true;
+            this.LblUser.BackColor = System.Drawing.Color.Transparent;
             this.LblUser.Location = new System.Drawing.Point(84, 113);
             this.LblUser.Name = "LblUser";
             this.LblUser.Size = new System.Drawing.Size(89, 16);

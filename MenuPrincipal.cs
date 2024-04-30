@@ -12,12 +12,14 @@ namespace RDGweb
 {
     public partial class MenuPrincipal : Form
     {
-        public MenuPrincipal()
+        public MenuPrincipal(string usuario)
         {
             InitializeComponent();
             MostrarFormulario(new FormInicio());
             BtnCerrarSesion.Click += BtnCerrarSesion_Click;
+            lblUsername.Text = usuario;
         }
+
         private void MostrarFormulario(Form formulario)
         {
             //limpar el panel
@@ -91,5 +93,6 @@ namespace RDGweb
         {
             MostrarFormulario(new Trabajadores());
         }
+
     }
 }

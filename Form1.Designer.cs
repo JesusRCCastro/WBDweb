@@ -79,6 +79,7 @@
             // LblUser
             // 
             this.LblUser.AutoSize = true;
+            this.LblUser.BackColor = System.Drawing.Color.Transparent;
             this.LblUser.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblUser.Location = new System.Drawing.Point(97, 188);
             this.LblUser.Name = "LblUser";
@@ -89,6 +90,7 @@
             // LblPassword
             // 
             this.LblPassword.AutoSize = true;
+            this.LblPassword.BackColor = System.Drawing.Color.Transparent;
             this.LblPassword.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblPassword.Location = new System.Drawing.Point(97, 247);
             this.LblPassword.Name = "LblPassword";
@@ -130,8 +132,10 @@
             // 
             // LklRegistro
             // 
+            this.LklRegistro.ActiveLinkColor = System.Drawing.Color.Maroon;
             this.LklRegistro.AutoSize = true;
-            this.LklRegistro.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.LklRegistro.BackColor = System.Drawing.Color.Transparent;
+            this.LklRegistro.LinkColor = System.Drawing.Color.White;
             this.LklRegistro.Location = new System.Drawing.Point(145, 443);
             this.LklRegistro.Name = "LklRegistro";
             this.LklRegistro.Size = new System.Drawing.Size(81, 16);
@@ -143,6 +147,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Location = new System.Drawing.Point(117, 420);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(142, 16);

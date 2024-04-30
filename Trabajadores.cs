@@ -14,7 +14,7 @@ namespace RDGweb
     public partial class Trabajadores : Form
     {
         private MySqlConnection con;
-        private string connectionString = "server=localhost;Database=Guarderia;Uid=root;Password=";
+        private string connectionString = "server=localhost;Database=guarderia;Uid=root;Password=";
         public Trabajadores()
         {
             InitializeComponent();
@@ -31,6 +31,19 @@ namespace RDGweb
 
             if(!string.IsNullOrWhiteSpace(Nombre) && !string.IsNullOrWhiteSpace(Roles) && !string.IsNullOrWhiteSpace(Correo) && !string.IsNullOrWhiteSpace(Telefono))
             {
+                // Validar el número de teléfono
+                if (!EsTelefonoValido(Telefono))
+                {
+                    MessageBox.Show("Por favor, ingresa un número de teléfono válido (10 dígitos).", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                // Validar el correo electrónico
+                if (!EsCorreoValido(Correo))
+                {
+                    MessageBox.Show("Por favor, ingresa un correo electrónico válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
                 try
                 {
                     con.Open();
@@ -56,6 +69,30 @@ namespace RDGweb
             else
             {
                 MessageBox.Show("Por favor, completa todos los campos.");
+            }
+        }
+
+        // Función para validar el número de teléfono
+        private bool EsTelefonoValido(string telefono)
+        {
+            if (telefono.Length == 10 && telefono.All(char.IsDigit))
+            {
+                return true;
+            }
+            return false;
+        }
+
+        // Función para validar el correo electrónico
+        private bool EsCorreoValido(string correo)
+        {
+            try
+            {
+                var addr = new System.Net.Mail.MailAddress(correo);
+                return addr.Address == correo;
+            }
+            catch
+            {
+                return false;
             }
         }
 

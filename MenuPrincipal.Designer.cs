@@ -39,8 +39,9 @@
             this.BtnClientesPadres = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
-            this.LblVersion = new System.Windows.Forms.Label();
             this.panelCentral = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblUsername = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,7 +78,7 @@
             // BtnIDNiños
             // 
             this.BtnIDNiños.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.BtnIDNiños.Location = new System.Drawing.Point(13, 61);
+            this.BtnIDNiños.Location = new System.Drawing.Point(11, 74);
             this.BtnIDNiños.Margin = new System.Windows.Forms.Padding(4);
             this.BtnIDNiños.Name = "BtnIDNiños";
             this.BtnIDNiños.Size = new System.Drawing.Size(173, 49);
@@ -89,7 +90,7 @@
             // BtnListaDeTrabajadores
             // 
             this.BtnListaDeTrabajadores.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.BtnListaDeTrabajadores.Location = new System.Drawing.Point(13, 436);
+            this.BtnListaDeTrabajadores.Location = new System.Drawing.Point(11, 449);
             this.BtnListaDeTrabajadores.Margin = new System.Windows.Forms.Padding(4);
             this.BtnListaDeTrabajadores.Name = "BtnListaDeTrabajadores";
             this.BtnListaDeTrabajadores.Size = new System.Drawing.Size(173, 49);
@@ -101,7 +102,7 @@
             // BtnIncidencias
             // 
             this.BtnIncidencias.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.BtnIncidencias.Location = new System.Drawing.Point(13, 361);
+            this.BtnIncidencias.Location = new System.Drawing.Point(11, 374);
             this.BtnIncidencias.Margin = new System.Windows.Forms.Padding(4);
             this.BtnIncidencias.Name = "BtnIncidencias";
             this.BtnIncidencias.Size = new System.Drawing.Size(173, 49);
@@ -113,7 +114,7 @@
             // BtnEventos
             // 
             this.BtnEventos.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.BtnEventos.Location = new System.Drawing.Point(13, 286);
+            this.BtnEventos.Location = new System.Drawing.Point(11, 299);
             this.BtnEventos.Margin = new System.Windows.Forms.Padding(4);
             this.BtnEventos.Name = "BtnEventos";
             this.BtnEventos.Size = new System.Drawing.Size(173, 49);
@@ -125,7 +126,7 @@
             // BtnAsistencia
             // 
             this.BtnAsistencia.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.BtnAsistencia.Location = new System.Drawing.Point(11, 211);
+            this.BtnAsistencia.Location = new System.Drawing.Point(9, 224);
             this.BtnAsistencia.Margin = new System.Windows.Forms.Padding(4);
             this.BtnAsistencia.Name = "BtnAsistencia";
             this.BtnAsistencia.Size = new System.Drawing.Size(173, 49);
@@ -137,7 +138,7 @@
             // BtnClientesPadres
             // 
             this.BtnClientesPadres.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.BtnClientesPadres.Location = new System.Drawing.Point(11, 135);
+            this.BtnClientesPadres.Location = new System.Drawing.Point(9, 148);
             this.BtnClientesPadres.Margin = new System.Windows.Forms.Padding(4);
             this.BtnClientesPadres.Name = "BtnClientesPadres";
             this.BtnClientesPadres.Size = new System.Drawing.Size(173, 49);
@@ -160,25 +161,14 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(241, 30);
+            this.label2.Location = new System.Drawing.Point(211, 12);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(463, 52);
             this.label2.TabIndex = 0;
             this.label2.Text = "Bienvenido a RDGweb";
-            // 
-            // LblVersion
-            // 
-            this.LblVersion.AutoSize = true;
-            this.LblVersion.BackColor = System.Drawing.Color.White;
-            this.LblVersion.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.LblVersion.ForeColor = System.Drawing.Color.Black;
-            this.LblVersion.Location = new System.Drawing.Point(870, 77);
-            this.LblVersion.Name = "LblVersion";
-            this.LblVersion.Size = new System.Drawing.Size(93, 16);
-            this.LblVersion.TabIndex = 3;
-            this.LblVersion.Text = "Versión 1.0.0.9";
             // 
             // panelCentral
             // 
@@ -189,6 +179,26 @@
             this.panelCentral.Size = new System.Drawing.Size(772, 458);
             this.panelCentral.TabIndex = 4;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Location = new System.Drawing.Point(851, 74);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(93, 16);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Version 1.0.0.9";
+            // 
+            // lblUsername
+            // 
+            this.lblUsername.AutoSize = true;
+            this.lblUsername.BackColor = System.Drawing.Color.Transparent;
+            this.lblUsername.Location = new System.Drawing.Point(217, 74);
+            this.lblUsername.Name = "lblUsername";
+            this.lblUsername.Size = new System.Drawing.Size(44, 16);
+            this.lblUsername.TabIndex = 0;
+            this.lblUsername.Text = "label1";
+            // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -197,8 +207,9 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(975, 554);
+            this.Controls.Add(this.lblUsername);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.panelCentral);
-            this.Controls.Add(this.LblVersion);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
@@ -224,7 +235,8 @@
         public System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button BtnCerrarSesion;
-        private System.Windows.Forms.Label LblVersion;
         private System.Windows.Forms.Panel panelCentral;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblUsername;
     }
 }

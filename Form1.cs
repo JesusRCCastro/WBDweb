@@ -89,7 +89,7 @@ namespace RDGweb
             if (read.Read())
             {
                 this.Hide();
-                MenuPrincipal menuPrincipal = new MenuPrincipal();
+                MenuPrincipal menuPrincipal = new MenuPrincipal(nombreUsuario);
                 menuPrincipal.Show();
             }
             else
@@ -113,8 +113,9 @@ namespace RDGweb
 
         private void BtnPruebaMenu_Click(object sender, EventArgs e)
         {
+            string usuario = TbxUser.Text;
             // Crear una instancia del formulario MenuPrincipal
-            MenuPrincipal formularioMenuPrincipal = new MenuPrincipal();
+            MenuPrincipal formularioMenuPrincipal = new MenuPrincipal(usuario);
             // Mostrar el formulario MenuPrincipal
             formularioMenuPrincipal.Show();
         }
