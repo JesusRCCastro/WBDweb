@@ -13,6 +13,7 @@ namespace RDGweb
 {
     public partial class Trabajadores : Form
     {
+        private bool listaEmpleadosAbierto = false; // Variable para rastrear si el formulario de lista de empleados está abierto
         private MySqlConnection con;
         private string connectionString = "server=localhost;Database=guarderia;Uid=root;Password=";
 
@@ -55,7 +56,7 @@ namespace RDGweb
                 try
                 {
                     con.Open();
-                    string query = "INSERT INTO `personal` (Nombre, Roles, Correo, telefono) VALUES (@nombre, @roles, @correo, @telefono)";
+                    string query = "INSERT INTO `personal` (Nombre, rol_id, Correo, telefono) VALUES (@nombre, @roles, @correo, @telefono)";
                     MySqlCommand cmd = new MySqlCommand(query, con);
                     cmd.Parameters.AddWithValue("@nombre", Nombre);
                     cmd.Parameters.AddWithValue("@roles", rolSeleccionado.Id); // Nuevo: Insertar el ID del rol
@@ -195,9 +196,10 @@ namespace RDGweb
 
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
-            string nombreABuscar = CbxNombre.SelectedItem.ToString();
-            if (!string.IsNullOrWhiteSpace(nombreABuscar))
+            
+            if (CbxNombre.SelectedItem !=null)
             {
+                string nombreABuscar = CbxNombre.SelectedItem.ToString();
                 try
                 {
                     con.Open();
@@ -233,25 +235,36 @@ namespace RDGweb
 
         private void BtnListaEmpleados_Click(object sender, EventArgs e)
         {
-            PersonalTrabajo formularioPersonalTrabajo = new PersonalTrabajo();
-            formularioPersonalTrabajo.Show();
+            // Verificar si el formulario de lista de empleados ya está abierto
+            if (!listaEmpleadosAbierto)
+            {
+                // Si no está abierto, crear una nueva instancia y mostrar el formulario
+                PersonalTrabajo formularioPersonalTrabajo = new PersonalTrabajo();
+                formularioPersonalTrabajo.Show();
+
+                // Establecer la variable a true para indicar que el formulario está abierto
+                listaEmpleadosAbierto = true;
+
+                // Suscribirse al evento FormClosed del formulario de lista de empleados
+                formularioPersonalTrabajo.FormClosed += (s, args) => listaEmpleadosAbierto = false;
+            }
         }
-    }
 
-    public class RolItem
-    {
-        public int Id { get; set; }
-        public string Nombre { get; set; }
-
-        public RolItem(int id, string nombre)
+        public class RolItem
         {
-            Id = id;
-            Nombre = nombre;
-        }
+            public int Id { get; set; }
+            public string Nombre { get; set; }
 
-        public override string ToString()
-        {
-            return Nombre;
+            public RolItem(int id, string nombre)
+            {
+                Id = id;
+                Nombre = nombre;
+            }
+
+            public override string ToString()
+            {
+                return Nombre;
+            }
         }
     }
 }

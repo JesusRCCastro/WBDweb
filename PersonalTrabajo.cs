@@ -17,6 +17,7 @@ namespace RDGweb
         {
             InitializeComponent();
             LlenarGridConActividades();
+            DgvTrabajadores.ReadOnly = true;
         }
 
         private void LlenarGridConActividades()
