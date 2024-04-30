@@ -60,7 +60,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(203, 554);
+            this.panel1.Size = new System.Drawing.Size(203, 570);
             this.panel1.TabIndex = 0;
             // 
             // BtnCerrarSesion
@@ -152,7 +152,7 @@
             this.dateTimePicker1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(759, 30);
+            this.dateTimePicker1.Location = new System.Drawing.Point(832, 26);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(169, 34);
@@ -174,16 +174,16 @@
             // 
             this.panelCentral.BackColor = System.Drawing.Color.White;
             this.panelCentral.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelCentral.Location = new System.Drawing.Point(203, 96);
+            this.panelCentral.Location = new System.Drawing.Point(203, 112);
             this.panelCentral.Name = "panelCentral";
-            this.panelCentral.Size = new System.Drawing.Size(772, 458);
+            this.panelCentral.Size = new System.Drawing.Size(811, 458);
             this.panelCentral.TabIndex = 4;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(851, 74);
+            this.label3.Location = new System.Drawing.Point(907, 84);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(93, 16);
             this.label3.TabIndex = 5;
@@ -206,7 +206,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(975, 554);
+            this.ClientSize = new System.Drawing.Size(1014, 570);
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panelCentral);

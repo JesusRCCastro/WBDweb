@@ -123,7 +123,7 @@
             // 
             this.DgvEventos.BackgroundColor = System.Drawing.Color.SteelBlue;
             this.DgvEventos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvEventos.Location = new System.Drawing.Point(77, 64);
+            this.DgvEventos.Location = new System.Drawing.Point(152, 64);
             this.DgvEventos.Name = "DgvEventos";
             this.DgvEventos.RowHeadersWidth = 51;
             this.DgvEventos.RowTemplate.Height = 24;

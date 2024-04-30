@@ -104,6 +104,12 @@
     <Compile Include="Asistencia.Designer.cs">
       <DependentUpon>Asistencia.cs</DependentUpon>
     </Compile>
+    <Compile Include="AñadirIncidencias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AñadirIncidencias.Designer.cs">
+      <DependentUpon>AñadirIncidencias.cs</DependentUpon>
+    </Compile>
     <Compile Include="Clientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,6 +180,9 @@
     </Compile>
     <EmbeddedResource Include="Asistencia.resx">
       <DependentUpon>Asistencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AñadirIncidencias.resx">
+      <DependentUpon>AñadirIncidencias.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Clientes.resx">
       <DependentUpon>Clientes.cs</DependentUpon>

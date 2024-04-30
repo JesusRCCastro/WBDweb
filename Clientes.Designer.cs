@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Clientes));
             this.CombBoxNumeroPadres = new System.Windows.Forms.ComboBox();
             this.TextBoxNombreCliente = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -54,10 +53,11 @@
             // 
             // CombBoxNumeroPadres
             // 
+            this.CombBoxNumeroPadres.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CombBoxNumeroPadres.FormattingEnabled = true;
-            this.CombBoxNumeroPadres.Location = new System.Drawing.Point(432, 48);
+            this.CombBoxNumeroPadres.Location = new System.Drawing.Point(410, 39);
             this.CombBoxNumeroPadres.Name = "CombBoxNumeroPadres";
-            this.CombBoxNumeroPadres.Size = new System.Drawing.Size(121, 24);
+            this.CombBoxNumeroPadres.Size = new System.Drawing.Size(121, 28);
             this.CombBoxNumeroPadres.TabIndex = 0;
             this.CombBoxNumeroPadres.SelectedIndexChanged += new System.EventHandler(this.CombBoxNumeroPadres_SelectedIndexChanged);
             // 
@@ -70,7 +70,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.BackColor = System.Drawing.Color.LightBlue;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.CombBoxNumeroPadres);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -83,19 +83,20 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 27);
+            this.label1.Location = new System.Drawing.Point(29, 27);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(354, 46);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Nombre de Padres";
+            this.label1.Text = "Numero de Padres";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(20, 139);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(117, 16);
+            this.label2.Size = new System.Drawing.Size(132, 16);
             this.label2.TabIndex = 3;
             this.label2.Text = "Nombre Completo";
             // 
@@ -144,60 +145,66 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(244, 139);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 16);
+            this.label3.Size = new System.Drawing.Size(44, 16);
             this.label3.TabIndex = 10;
             this.label3.Text = "Edad";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(20, 199);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(64, 16);
+            this.label4.Size = new System.Drawing.Size(73, 16);
             this.label4.TabIndex = 11;
             this.label4.Text = "Dirección";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(244, 199);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 16);
+            this.label5.Size = new System.Drawing.Size(56, 16);
             this.label5.TabIndex = 12;
             this.label5.Text = "Celular";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(20, 258);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(139, 16);
+            this.label6.Size = new System.Drawing.Size(159, 16);
             this.label6.TabIndex = 13;
             this.label6.Text = "Numero seguro social";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(244, 258);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(41, 16);
+            this.label7.Size = new System.Drawing.Size(47, 16);
             this.label7.TabIndex = 14;
             this.label7.Text = "Oficio";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.label8.Location = new System.Drawing.Point(20, 316);
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(22, 316);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(117, 16);
+            this.label8.Size = new System.Drawing.Size(135, 16);
             this.label8.TabIndex = 15;
             this.label8.Text = "Correo electronico";
             // 
@@ -235,7 +242,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(571, 421);
             this.Controls.Add(this.BtnEliminarCliente);

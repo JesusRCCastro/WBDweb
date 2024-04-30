@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static Mysqlx.Crud.Order.Types;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace RDGweb
 {
@@ -22,6 +23,8 @@ namespace RDGweb
             LoadIdCliente();
             this.BtnActualizarInfCliente.Click += new System.EventHandler(this.BtnActualizarInfCliente_Click);
             CombBoxNumeroPadres.SelectedIndexChanged += CombBoxNumeroPadres_SelectedIndexChanged;
+            TextBoxCelularCliente.ReadOnly = true;
+
         }
 
         private void CombBoxNumeroPadres_SelectedIndexChanged(object sender, EventArgs e)
@@ -36,7 +39,8 @@ namespace RDGweb
                 NSSCliente(selectedText);
                 OficioCliente(selectedText);
                 CorreoCliente(selectedText);
-                
+                TextBoxCelularCliente.ReadOnly = true;
+
             }
             else
             {

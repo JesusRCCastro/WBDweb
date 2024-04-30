@@ -125,5 +125,14 @@ namespace RDGweb
             }
         }
 
+        private void btnAgregarIncidencia_Click(object sender, EventArgs e)
+        {
+            // Crear una instancia del formulario de nuevos clientes
+            AñadirIncidencias formularioNuevosCliente = new AñadirIncidencias();
+            // Mostrar el formulario de nuevos clientes
+            formularioNuevosCliente.Show();
+            // Ocultar el formulario actual
+            this.Hide();
+        }
     }
 }

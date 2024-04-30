@@ -38,7 +38,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.btnAgregarIncidencia = new System.Windows.Forms.Button();
-            this.btnlistaIncidencias = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PicBoxFaceChild)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -46,7 +45,7 @@
             // ComBIDNiños
             // 
             this.ComBIDNiños.FormattingEnabled = true;
-            this.ComBIDNiños.Location = new System.Drawing.Point(12, 52);
+            this.ComBIDNiños.Location = new System.Drawing.Point(25, 52);
             this.ComBIDNiños.Name = "ComBIDNiños";
             this.ComBIDNiños.Size = new System.Drawing.Size(166, 24);
             this.ComBIDNiños.TabIndex = 1;
@@ -90,7 +89,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 26);
+            this.label2.Location = new System.Drawing.Point(26, 26);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(103, 16);
             this.label2.TabIndex = 3;
@@ -99,7 +98,6 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.panel2.Controls.Add(this.btnlistaIncidencias);
             this.panel2.Controls.Add(this.TexBoxFechaIncidencias);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
@@ -123,22 +121,13 @@
             // btnAgregarIncidencia
             // 
             this.btnAgregarIncidencia.BackColor = System.Drawing.SystemColors.Info;
-            this.btnAgregarIncidencia.Location = new System.Drawing.Point(644, 384);
+            this.btnAgregarIncidencia.Location = new System.Drawing.Point(677, 375);
             this.btnAgregarIncidencia.Name = "btnAgregarIncidencia";
             this.btnAgregarIncidencia.Size = new System.Drawing.Size(90, 50);
             this.btnAgregarIncidencia.TabIndex = 9;
             this.btnAgregarIncidencia.Text = "Agregar incidencia";
             this.btnAgregarIncidencia.UseVisualStyleBackColor = false;
-            // 
-            // btnlistaIncidencias
-            // 
-            this.btnlistaIncidencias.BackColor = System.Drawing.SystemColors.Info;
-            this.btnlistaIncidencias.Location = new System.Drawing.Point(551, 26);
-            this.btnlistaIncidencias.Name = "btnlistaIncidencias";
-            this.btnlistaIncidencias.Size = new System.Drawing.Size(90, 50);
-            this.btnlistaIncidencias.TabIndex = 10;
-            this.btnlistaIncidencias.Text = "Lista de Incidencias";
-            this.btnlistaIncidencias.UseVisualStyleBackColor = false;
+            this.btnAgregarIncidencia.Click += new System.EventHandler(this.btnAgregarIncidencia_Click);
             // 
             // Incidencias
             // 
@@ -173,6 +162,5 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnAgregarIncidencia;
-        private System.Windows.Forms.Button btnlistaIncidencias;
     }
 }

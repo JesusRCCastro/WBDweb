@@ -207,3 +207,4 @@ C:\Users\Aram\Source\Repos\JesusRCCastro\WBDweb\obj\Debug\RDGweb.exe
 C:\Users\Aram\Source\Repos\JesusRCCastro\WBDweb\obj\Debug\RDGweb.pdb
 C:\Users\angel\Source\Repos\JesusRCCastro\WBDweb\obj\Debug\RDGweb.Eventos.resources
 C:\Users\angel\Source\Repos\JesusRCCastro\WBDweb\obj\Debug\RDGweb.Trabajadores.resources
+C:\Users\angel\Source\Repos\JesusRCCastro\WBDweb\obj\Debug\RDGweb.AñadirIncidencias.resources
