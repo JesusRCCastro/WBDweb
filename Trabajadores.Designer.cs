@@ -37,7 +37,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.TbxTelefonoTrabajador = new System.Windows.Forms.TextBox();
             this.TbxCorreoTrabajador = new System.Windows.Forms.TextBox();
-            this.TbxRolTrabajador = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.TbxIDTrabajador = new System.Windows.Forms.TextBox();
             this.BtnAgregar = new System.Windows.Forms.Button();
@@ -46,6 +45,7 @@
             this.BtnListaEmpleados = new System.Windows.Forms.Button();
             this.TbxNombreTrabajador = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.CbxRoles = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -138,14 +138,6 @@
             this.TbxCorreoTrabajador.Size = new System.Drawing.Size(227, 22);
             this.TbxCorreoTrabajador.TabIndex = 16;
             // 
-            // TbxRolTrabajador
-            // 
-            this.TbxRolTrabajador.Location = new System.Drawing.Point(294, 194);
-            this.TbxRolTrabajador.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.TbxRolTrabajador.Name = "TbxRolTrabajador";
-            this.TbxRolTrabajador.Size = new System.Drawing.Size(125, 22);
-            this.TbxRolTrabajador.TabIndex = 15;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -227,12 +219,22 @@
             this.label7.TabIndex = 24;
             this.label7.Text = "Nombre";
             // 
+            // CbxRoles
+            // 
+            this.CbxRoles.FormattingEnabled = true;
+            this.CbxRoles.Location = new System.Drawing.Point(294, 195);
+            this.CbxRoles.Name = "CbxRoles";
+            this.CbxRoles.Size = new System.Drawing.Size(184, 24);
+            this.CbxRoles.TabIndex = 26;
+            this.CbxRoles.Text = "Selecciona un Rol";
+            // 
             // Trabajadores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(490, 360);
+            this.Controls.Add(this.CbxRoles);
             this.Controls.Add(this.TbxNombreTrabajador);
             this.Controls.Add(this.BtnAgregar);
             this.Controls.Add(this.label7);
@@ -243,7 +245,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.TbxTelefonoTrabajador);
             this.Controls.Add(this.TbxCorreoTrabajador);
-            this.Controls.Add(this.TbxRolTrabajador);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.TbxIDTrabajador);
             this.Controls.Add(this.panel1);
@@ -269,7 +270,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox TbxTelefonoTrabajador;
         private System.Windows.Forms.TextBox TbxCorreoTrabajador;
-        private System.Windows.Forms.TextBox TbxRolTrabajador;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox TbxIDTrabajador;
         private System.Windows.Forms.Label label6;
@@ -279,5 +279,6 @@
         private System.Windows.Forms.TextBox TbxNombreTrabajador;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button BtnListaEmpleados;
+        private System.Windows.Forms.ComboBox CbxRoles;
     }
 }
