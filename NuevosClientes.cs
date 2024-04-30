@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -56,6 +57,39 @@ namespace RDGweb
             if (!int.TryParse(TextBoxNuevaEdadNiño.Text, out _))
             {
                 MessageBox.Show("La edad del niño debe ser un número entero.");
+                return;
+            }
+            // Validaciones adicionales
+            if (!Regex.IsMatch(TextBoxNuevoNombreCliente.Text, @"^[a-zA-Z\s]+$") ||
+                !Regex.IsMatch(TextBoxNuevoOficio.Text, @"^[a-zA-Z\s]+$") ||
+                !Regex.IsMatch(TextBoxNuevoNombreNiño.Text, @"^[a-zA-Z\s]+$"))
+            {
+                MessageBox.Show("Los nombres y el oficio solo deben contener letras.");
+                return;
+            }
+
+            if (!Regex.IsMatch(TextBoxNuevoNSS.Text, @"^\d{11}$"))
+            {
+                MessageBox.Show("El NSS debe contener exactamente 11 dígitos.");
+                return;
+            }
+
+            if (!Regex.IsMatch(TextBoxNuevoCorreo.Text, @"^[^@]+@[^@]+\.[^@]+$"))
+            {
+                MessageBox.Show("El correo electrónico debe tener un formato válido con '@' y '.com'.");
+                return;
+            }
+
+            if (!(TextBoxActividad.Text == "Masculino" || TextBoxActividad.Text == "Femenino"))
+            {
+                MessageBox.Show("El género solo puede ser 'Masculino' o 'Femenino'.");
+                return;
+            }
+
+            if (!Regex.IsMatch(TextBoxNuevoCelularCliente.Text, @"^\d{10}$") ||
+                !Regex.IsMatch(TextBoxNuevoNumeroContacto.Text, @"^\d{10}$"))
+            {
+                MessageBox.Show("El celular y el número de contacto deben contener exactamente 10 dígitos.");
                 return;
             }
 

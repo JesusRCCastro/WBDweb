@@ -52,8 +52,8 @@
             this.label12 = new System.Windows.Forms.Label();
             this.TextBoxNuevoNumeroContacto = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.TextBoxActividad = new System.Windows.Forms.TextBox();
             this.BtnNuevoCliente = new System.Windows.Forms.Button();
+            this.TextBoxActividad = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label8
@@ -179,9 +179,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(32, 30);
+            this.label1.Location = new System.Drawing.Point(9, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(414, 39);
+            this.label1.Size = new System.Drawing.Size(398, 38);
             this.label1.TabIndex = 30;
             this.label1.Text = "Registro de nuevo usuario";
             // 
@@ -264,13 +264,6 @@
             this.label13.TabIndex = 40;
             this.label13.Text = "Genero del Niño";
             // 
-            // TextBoxActividad
-            // 
-            this.TextBoxActividad.Location = new System.Drawing.Point(56, 504);
-            this.TextBoxActividad.Name = "TextBoxActividad";
-            this.TextBoxActividad.Size = new System.Drawing.Size(98, 22);
-            this.TextBoxActividad.TabIndex = 39;
-            // 
             // BtnNuevoCliente
             // 
             this.BtnNuevoCliente.Location = new System.Drawing.Point(157, 547);
@@ -281,14 +274,26 @@
             this.BtnNuevoCliente.UseVisualStyleBackColor = true;
             this.BtnNuevoCliente.Click += new System.EventHandler(this.BtnNuevoCliente_Click);
             // 
+            // TextBoxActividad
+            // 
+            this.TextBoxActividad.Cursor = System.Windows.Forms.Cursors.Default;
+            this.TextBoxActividad.FormattingEnabled = true;
+            this.TextBoxActividad.Items.AddRange(new object[] {
+            "Masculino",
+            "Femenino"});
+            this.TextBoxActividad.Location = new System.Drawing.Point(56, 504);
+            this.TextBoxActividad.Name = "TextBoxActividad";
+            this.TextBoxActividad.Size = new System.Drawing.Size(121, 24);
+            this.TextBoxActividad.TabIndex = 42;
+            // 
             // NuevoCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(458, 619);
+            this.Controls.Add(this.TextBoxActividad);
             this.Controls.Add(this.BtnNuevoCliente);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.TextBoxActividad);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.TextBoxNuevoNumeroContacto);
             this.Controls.Add(this.label11);
@@ -345,7 +350,7 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox TextBoxNuevoNumeroContacto;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox TextBoxActividad;
         private System.Windows.Forms.Button BtnNuevoCliente;
+        private System.Windows.Forms.ComboBox TextBoxActividad;
     }
 }
