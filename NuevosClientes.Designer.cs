@@ -46,7 +46,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.TextBoxNuevoNombreNiño = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.TextBoxNuevaFechaNiño = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.TextBoxNuevaEdadNiño = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -54,6 +53,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.BtnNuevoCliente = new System.Windows.Forms.Button();
             this.TextBoxActividad = new System.Windows.Forms.ComboBox();
+            this.TextBoxNuevaFechaNiño = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // label8
@@ -212,14 +212,6 @@
             this.label10.TabIndex = 34;
             this.label10.Text = "Fecha de nacimiento ";
             // 
-            // TextBoxNuevaFechaNiño
-            // 
-            this.TextBoxNuevaFechaNiño.Location = new System.Drawing.Point(283, 375);
-            this.TextBoxNuevaFechaNiño.Name = "TextBoxNuevaFechaNiño";
-            this.TextBoxNuevaFechaNiño.Size = new System.Drawing.Size(154, 22);
-            this.TextBoxNuevaFechaNiño.TabIndex = 33;
-            this.TextBoxNuevaFechaNiño.Text = "AAAA-MM-DD";
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -286,11 +278,20 @@
             this.TextBoxActividad.Size = new System.Drawing.Size(121, 24);
             this.TextBoxActividad.TabIndex = 42;
             // 
+            // TextBoxNuevaFechaNiño
+            // 
+            this.TextBoxNuevaFechaNiño.Location = new System.Drawing.Point(293, 375);
+            this.TextBoxNuevaFechaNiño.Mask = "####-##-##";
+            this.TextBoxNuevaFechaNiño.Name = "TextBoxNuevaFechaNiño";
+            this.TextBoxNuevaFechaNiño.Size = new System.Drawing.Size(100, 22);
+            this.TextBoxNuevaFechaNiño.TabIndex = 43;
+            // 
             // NuevoCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(458, 619);
+            this.Controls.Add(this.TextBoxNuevaFechaNiño);
             this.Controls.Add(this.TextBoxActividad);
             this.Controls.Add(this.BtnNuevoCliente);
             this.Controls.Add(this.label13);
@@ -299,7 +300,6 @@
             this.Controls.Add(this.label11);
             this.Controls.Add(this.TextBoxNuevaEdadNiño);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.TextBoxNuevaFechaNiño);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.TextBoxNuevoNombreNiño);
             this.Controls.Add(this.label1);
@@ -317,6 +317,7 @@
             this.Controls.Add(this.TextBoxNuevoEdadCliente);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.TextBoxNuevoNombreCliente);
+            this.MaximizeBox = false;
             this.Name = "NuevoCliente";
             this.Text = "NuevosClientes";
             this.ResumeLayout(false);
@@ -344,7 +345,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox TextBoxNuevoNombreNiño;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox TextBoxNuevaFechaNiño;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox TextBoxNuevaEdadNiño;
         private System.Windows.Forms.Label label12;
@@ -352,5 +352,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button BtnNuevoCliente;
         private System.Windows.Forms.ComboBox TextBoxActividad;
+        private System.Windows.Forms.MaskedTextBox TextBoxNuevaFechaNiño;
     }
 }

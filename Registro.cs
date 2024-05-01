@@ -20,7 +20,7 @@ namespace RDGweb
 
         private void BtnGuardarDatos_Click(object sender, EventArgs e)
         {
-            //validar que no haya campos vacios
+            // Validar que no haya campos vacíos
             if (string.IsNullOrWhiteSpace(TbxRegistroUser.Text) || string.IsNullOrWhiteSpace(TbxRegistroPassword.Text))
             {
                 MessageBox.Show("Por favor, completa todos los campos.");
@@ -33,7 +33,22 @@ namespace RDGweb
                 MessageBox.Show("La contraseña debe tener al menos 8 caracteres.");
                 return;
             }
-            // establecer coneccion con la base de datos
+
+            // Validar que no haya espacios en el usuario
+            if (TbxRegistroUser.Text.Contains(" "))
+            {
+                MessageBox.Show("El nombre de usuario no puede contener espacios.");
+                return;
+            }
+
+            // Validar que no haya espacios en la contraseña
+            if (TbxRegistroPassword.Text.Contains(" "))
+            {
+                MessageBox.Show("La contraseña no puede contener espacios.");
+                return;
+            }
+
+            // Establecer conexión con la base de datos
             MySqlConnection con = new MySqlConnection("Server = localhost; Database = Guarderia; User Id = root; Password =  ");
             try
             {
@@ -70,7 +85,7 @@ namespace RDGweb
             {
                 con.Close();
             }
-            
+
         }
 
         private void BtnRegresarlogin_Click(object sender, EventArgs e)

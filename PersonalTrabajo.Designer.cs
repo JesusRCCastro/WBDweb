@@ -73,6 +73,7 @@
             this.ClientSize = new System.Drawing.Size(729, 460);
             this.Controls.Add(this.DgvTrabajadores);
             this.Controls.Add(this.panel1);
+            this.MaximizeBox = false;
             this.Name = "PersonalTrabajo";
             this.Text = "PersonalTrabajo";
             this.panel1.ResumeLayout(false);

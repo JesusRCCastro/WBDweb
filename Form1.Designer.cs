@@ -39,7 +39,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.LklRegistro = new System.Windows.Forms.LinkLabel();
             this.label2 = new System.Windows.Forms.Label();
-            this.BtnPruebaMenu = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -154,18 +153,6 @@
             this.label2.TabIndex = 11;
             this.label2.Text = "¿No estás registtrado?";
             // 
-            // BtnPruebaMenu
-            // 
-            this.BtnPruebaMenu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnPruebaMenu.Location = new System.Drawing.Point(90, 377);
-            this.BtnPruebaMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.BtnPruebaMenu.Name = "BtnPruebaMenu";
-            this.BtnPruebaMenu.Size = new System.Drawing.Size(200, 25);
-            this.BtnPruebaMenu.TabIndex = 12;
-            this.BtnPruebaMenu.Text = "Prueba menu";
-            this.BtnPruebaMenu.UseVisualStyleBackColor = true;
-            this.BtnPruebaMenu.Click += new System.EventHandler(this.BtnPruebaMenu_Click);
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -186,7 +173,6 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(388, 491);
-            this.Controls.Add(this.BtnPruebaMenu);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.LklRegistro);
             this.Controls.Add(this.label1);
@@ -199,10 +185,10 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label3);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximizeBox = false;
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
-            this.Load += new System.EventHandler(this.FormLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
@@ -221,7 +207,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.LinkLabel LklRegistro;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button BtnPruebaMenu;
         private System.Windows.Forms.Label label3;
     }
 }

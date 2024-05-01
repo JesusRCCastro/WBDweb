@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Asistencia));
             this.BtnTomarAsistencia = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -39,10 +40,10 @@
             // 
             // BtnTomarAsistencia
             // 
-            this.BtnTomarAsistencia.Location = new System.Drawing.Point(435, 112);
+            this.BtnTomarAsistencia.Location = new System.Drawing.Point(435, 220);
             this.BtnTomarAsistencia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnTomarAsistencia.Name = "BtnTomarAsistencia";
-            this.BtnTomarAsistencia.Size = new System.Drawing.Size(160, 38);
+            this.BtnTomarAsistencia.Size = new System.Drawing.Size(126, 33);
             this.BtnTomarAsistencia.TabIndex = 1;
             this.BtnTomarAsistencia.Text = "Tomar Asistencia";
             this.BtnTomarAsistencia.UseVisualStyleBackColor = true;
@@ -63,18 +64,18 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(240, 26);
+            this.label1.Location = new System.Drawing.Point(263, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(278, 32);
+            this.label1.Size = new System.Drawing.Size(233, 32);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Marque la Asistencia";
+            this.label1.Text = "Tomar Asistencia";
             // 
             // BtnFalta
             // 
-            this.BtnFalta.Location = new System.Drawing.Point(435, 187);
+            this.BtnFalta.Location = new System.Drawing.Point(435, 283);
             this.BtnFalta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnFalta.Name = "BtnFalta";
-            this.BtnFalta.Size = new System.Drawing.Size(160, 38);
+            this.BtnFalta.Size = new System.Drawing.Size(126, 33);
             this.BtnFalta.TabIndex = 3;
             this.BtnFalta.Text = "Marcar Falta";
             this.BtnFalta.UseVisualStyleBackColor = true;
@@ -84,12 +85,12 @@
             // 
             this.DgvAsistencia.BackgroundColor = System.Drawing.Color.SteelBlue;
             this.DgvAsistencia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvAsistencia.Location = new System.Drawing.Point(205, 97);
+            this.DgvAsistencia.Location = new System.Drawing.Point(199, 167);
             this.DgvAsistencia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DgvAsistencia.Name = "DgvAsistencia";
             this.DgvAsistencia.RowHeadersWidth = 51;
             this.DgvAsistencia.RowTemplate.Height = 24;
-            this.DgvAsistencia.Size = new System.Drawing.Size(206, 349);
+            this.DgvAsistencia.Size = new System.Drawing.Size(392, 171);
             this.DgvAsistencia.TabIndex = 4;
             // 
             // Asistencia
@@ -97,11 +98,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(724, 457);
-            this.Controls.Add(this.DgvAsistencia);
             this.Controls.Add(this.BtnFalta);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.BtnTomarAsistencia);
+            this.Controls.Add(this.DgvAsistencia);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Asistencia";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

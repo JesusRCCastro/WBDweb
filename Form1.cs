@@ -105,20 +105,5 @@ namespace RDGweb
         {
             TbxPassword.PasswordChar = '*';
         }
-
-        private void FormLogin_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void BtnPruebaMenu_Click(object sender, EventArgs e)
-        {
-            string usuario = TbxUser.Text;
-            // Crear una instancia del formulario MenuPrincipal
-            MenuPrincipal formularioMenuPrincipal = new MenuPrincipal(usuario);
-            // Mostrar el formulario MenuPrincipal
-            formularioMenuPrincipal.Show();
-        }
-
     }
 }
