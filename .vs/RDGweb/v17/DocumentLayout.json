@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Jesus Castro\\source\\repos\\WBDweb\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{845CD035-EC15-45EC-BC71-E8DE3281C33C}|RDGweb.csproj|c:\\users\\jesus castro\\source\\repos\\wbdweb\\asistencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{845CD035-EC15-45EC-BC71-E8DE3281C33C}|RDGweb.csproj|solutionrelative:asistencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{845CD035-EC15-45EC-BC71-E8DE3281C33C}|RDGweb.csproj|c:\\users\\jesus castro\\source\\repos\\wbdweb\\asistencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{845CD035-EC15-45EC-BC71-E8DE3281C33C}|RDGweb.csproj|solutionrelative:asistencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{845CD035-EC15-45EC-BC71-E8DE3281C33C}|RDGweb.csproj|C:\\Users\\Jesus Castro\\source\\repos\\WBDweb\\nuevosclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{845CD035-EC15-45EC-BC71-E8DE3281C33C}|RDGweb.csproj|solutionrelative:nuevosclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{845CD035-EC15-45EC-BC71-E8DE3281C33C}|RDGweb.csproj|c:\\users\\jesus castro\\source\\repos\\wbdweb\\nuevosclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{845CD035-EC15-45EC-BC71-E8DE3281C33C}|RDGweb.csproj|solutionrelative:nuevosclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{845CD035-EC15-45EC-BC71-E8DE3281C33C}|RDGweb.csproj|c:\\users\\jesus castro\\source\\repos\\wbdweb\\asistencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{845CD035-EC15-45EC-BC71-E8DE3281C33C}|RDGweb.csproj|solutionrelative:asistencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{845CD035-EC15-45EC-BC71-E8DE3281C33C}|RDGweb.csproj|c:\\users\\jesus castro\\source\\repos\\wbdweb\\registro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -46,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 18,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Bookmark",
@@ -94,7 +98,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "Asistencia.cs",
+              "DocumentMoniker": "C:\\Users\\Jesus Castro\\source\\repos\\WBDweb\\Asistencia.cs",
+              "RelativeDocumentMoniker": "Asistencia.cs",
+              "ToolTip": "C:\\Users\\Jesus Castro\\source\\repos\\WBDweb\\Asistencia.cs*",
+              "RelativeToolTip": "Asistencia.cs*",
+              "ViewState": "AQIAADgAAAAAAAAAAAAgwFUAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T04:54:49.055Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "NuevosClientes.cs",
               "DocumentMoniker": "C:\\Users\\Jesus Castro\\source\\repos\\WBDweb\\NuevosClientes.cs",
               "RelativeDocumentMoniker": "NuevosClientes.cs",
@@ -107,19 +124,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Asistencia.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Jesus Castro\\source\\repos\\WBDweb\\Asistencia.cs",
               "RelativeDocumentMoniker": "Asistencia.cs",
-              "ToolTip": "C:\\Users\\Jesus Castro\\source\\repos\\WBDweb\\Asistencia.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Asistencia.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\Users\\Jesus Castro\\source\\repos\\WBDweb\\Asistencia.cs [Dise\u00F1o]*",
+              "RelativeToolTip": "Asistencia.cs [Dise\u00F1o]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-01T04:45:50.673Z",
               "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Registro.cs",
               "DocumentMoniker": "C:\\Users\\Jesus Castro\\source\\repos\\WBDweb\\Registro.cs",
               "RelativeDocumentMoniker": "Registro.cs",
@@ -132,7 +149,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Registro.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Jesus Castro\\source\\repos\\WBDweb\\Registro.cs",
               "RelativeDocumentMoniker": "Registro.cs",
@@ -144,7 +161,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "PersonalTrabajo.cs",
               "DocumentMoniker": "C:\\Users\\Jesus Castro\\source\\repos\\WBDweb\\PersonalTrabajo.cs",
               "RelativeDocumentMoniker": "PersonalTrabajo.cs",
@@ -157,7 +174,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "PersonalTrabajo.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Jesus Castro\\source\\repos\\WBDweb\\PersonalTrabajo.cs",
               "RelativeDocumentMoniker": "PersonalTrabajo.cs",
@@ -169,7 +186,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Trabajadores.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Jesus Castro\\source\\repos\\WBDweb\\Trabajadores.cs",
               "RelativeDocumentMoniker": "Trabajadores.cs",
@@ -181,7 +198,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "NuevosClientes.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Jesus Castro\\source\\repos\\WBDweb\\NuevosClientes.cs",
               "RelativeDocumentMoniker": "NuevosClientes.cs",
@@ -193,7 +210,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "MenuPrincipal.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Jesus Castro\\source\\repos\\WBDweb\\MenuPrincipal.cs",
               "RelativeDocumentMoniker": "MenuPrincipal.cs",

@@ -8,6 +8,8 @@ namespace RDGweb
     public partial class Asistencia : Form
     {
         MySqlConnection conexion;
+        bool asistenciaTomada = false;
+        bool faltaMarcada = false;
 
         public Asistencia()
         {
@@ -16,6 +18,9 @@ namespace RDGweb
             string cadenaConexion = "server=localhost;user=root;password=;database=guarderia;";
             conexion = new MySqlConnection(cadenaConexion);
             LlenarGridConNiños();
+
+            // Deshabilitar la fila para añadir nuevos datos al final del DataGridView
+            DgvAsistencia.AllowUserToAddRows = false;
         }
 
         private void LlenarGridConNiños()
@@ -42,6 +47,13 @@ namespace RDGweb
 
         private void BtnTomarAsistencia_Click(object sender, EventArgs e)
         {
+            // Verificar si ya se ha registrado la asistencia
+            if (asistenciaTomada)
+            {
+                MessageBox.Show("Ya se ha tomado la asistencia.");
+                return;
+            }
+            
             // Verificamos si se ha seleccionado una fila en el DataGridView
             if (DgvAsistencia.SelectedRows.Count > 0)
             {
@@ -64,6 +76,13 @@ namespace RDGweb
 
         private void BtnFalta_Click(object sender, EventArgs e)
         {
+            // Verificar si ya se ha marcado la falta
+            if (faltaMarcada)
+            {
+                MessageBox.Show("Ya se ha marcado la falta.");
+                return;
+            }
+            
             // Verificamos si se ha seleccionado una fila en el DataGridView
             if (DgvAsistencia.SelectedRows.Count > 0)
             {
