@@ -199,7 +199,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(93, 16);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Version 1.0.0.9";
+            this.label3.Text = "Version 1.0.1.5";
             // 
             // MenuPrincipal
             // 

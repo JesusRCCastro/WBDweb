@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Net.Mail;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
@@ -13,7 +8,7 @@ namespace RDGweb
 {
     public partial class Trabajadores : Form
     {
-        private bool listaEmpleadosAbierto = false; // Variable para rastrear si el formulario de lista de empleados está abierto
+        private bool listaEmpleadosAbierto = false;
         private MySqlConnection con;
         private string connectionString = "server=localhost;Database=guarderia;Uid=root;Password=";
 
@@ -21,16 +16,20 @@ namespace RDGweb
         {
             InitializeComponent();
             con = new MySqlConnection(connectionString);
-            CargarTrabajadores();
-            CargarRoles(); // Nuevo: Cargar los roles al iniciar el formulario
+            CargarRoles();
+            ObtenerSiguienteID();
+            TbxID.ReadOnly = true;
+            CbxRoles.DropDownStyle = ComboBoxStyle.DropDown;
+            CbxRoles.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            CbxRoles.AutoCompleteSource = AutoCompleteSource.ListItems;
         }
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
-            string Nombre = TbxNombreTrabajador.Text;
-            RolItem rolSeleccionado = (RolItem)CbxRoles.SelectedItem; // Nuevo: Obtener el rol seleccionado
-            string Correo = TbxCorreoTrabajador.Text;
-            string Telefono = TbxTelefonoTrabajador.Text;
+            string nombre = TbxNombreTrabajador.Text.Trim();
+            RolItem rolSeleccionado = (RolItem)CbxRoles.SelectedItem;
+            string correo = TbxCorreoTrabajador.Text.Trim();
+            string telefono = TbxTelefonoTrabajador.Text.Trim();
 
             if (rolSeleccionado == null)
             {
@@ -38,64 +37,95 @@ namespace RDGweb
                 return;
             }
 
-            if (!string.IsNullOrWhiteSpace(Nombre) && !string.IsNullOrWhiteSpace(Correo) && !string.IsNullOrWhiteSpace(Telefono))
+            if (string.IsNullOrWhiteSpace(nombre) || string.IsNullOrWhiteSpace(correo) || string.IsNullOrWhiteSpace(telefono))
             {
-                // Validar el número de teléfono
-                if (!EsTelefonoValido(Telefono))
-                {
-                    MessageBox.Show("Por favor, ingresa un número de teléfono válido (10 dígitos).", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-
-                // Validar el correo electrónico
-                if (!EsCorreoValido(Correo))
-                {
-                    MessageBox.Show("Por favor, ingresa un correo electrónico válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-                try
-                {
-                    con.Open();
-                    string query = "INSERT INTO `personal` (Nombre, rol_id, Correo, telefono) VALUES (@nombre, @roles, @correo, @telefono)";
-                    MySqlCommand cmd = new MySqlCommand(query, con);
-                    cmd.Parameters.AddWithValue("@nombre", Nombre);
-                    cmd.Parameters.AddWithValue("@roles", rolSeleccionado.Id); // Nuevo: Insertar el ID del rol
-                    cmd.Parameters.AddWithValue("@correo", Correo);
-                    cmd.Parameters.AddWithValue("@telefono", Telefono);
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Trabajador agregado correctamente.");
-                    CargarTrabajadores();
-                }
-                catch (MySqlException ex)
-                {
-                    MessageBox.Show("Error al agregar el trabajador: " + ex.Message);
-                }
-                finally
-                {
-                    con.Close();
-                }
+                MessageBox.Show("Por favor, completa todos los campos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
-            else
+
+            if (nombre.Any(char.IsDigit))
             {
-                MessageBox.Show("Por favor, completa todos los campos.");
+                MessageBox.Show("El nombre no debe contener números.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (!EsTelefonoValido(telefono))
+            {
+                MessageBox.Show("Por favor, ingresa un número de teléfono válido (10 dígitos).", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (!EsCorreoValido(correo))
+            {
+                MessageBox.Show("Por favor, ingresa un correo electrónico válido que termine en .com.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (TrabajadorExiste(nombre, correo, telefono))
+            {
+                MessageBox.Show("El trabajador ya existe en la base de datos con el mismo nombre, correo o teléfono.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            try
+            {
+                con.Open();
+                string query = "INSERT INTO `personal` (Nombre, rol_id, Correo, telefono) VALUES (@nombre, @roles, @correo, @telefono)";
+                MySqlCommand cmd = new MySqlCommand(query, con);
+                cmd.Parameters.AddWithValue("@nombre", nombre);
+                cmd.Parameters.AddWithValue("@roles", rolSeleccionado.Id);
+                cmd.Parameters.AddWithValue("@correo", correo);
+                cmd.Parameters.AddWithValue("@telefono", telefono);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Trabajador agregado correctamente.");
+                LimpiarCampos();
+                ObtenerSiguienteID();
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Error al agregar el trabajador: " + ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        private bool TrabajadorExiste(string nombre, string correo, string telefono)
+        {
+            try
+            {
+                con.Open();
+                string query = "SELECT COUNT(*) FROM personal WHERE Nombre = @nombre OR Correo = @correo OR telefono = @telefono";
+                MySqlCommand cmd = new MySqlCommand(query, con);
+                cmd.Parameters.AddWithValue("@nombre", nombre);
+                cmd.Parameters.AddWithValue("@correo", correo);
+                cmd.Parameters.AddWithValue("@telefono", telefono);
+                int count = Convert.ToInt32(cmd.ExecuteScalar());
+                return count > 0;
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Error al verificar la existencia del trabajador: " + ex.Message);
+                return false;
+            }
+            finally
+            {
+                con.Close();
             }
         }
 
         private bool EsTelefonoValido(string telefono)
         {
-            if (telefono.Length == 10 && telefono.All(char.IsDigit))
-            {
-                return true;
-            }
-            return false;
+            return telefono.Length == 10 && telefono.All(char.IsDigit);
         }
 
         private bool EsCorreoValido(string correo)
         {
             try
             {
-                var addr = new System.Net.Mail.MailAddress(correo);
-                return addr.Address == correo;
+                var addr = new MailAddress(correo);
+                return addr.Address == correo && correo.EndsWith(".com");
             }
             catch
             {
@@ -130,124 +160,52 @@ namespace RDGweb
             }
         }
 
-        private void CargarTrabajadores()
+        private void BtnListaEmpleados_Click(object sender, EventArgs e)
+        {
+            if (!listaEmpleadosAbierto)
+            {
+                PersonalTrabajo formularioPersonalTrabajo = new PersonalTrabajo();
+                formularioPersonalTrabajo.Show();
+                listaEmpleadosAbierto = true;
+                formularioPersonalTrabajo.FormClosed += (s, args) => listaEmpleadosAbierto = false;
+            }
+        }
+
+        private void ObtenerSiguienteID()
         {
             try
             {
-                using (MySqlConnection con = new MySqlConnection("server=localhost;user=root;password=;database=guarderia;"))
+                using (MySqlConnection conexion = new MySqlConnection("server=localhost;user=root;password=;database=guarderia;"))
                 {
-                    con.Open();
-                    string query = "SELECT Nombre FROM `personal`";
-                    using (MySqlCommand cmd = new MySqlCommand(query, con))
+                    conexion.Open();
+                    string query = "SELECT MAX(idPersonal) AS max_id FROM personal";
+                    using (MySqlCommand comando = new MySqlCommand(query, conexion))
                     {
-                        using (MySqlDataReader reader = cmd.ExecuteReader())
+                        object result = comando.ExecuteScalar();
+                        if (result != DBNull.Value)
                         {
-                            CbxNombre.Items.Clear();
-                            while (reader.Read())
-                            {
-                                CbxNombre.Items.Add(reader["Nombre"].ToString());
-                            }
+                            int maxID = Convert.ToInt32(result);
+                            TbxID.Text = (maxID + 1).ToString();
+                        }
+                        else
+                        {
+                            TbxID.Text = "1";
                         }
                     }
                 }
             }
-            catch (MySqlException ex)
+            catch (Exception ex)
             {
-                MessageBox.Show("Error al cargar los trabajadores: " + ex.Message);
+                MessageBox.Show("Error al obtener el siguiente ID: " + ex.Message);
             }
         }
 
-        private void CbxNombre_SelectedIndexChanged(object sender, EventArgs e)
+        private void LimpiarCampos()
         {
-            string nombreABuscar = CbxNombre.SelectedItem.ToString();
-            if (!string.IsNullOrWhiteSpace(nombreABuscar))
-            {
-                try
-                {
-                    con.Open();
-                    string query = "SELECT * FROM `personal` WHERE Nombre = @nombre";
-                    MySqlCommand cmd = new MySqlCommand(query, con);
-                    cmd.Parameters.AddWithValue("@nombre", nombreABuscar);
-                    MySqlDataReader reader = cmd.ExecuteReader();
-                    if (reader.Read())
-                    {
-                        TbxIDTrabajador.Text = reader["idPersonal"].ToString();
-                        CbxRoles.Text = reader["rol_id"].ToString();
-                        TbxCorreoTrabajador.Text = reader["Correo"].ToString();
-                        TbxNombreTrabajador.Text = reader["Nombre"].ToString();
-                        TbxTelefonoTrabajador.Text = reader["telefono"].ToString();
-                    }
-                    else
-                    {
-                        LimpiarTextBox();
-                    }
-                }
-                catch (MySqlException ex)
-                {
-                    MessageBox.Show("Error al buscar el trabajador: " + ex.Message);
-                }
-                finally
-                {
-                    con.Close();
-                }
-
-            }
-        }
-
-        private void BtnEliminar_Click(object sender, EventArgs e)
-        {
-            
-            if (CbxNombre.SelectedItem !=null)
-            {
-                string nombreABuscar = CbxNombre.SelectedItem.ToString();
-                try
-                {
-                    con.Open();
-                    string query = "DELETE FROM `personal` WHERE Nombre = @nombre";
-                    MySqlCommand cmd = new MySqlCommand(query, con);
-                    cmd.Parameters.AddWithValue("@nombre", nombreABuscar);
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Trabajador eliminado correctamente.");
-                    CargarTrabajadores();
-                    LimpiarTextBox();
-                }
-                catch (MySqlException ex)
-                {
-                    MessageBox.Show("Error al eliminar el trabajador: " + ex.Message);
-                }
-                finally
-                {
-                    con.Close();
-                }
-            }
-            else
-            {
-                MessageBox.Show("Por favor, selecciona un nombre para eliminar.");
-            }
-        }
-
-        private void LimpiarTextBox()
-        {
-            TbxIDTrabajador.Text = "";
-            TbxNombreTrabajador.Text = "";
-            TbxTelefonoTrabajador.Text = "";
-        }
-
-        private void BtnListaEmpleados_Click(object sender, EventArgs e)
-        {
-            // Verificar si el formulario de lista de empleados ya está abierto
-            if (!listaEmpleadosAbierto)
-            {
-                // Si no está abierto, crear una nueva instancia y mostrar el formulario
-                PersonalTrabajo formularioPersonalTrabajo = new PersonalTrabajo();
-                formularioPersonalTrabajo.Show();
-
-                // Establecer la variable a true para indicar que el formulario está abierto
-                listaEmpleadosAbierto = true;
-
-                // Suscribirse al evento FormClosed del formulario de lista de empleados
-                formularioPersonalTrabajo.FormClosed += (s, args) => listaEmpleadosAbierto = false;
-            }
+            TbxNombreTrabajador.Clear();
+            TbxCorreoTrabajador.Clear();
+            TbxTelefonoTrabajador.Clear();
+            CbxRoles.SelectedIndex = -1;
         }
 
         public class RolItem

@@ -29,18 +29,15 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.CbxNombre = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.TbxTelefonoTrabajador = new System.Windows.Forms.TextBox();
             this.TbxCorreoTrabajador = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.TbxIDTrabajador = new System.Windows.Forms.TextBox();
+            this.TbxID = new System.Windows.Forms.TextBox();
             this.BtnAgregar = new System.Windows.Forms.Button();
-            this.BtnEliminar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.BtnListaEmpleados = new System.Windows.Forms.Button();
             this.TbxNombreTrabajador = new System.Windows.Forms.TextBox();
@@ -53,9 +50,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.CbxNombre);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -63,34 +58,15 @@
             this.panel1.Size = new System.Drawing.Size(490, 100);
             this.panel1.TabIndex = 0;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(291, 32);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(56, 16);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "Nombre";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(26, 31);
+            this.label1.Location = new System.Drawing.Point(150, 27);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(190, 36);
             this.label1.TabIndex = 1;
             this.label1.Text = "Trabajadores";
-            // 
-            // CbxNombre
-            // 
-            this.CbxNombre.FormattingEnabled = true;
-            this.CbxNombre.Location = new System.Drawing.Point(294, 56);
-            this.CbxNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.CbxNombre.Name = "CbxNombre";
-            this.CbxNombre.Size = new System.Drawing.Size(159, 24);
-            this.CbxNombre.TabIndex = 0;
-            this.CbxNombre.SelectedIndexChanged += new System.EventHandler(this.CbxNombre_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -148,18 +124,18 @@
             this.label2.TabIndex = 14;
             this.label2.Text = "Rol";
             // 
-            // TbxIDTrabajador
+            // TbxID
             // 
-            this.TbxIDTrabajador.Location = new System.Drawing.Point(31, 251);
-            this.TbxIDTrabajador.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.TbxIDTrabajador.Name = "TbxIDTrabajador";
-            this.TbxIDTrabajador.Size = new System.Drawing.Size(67, 22);
-            this.TbxIDTrabajador.TabIndex = 13;
+            this.TbxID.Location = new System.Drawing.Point(31, 251);
+            this.TbxID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TbxID.Name = "TbxID";
+            this.TbxID.Size = new System.Drawing.Size(67, 22);
+            this.TbxID.TabIndex = 13;
             // 
             // BtnAgregar
             // 
             this.BtnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.BtnAgregar.Location = new System.Drawing.Point(193, 260);
+            this.BtnAgregar.Location = new System.Drawing.Point(339, 261);
             this.BtnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnAgregar.Name = "BtnAgregar";
             this.BtnAgregar.Size = new System.Drawing.Size(100, 33);
@@ -168,34 +144,22 @@
             this.BtnAgregar.UseVisualStyleBackColor = false;
             this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
-            // BtnEliminar
-            // 
-            this.BtnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.BtnEliminar.Location = new System.Drawing.Point(319, 260);
-            this.BtnEliminar.Margin = new System.Windows.Forms.Padding(4);
-            this.BtnEliminar.Name = "BtnEliminar";
-            this.BtnEliminar.Size = new System.Drawing.Size(100, 33);
-            this.BtnEliminar.TabIndex = 22;
-            this.BtnEliminar.Text = "Eliminar";
-            this.BtnEliminar.UseVisualStyleBackColor = false;
-            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Info;
             this.panel2.Controls.Add(this.BtnListaEmpleados);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 311);
+            this.panel2.Location = new System.Drawing.Point(0, 302);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(490, 49);
+            this.panel2.Size = new System.Drawing.Size(490, 58);
             this.panel2.TabIndex = 23;
             // 
             // BtnListaEmpleados
             // 
-            this.BtnListaEmpleados.Location = new System.Drawing.Point(29, 14);
+            this.BtnListaEmpleados.Location = new System.Drawing.Point(12, 3);
             this.BtnListaEmpleados.Name = "BtnListaEmpleados";
-            this.BtnListaEmpleados.Size = new System.Drawing.Size(147, 24);
+            this.BtnListaEmpleados.Size = new System.Drawing.Size(147, 43);
             this.BtnListaEmpleados.TabIndex = 24;
             this.BtnListaEmpleados.Text = "Lista de empleados";
             this.BtnListaEmpleados.UseVisualStyleBackColor = true;
@@ -238,7 +202,6 @@
             this.Controls.Add(this.TbxNombreTrabajador);
             this.Controls.Add(this.BtnAgregar);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.BtnEliminar);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -246,7 +209,7 @@
             this.Controls.Add(this.TbxTelefonoTrabajador);
             this.Controls.Add(this.TbxCorreoTrabajador);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.TbxIDTrabajador);
+            this.Controls.Add(this.TbxID);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Trabajadores";
@@ -264,17 +227,14 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox CbxNombre;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox TbxTelefonoTrabajador;
         private System.Windows.Forms.TextBox TbxCorreoTrabajador;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox TbxIDTrabajador;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox TbxID;
         private System.Windows.Forms.Button BtnAgregar;
-        private System.Windows.Forms.Button BtnEliminar;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox TbxNombreTrabajador;
         private System.Windows.Forms.Label label7;

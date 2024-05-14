@@ -12,12 +12,37 @@ namespace RDGweb
 {
     public partial class MenuPrincipal : Form
     {
+        private bool isFormClosingHandled = false;
         public MenuPrincipal(string usuario)
         {
             InitializeComponent();
             MostrarFormulario(new FormInicio());
             BtnCerrarSesion.Click += BtnCerrarSesion_Click;
             lblUsername.Text = usuario;
+            this.FormClosing += MenuPrincipal_FormClosing;
+        }
+        private void MenuPrincipal_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // Asegurarse de que el evento de cierre solo se maneje una vez
+            if (!isFormClosingHandled)
+            {
+                isFormClosingHandled = true;
+
+                // Confirmar si desea cerrar completamente la aplicación
+                DialogResult result = MessageBox.Show("¿Estás seguro que deseas cerrar la aplicación?", "Confirmar cierre", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    // Cierra toda la aplicación
+                    Application.Exit();
+                }
+                else
+                {
+                    // Cancela el cierre del formulario
+                    e.Cancel = true;
+                }
+
+                isFormClosingHandled = false; // Resetear el flag después de manejar el evento
+            }
         }
 
         private void MostrarFormulario(Form formulario)
