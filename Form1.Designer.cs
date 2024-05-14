@@ -39,15 +39,16 @@
             this.label1 = new System.Windows.Forms.Label();
             this.LklRegistro = new System.Windows.Forms.LinkLabel();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // TbxUser
             // 
             this.TbxUser.BackColor = System.Drawing.Color.White;
-            this.TbxUser.Location = new System.Drawing.Point(97, 212);
+            this.TbxUser.Location = new System.Drawing.Point(88, 263);
             this.TbxUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TbxUser.Name = "TbxUser";
             this.TbxUser.Size = new System.Drawing.Size(193, 22);
@@ -56,7 +57,7 @@
             // TbxPassword
             // 
             this.TbxPassword.BackColor = System.Drawing.Color.White;
-            this.TbxPassword.Location = new System.Drawing.Point(97, 270);
+            this.TbxPassword.Location = new System.Drawing.Point(88, 321);
             this.TbxPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TbxPassword.Name = "TbxPassword";
             this.TbxPassword.Size = new System.Drawing.Size(193, 22);
@@ -67,7 +68,7 @@
             // 
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(49, 186);
+            this.pictureBox2.Location = new System.Drawing.Point(40, 237);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(43, 50);
@@ -80,7 +81,7 @@
             this.LblUser.AutoSize = true;
             this.LblUser.BackColor = System.Drawing.Color.Transparent;
             this.LblUser.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblUser.Location = new System.Drawing.Point(97, 188);
+            this.LblUser.Location = new System.Drawing.Point(88, 239);
             this.LblUser.Name = "LblUser";
             this.LblUser.Size = new System.Drawing.Size(129, 19);
             this.LblUser.TabIndex = 4;
@@ -91,7 +92,7 @@
             this.LblPassword.AutoSize = true;
             this.LblPassword.BackColor = System.Drawing.Color.Transparent;
             this.LblPassword.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblPassword.Location = new System.Drawing.Point(97, 247);
+            this.LblPassword.Location = new System.Drawing.Point(88, 298);
             this.LblPassword.Name = "LblPassword";
             this.LblPassword.Size = new System.Drawing.Size(155, 19);
             this.LblPassword.TabIndex = 5;
@@ -100,7 +101,7 @@
             // BtnInicioSesion
             // 
             this.BtnInicioSesion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnInicioSesion.Location = new System.Drawing.Point(135, 316);
+            this.BtnInicioSesion.Location = new System.Drawing.Point(126, 367);
             this.BtnInicioSesion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnInicioSesion.Name = "BtnInicioSesion";
             this.BtnInicioSesion.Size = new System.Drawing.Size(117, 25);
@@ -113,7 +114,7 @@
             // 
             this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(49, 248);
+            this.pictureBox3.Location = new System.Drawing.Point(40, 299);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(43, 41);
@@ -153,18 +154,16 @@
             this.label2.TabIndex = 11;
             this.label2.Text = "¿No estás registtrado?";
             // 
-            // label3
+            // pictureBox1
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.SystemColors.Window;
-            this.label3.Font = new System.Drawing.Font("Bernard MT Condensed", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Image = ((System.Drawing.Image)(resources.GetObject("label3.Image")));
-            this.label3.Location = new System.Drawing.Point(78, 54);
-            this.label3.Margin = new System.Windows.Forms.Padding(0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(227, 72);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "RDGweb";
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::RDGweb.Properties.Resources.logo22;
+            this.pictureBox1.Location = new System.Drawing.Point(67, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(224, 224);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
             // 
             // FormLogin
             // 
@@ -173,6 +172,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(388, 491);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.LklRegistro);
             this.Controls.Add(this.label1);
@@ -183,7 +183,6 @@
             this.Controls.Add(this.TbxPassword);
             this.Controls.Add(this.TbxUser);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.label3);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.Name = "FormLogin";
@@ -191,6 +190,7 @@
             this.Text = "Login";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -207,7 +207,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.LinkLabel LklRegistro;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
