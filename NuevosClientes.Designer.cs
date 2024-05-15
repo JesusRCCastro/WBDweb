@@ -54,6 +54,10 @@
             this.BtnNuevoCliente = new System.Windows.Forms.Button();
             this.TextBoxActividad = new System.Windows.Forms.ComboBox();
             this.TextBoxNuevaFechaNiño = new System.Windows.Forms.MaskedTextBox();
+            this.tbxIdpadre = new System.Windows.Forms.TextBox();
+            this.tbxIdniño = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label8
@@ -268,6 +272,8 @@
             // 
             // TextBoxActividad
             // 
+            this.TextBoxActividad.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.TextBoxActividad.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.TextBoxActividad.Cursor = System.Windows.Forms.Cursors.Default;
             this.TextBoxActividad.FormattingEnabled = true;
             this.TextBoxActividad.Items.AddRange(new object[] {
@@ -286,11 +292,47 @@
             this.TextBoxNuevaFechaNiño.Size = new System.Drawing.Size(100, 22);
             this.TextBoxNuevaFechaNiño.TabIndex = 43;
             // 
+            // tbxIdpadre
+            // 
+            this.tbxIdpadre.Location = new System.Drawing.Point(281, 292);
+            this.tbxIdpadre.Name = "tbxIdpadre";
+            this.tbxIdpadre.Size = new System.Drawing.Size(64, 22);
+            this.tbxIdpadre.TabIndex = 44;
+            // 
+            // tbxIdniño
+            // 
+            this.tbxIdniño.Location = new System.Drawing.Point(281, 534);
+            this.tbxIdniño.Name = "tbxIdniño";
+            this.tbxIdniño.Size = new System.Drawing.Size(64, 22);
+            this.tbxIdniño.TabIndex = 45;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(281, 272);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(81, 16);
+            this.label14.TabIndex = 46;
+            this.label14.Text = "ID del padre";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(281, 515);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(73, 16);
+            this.label15.TabIndex = 47;
+            this.label15.Text = "ID del Niño";
+            // 
             // NuevoCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(458, 637);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.tbxIdniño);
+            this.Controls.Add(this.tbxIdpadre);
             this.Controls.Add(this.TextBoxNuevaFechaNiño);
             this.Controls.Add(this.TextBoxActividad);
             this.Controls.Add(this.BtnNuevoCliente);
@@ -353,5 +395,9 @@
         private System.Windows.Forms.Button BtnNuevoCliente;
         private System.Windows.Forms.ComboBox TextBoxActividad;
         private System.Windows.Forms.MaskedTextBox TextBoxNuevaFechaNiño;
+        private System.Windows.Forms.TextBox tbxIdpadre;
+        private System.Windows.Forms.TextBox tbxIdniño;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
     }
 }

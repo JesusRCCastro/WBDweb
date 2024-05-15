@@ -1,13 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace RDGweb
@@ -21,7 +15,7 @@ namespace RDGweb
 
         private void BtnNuevoCliente_Click(object sender, EventArgs e)
         {
-            // Validar que todos los campos estén completos
+            // Validaciones de campos
             if (string.IsNullOrWhiteSpace(TextBoxNuevoNombreCliente.Text) ||
                 string.IsNullOrWhiteSpace(TextBoxNuevoEdadCliente.Text) ||
                 string.IsNullOrWhiteSpace(TextBoxNuevoDirrecionCliente.Text) ||
@@ -33,33 +27,33 @@ namespace RDGweb
                 string.IsNullOrWhiteSpace(TextBoxNuevaFechaNiño.Text) ||
                 string.IsNullOrWhiteSpace(TextBoxNuevoNumeroContacto.Text) ||
                 string.IsNullOrWhiteSpace(TextBoxNuevaEdadNiño.Text) ||
+                string.IsNullOrWhiteSpace(tbxIdpadre.Text) ||
+                string.IsNullOrWhiteSpace(tbxIdniño.Text) ||
                 string.IsNullOrWhiteSpace(TextBoxActividad.Text))
+                
             {
                 MessageBox.Show("Por favor, completa todos los campos.");
                 return;
             }
 
-            // Validar el formato de la edad del cliente
             if (!int.TryParse(TextBoxNuevoEdadCliente.Text, out _))
             {
                 MessageBox.Show("La edad del cliente debe ser un número entero.");
                 return;
             }
 
-            // Validar el formato de la fecha de nacimiento del niño
             if (!DateTime.TryParse(TextBoxNuevaFechaNiño.Text, out _))
             {
                 MessageBox.Show("La fecha de nacimiento del niño no es válida.");
                 return;
             }
 
-            // Validar el formato de la edad del niño
             if (!int.TryParse(TextBoxNuevaEdadNiño.Text, out _))
             {
                 MessageBox.Show("La edad del niño debe ser un número entero.");
                 return;
             }
-            // Validaciones adicionales
+
             if (!Regex.IsMatch(TextBoxNuevoNombreCliente.Text, @"^[a-zA-Z\s]+$") ||
                 !Regex.IsMatch(TextBoxNuevoOficio.Text, @"^[a-zA-Z\s]+$") ||
                 !Regex.IsMatch(TextBoxNuevoNombreNiño.Text, @"^[a-zA-Z\s]+$"))
@@ -95,16 +89,18 @@ namespace RDGweb
 
             // Insertar datos en la base de datos
             string connectionString = "server=localhost;user=root;database=guarderia;port=3306;password=";
-            string queryCliente = "INSERT INTO cliente (Nombre, Edad, Dirección, Telefono, NSS, Oficio, Correo) VALUES (@Nombre, @Edad, @Dirección, @Telefono, @NSS, @Oficio, @Correo)";
-            string queryNiños = "INSERT INTO niños (Nombre, `FechaNacimiento`, NumContacto, Edad, Genero) VALUES (@NombreNiño, @FechaNacimiento, @NumContacto, @EdadNiño, @GeneroNiño)";
-
+            string queryCliente = "INSERT INTO cliente (Nombre, Edad, Dirección, Telefono, NSS, Oficio, Correo, idCliente) VALUES (@Nombre, @Edad, @Dirección, @Telefono, @NSS, @Oficio, @Correo, @idcliente); SELECT LAST_INSERT_ID();";
+            string queryNiños = "INSERT INTO niños (Nombre, `Fecha de Nacimiento`, NumContacto, Edad, Genero, idNiño) VALUES (@NombreNiño, @FechaNacimiento, @NumContacto, @EdadNiño, @GeneroNiño, @idniño); SELECT LAST_INSERT_ID();";
+           
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 try
                 {
                     conn.Open();
 
-                    // Insertando en la tabla cliente
+                    int idPadre, idniño;
+
+                    // Insertar en la tabla cliente y obtener el ID
                     using (MySqlCommand cmd = new MySqlCommand(queryCliente, conn))
                     {
                         cmd.Parameters.AddWithValue("@Nombre", TextBoxNuevoNombreCliente.Text);
@@ -114,11 +110,13 @@ namespace RDGweb
                         cmd.Parameters.AddWithValue("@NSS", TextBoxNuevoNSS.Text);
                         cmd.Parameters.AddWithValue("@Oficio", TextBoxNuevoOficio.Text);
                         cmd.Parameters.AddWithValue("@Correo", TextBoxNuevoCorreo.Text);
+                        cmd.Parameters.AddWithValue("@idpadres", tbxIdpadre.Text);
+                        
 
-                        cmd.ExecuteNonQuery();
+                        idPadre = Convert.ToInt32(cmd.ExecuteScalar());
                     }
 
-                    // Insertando en la tabla niños
+                    // Insertar en la tabla niños y obtener el ID
                     using (MySqlCommand cmd = new MySqlCommand(queryNiños, conn))
                     {
                         cmd.Parameters.AddWithValue("@NombreNiño", TextBoxNuevoNombreNiño.Text);
@@ -126,18 +124,56 @@ namespace RDGweb
                         cmd.Parameters.AddWithValue("@NumContacto", TextBoxNuevoNumeroContacto.Text);
                         cmd.Parameters.AddWithValue("@EdadNiño", TextBoxNuevaEdadNiño.Text);
                         cmd.Parameters.AddWithValue("@GeneroNiño", TextBoxActividad.Text);
+                        cmd.Parameters.AddWithValue("@idniño", tbxIdniño.Text);
+                        
 
-                        cmd.ExecuteNonQuery();
+                        idniño = Convert.ToInt32(cmd.ExecuteScalar());
                     }
 
+                    int idCliente = ObtenerUltimoId("cliente");
+                    tbxIdpadre.Text = idPadre.ToString();
+                    tbxIdpadre.ReadOnly = true;
+
+                    // Obtener ID del niño y mostrarlo en TextBox
+                    int idNiño = ObtenerUltimoId("niños");
+                    tbxIdniño.Text = idniño.ToString();
+                    tbxIdniño.ReadOnly = true;
+
                     // Mostrar mensaje de éxito
-                    MessageBox.Show("La información se ha añadido correctamente.");
+                    MessageBox.Show($"La información se ha añadido correctamente. ID del Padre: {idPadre}, ID del Niño: {idniño}");
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Error al insertar datos: " + ex.Message);
                 }
             }
+
+        }
+        private int ObtenerUltimoId(string tabla)
+        {
+            int ultimoId = 0;
+            string connectionString = "server=localhost;user=root;database=guarderia;port=3306;password=";
+            string query = $"SELECT MAX(id) FROM {tabla};";
+
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    object result = cmd.ExecuteScalar();
+                    if (result != DBNull.Value)
+                    {
+                        ultimoId = Convert.ToInt32(result);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al obtener el último ID: " + ex.Message);
+                }
+            }
+
+            return ultimoId + 1;
         }
     }
 }
