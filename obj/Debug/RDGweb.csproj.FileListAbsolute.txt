@@ -210,3 +210,4 @@ C:\Users\angel\Source\Repos\JesusRCCastro\WBDweb\obj\Debug\RDGweb.Trabajadores.r
 C:\Users\angel\Source\Repos\JesusRCCastro\WBDweb\obj\Debug\RDGweb.AñadirIncidencias.resources
 C:\Users\Jesus Castro\source\repos\WBDweb\obj\Debug\RDGweb.AñadirIncidencias.resources
 C:\Users\Aram\Source\Repos\JesusRCCastro\WBDweb\obj\Debug\RDGweb.AñadirIncidencias.resources
+C:\Users\araml\Source\Repos\JesusRCCastro\WBDweb\obj\Debug\RDGweb.AñadirIncidencias.resources
