@@ -23,6 +23,7 @@ namespace RDGweb
             TextBoxEdad.ReadOnly = true;
             MaskedTextBoxFechaNac.ReadOnly = true;
             TextBoxNumContacto.ReadOnly = true;
+            IdPadre.ReadOnly = true;
         }
 
 
@@ -127,6 +128,7 @@ namespace RDGweb
                         }
 
                         TextBoxNumContacto.Text = reader["NumContacto"].ToString();
+                        IdPadre.Text = reader["id_Padre"].ToString();
                     }
                     else
                     {
@@ -150,31 +152,65 @@ namespace RDGweb
             // Limpiar también el contenido del MaskedTextBox
             MaskedTextBoxFechaNac.Text = "";
             TextBoxNumContacto.Text = "";
+            IdPadre.Text = "";
         }
 
         private void DarDeBaja(string nombreNiño)
         {
             string connectionString = "server=localhost;user=root;password=;database=guarderia;";
-            string query = "DELETE FROM niños WHERE Nombre = @NombreNiño;";
+            
 
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 try
                 {
                     conn.Open();
-                    MySqlCommand cmd = new MySqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@NombreNiño", nombreNiño);
+                    MySqlCommand cmd = conn.CreateCommand();
+                    MySqlTransaction transaction = conn.BeginTransaction();
+                    cmd.Transaction = transaction;
 
-                    int rowsAffected = cmd.ExecuteNonQuery();
+                    try
+                    {
+                        cmd.CommandText = "SELECT id_padre FROM niños WHERE Nombre = @NombreNiño";
+                        cmd.Parameters.AddWithValue("@NombreNiño", nombreNiño);
 
-                    if (rowsAffected > 0)
-                    {
-                        MessageBox.Show("El niño se eliminó correctamente.");
+                        int? idPadre = (int?)cmd.ExecuteScalar();
+
+                        if (idPadre != null)
+                        {
+                            // Paso 2: Eliminar el niño
+                            cmd.CommandText = "DELETE FROM niños WHERE Nombre = @NombreNiño";
+                            cmd.ExecuteNonQuery();
+
+                            // Paso 3: Contar los niños restantes del padre
+                            cmd.CommandText = "SELECT COUNT(*) FROM niños WHERE id_padre = @idPadre";
+                            cmd.Parameters.Clear();
+                            cmd.Parameters.AddWithValue("@idPadre", idPadre);
+                            int numNinos = Convert.ToInt32(cmd.ExecuteScalar());
+
+                            // Paso 4: Si no tiene más niños, eliminar al padre
+                            if (numNinos == 0)
+                            {
+                                cmd.CommandText = "DELETE FROM Clientes WHERE idCliente = @idPadre";
+                                cmd.ExecuteNonQuery();
+                            }
+
+                            // Confirmar la transacción
+                            transaction.Commit();
+                            MessageBox.Show("El niño y, si aplica, el padre han sido eliminados correctamente.");
+                        }
+                        else
+                        {
+                            MessageBox.Show("No se encontró el padre del niño.");
+                        }
                     }
-                    else
+                    catch (Exception ex)
                     {
-                        MessageBox.Show("No se encontró ningún niño con el nombre proporcionado.");
+                        // Revertir la transacción en caso de error
+                        transaction.Rollback();
+                        MessageBox.Show("Ocurrió un error: " + ex.Message);
                     }
+                    
                 }
                 catch (Exception ex)
                 {
@@ -193,6 +229,10 @@ namespace RDGweb
                 LimpiarDatos();
                 LoadNombresNiños();
 
+            }
+            else
+            {
+                MessageBox.Show("Por favor, seleccione un niño.");
             }
         }
 
