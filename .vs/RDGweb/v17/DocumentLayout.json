@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\araml\\source\\repos\\JesusRCCastro\\WBDweb\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{845CD035-EC15-45EC-BC71-E8DE3281C33C}|RDGweb.csproj|c:\\users\\araml\\source\\repos\\jesusrccastro\\wbdweb\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{845CD035-EC15-45EC-BC71-E8DE3281C33C}|RDGweb.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{845CD035-EC15-45EC-BC71-E8DE3281C33C}|RDGweb.csproj|c:\\users\\araml\\source\\repos\\jesusrccastro\\wbdweb\\idni\u00F1os.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{845CD035-EC15-45EC-BC71-E8DE3281C33C}|RDGweb.csproj|solutionrelative:idni\u00F1os.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{845CD035-EC15-45EC-BC71-E8DE3281C33C}|RDGweb.csproj|c:\\users\\araml\\source\\repos\\jesusrccastro\\wbdweb\\registro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{845CD035-EC15-45EC-BC71-E8DE3281C33C}|RDGweb.csproj|solutionrelative:registro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{845CD035-EC15-45EC-BC71-E8DE3281C33C}|RDGweb.csproj|c:\\users\\araml\\source\\repos\\jesusrccastro\\wbdweb\\idni\u00F1os.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{845CD035-EC15-45EC-BC71-E8DE3281C33C}|RDGweb.csproj|solutionrelative:idni\u00F1os.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{845CD035-EC15-45EC-BC71-E8DE3281C33C}|RDGweb.csproj|C:\\Users\\araml\\source\\repos\\JesusRCCastro\\WBDweb\\registro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{845CD035-EC15-45EC-BC71-E8DE3281C33C}|RDGweb.csproj|solutionrelative:registro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{845CD035-EC15-45EC-BC71-E8DE3281C33C}|RDGweb.csproj|c:\\users\\araml\\source\\repos\\jesusrccastro\\wbdweb\\menuprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{845CD035-EC15-45EC-BC71-E8DE3281C33C}|RDGweb.csproj|solutionrelative:menuprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -59,38 +59,39 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Form1.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\araml\\source\\repos\\JesusRCCastro\\WBDweb\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\araml\\source\\repos\\JesusRCCastro\\WBDweb\\Form1.cs [Dise\u00F1o]*",
-              "RelativeToolTip": "Form1.cs [Dise\u00F1o]*",
+              "Title": "IDNi\u00F1os.cs",
+              "DocumentMoniker": "C:\\Users\\araml\\source\\repos\\JesusRCCastro\\WBDweb\\IDNi\u00F1os.cs",
+              "RelativeDocumentMoniker": "IDNi\u00F1os.cs",
+              "ToolTip": "C:\\Users\\araml\\source\\repos\\JesusRCCastro\\WBDweb\\IDNi\u00F1os.cs*",
+              "RelativeToolTip": "IDNi\u00F1os.cs*",
+              "ViewState": "AQIAAKoAAAAAAAAAAAAAAMoAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-15T05:02:47.449Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Registro.cs",
-              "DocumentMoniker": "C:\\Users\\araml\\source\\repos\\JesusRCCastro\\WBDweb\\Registro.cs",
-              "RelativeDocumentMoniker": "Registro.cs",
-              "ToolTip": "C:\\Users\\araml\\source\\repos\\JesusRCCastro\\WBDweb\\Registro.cs",
-              "RelativeToolTip": "Registro.cs",
-              "ViewState": "AQIAADIAAAAAAAAAAAAYwEQAAABGAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T19:49:48.897Z",
+              "WhenOpened": "2024-05-15T05:16:39.662Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Registro.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\araml\\source\\repos\\JesusRCCastro\\WBDweb\\Registro.cs",
-              "RelativeDocumentMoniker": "Registro.cs",
-              "ToolTip": "C:\\Users\\Aram\\source\\repos\\JesusRCCastro\\WBDweb\\Registro.cs [Dise\u00F1o]*",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\Aram\\source\\repos\\JesusRCCastro\\WBDweb\\Registro.cs [Dise\u00F1o]*",
+              "DocumentIndex": 1,
+              "Title": "IDNi\u00F1os.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\araml\\source\\repos\\JesusRCCastro\\WBDweb\\IDNi\u00F1os.cs",
+              "RelativeDocumentMoniker": "IDNi\u00F1os.cs",
+              "ToolTip": "C:\\Users\\araml\\source\\repos\\JesusRCCastro\\WBDweb\\IDNi\u00F1os.cs [Dise\u00F1o]*",
+              "RelativeToolTip": "IDNi\u00F1os.cs [Dise\u00F1o]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T19:49:44.792Z"
+              "WhenOpened": "2024-05-15T05:15:08.384Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MenuPrincipal.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\araml\\source\\repos\\JesusRCCastro\\WBDweb\\MenuPrincipal.cs",
+              "RelativeDocumentMoniker": "MenuPrincipal.cs",
+              "ToolTip": "C:\\Users\\araml\\source\\repos\\JesusRCCastro\\WBDweb\\MenuPrincipal.cs [Dise\u00F1o]",
+              "RelativeToolTip": "MenuPrincipal.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T05:14:38.107Z",
+              "EditorCaption": " [Dise\u00F1o]"
             }
           ]
         }

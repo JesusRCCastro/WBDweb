@@ -29,87 +29,80 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(IDNiños));
-            this.ComBoxIDCliente = new System.Windows.Forms.ComboBox();
             this.TextBoxNombreNiño = new System.Windows.Forms.TextBox();
-            this.TextBoxFechaNac = new System.Windows.Forms.TextBox();
             this.TextBoxEdad = new System.Windows.Forms.TextBox();
             this.TextBoxGenero = new System.Windows.Forms.TextBox();
             this.PicBoxFaceChild = new System.Windows.Forms.PictureBox();
             this.TextBoxNumContacto = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.TextBoxBuscar = new System.Windows.Forms.TextBox();
+            this.LbxNombreNiño = new System.Windows.Forms.ListBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.MaskedTextBoxFechaNac = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.PicBoxFaceChild)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // ComBoxIDCliente
-            // 
-            this.ComBoxIDCliente.FormattingEnabled = true;
-            this.ComBoxIDCliente.Location = new System.Drawing.Point(192, 108);
-            this.ComBoxIDCliente.Name = "ComBoxIDCliente";
-            this.ComBoxIDCliente.Size = new System.Drawing.Size(124, 24);
-            this.ComBoxIDCliente.TabIndex = 7;
-            // 
             // TextBoxNombreNiño
             // 
-            this.TextBoxNombreNiño.Location = new System.Drawing.Point(15, 67);
+            this.TextBoxNombreNiño.Location = new System.Drawing.Point(10, 95);
+            this.TextBoxNombreNiño.Margin = new System.Windows.Forms.Padding(2);
             this.TextBoxNombreNiño.Multiline = true;
             this.TextBoxNombreNiño.Name = "TextBoxNombreNiño";
-            this.TextBoxNombreNiño.Size = new System.Drawing.Size(233, 24);
+            this.TextBoxNombreNiño.Size = new System.Drawing.Size(176, 20);
             this.TextBoxNombreNiño.TabIndex = 9;
-            // 
-            // TextBoxFechaNac
-            // 
-            this.TextBoxFechaNac.Location = new System.Drawing.Point(15, 109);
-            this.TextBoxFechaNac.Multiline = true;
-            this.TextBoxFechaNac.Name = "TextBoxFechaNac";
-            this.TextBoxFechaNac.Size = new System.Drawing.Size(233, 24);
-            this.TextBoxFechaNac.TabIndex = 10;
             // 
             // TextBoxEdad
             // 
-            this.TextBoxEdad.Location = new System.Drawing.Point(280, 138);
+            this.TextBoxEdad.Location = new System.Drawing.Point(215, 167);
+            this.TextBoxEdad.Margin = new System.Windows.Forms.Padding(2);
             this.TextBoxEdad.Multiline = true;
             this.TextBoxEdad.Name = "TextBoxEdad";
-            this.TextBoxEdad.Size = new System.Drawing.Size(131, 24);
+            this.TextBoxEdad.Size = new System.Drawing.Size(99, 20);
             this.TextBoxEdad.TabIndex = 11;
             // 
             // TextBoxGenero
             // 
-            this.TextBoxGenero.Location = new System.Drawing.Point(280, 88);
+            this.TextBoxGenero.Location = new System.Drawing.Point(215, 111);
+            this.TextBoxGenero.Margin = new System.Windows.Forms.Padding(2);
             this.TextBoxGenero.Multiline = true;
             this.TextBoxGenero.Name = "TextBoxGenero";
-            this.TextBoxGenero.Size = new System.Drawing.Size(131, 24);
+            this.TextBoxGenero.Size = new System.Drawing.Size(99, 20);
             this.TextBoxGenero.TabIndex = 12;
             // 
             // PicBoxFaceChild
             // 
             this.PicBoxFaceChild.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.PicBoxFaceChild.Location = new System.Drawing.Point(431, 28);
+            this.PicBoxFaceChild.Location = new System.Drawing.Point(323, 23);
+            this.PicBoxFaceChild.Margin = new System.Windows.Forms.Padding(2);
             this.PicBoxFaceChild.Name = "PicBoxFaceChild";
-            this.PicBoxFaceChild.Size = new System.Drawing.Size(110, 105);
+            this.PicBoxFaceChild.Size = new System.Drawing.Size(82, 85);
             this.PicBoxFaceChild.TabIndex = 13;
             this.PicBoxFaceChild.TabStop = false;
             // 
             // TextBoxNumContacto
             // 
-            this.TextBoxNumContacto.Location = new System.Drawing.Point(15, 155);
+            this.TextBoxNumContacto.Location = new System.Drawing.Point(10, 167);
+            this.TextBoxNumContacto.Margin = new System.Windows.Forms.Padding(2);
             this.TextBoxNumContacto.Multiline = true;
             this.TextBoxNumContacto.Name = "TextBoxNumContacto";
-            this.TextBoxNumContacto.Size = new System.Drawing.Size(233, 24);
+            this.TextBoxNumContacto.Size = new System.Drawing.Size(176, 20);
             this.TextBoxNumContacto.TabIndex = 14;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.panel1.Controls.Add(this.MaskedTextBoxFechaNac);
+            this.panel1.Controls.Add(this.TextBoxBuscar);
+            this.panel1.Controls.Add(this.LbxNombreNiño);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
@@ -119,20 +112,97 @@
             this.panel1.Controls.Add(this.PicBoxFaceChild);
             this.panel1.Controls.Add(this.TextBoxGenero);
             this.panel1.Controls.Add(this.TextBoxEdad);
-            this.panel1.Controls.Add(this.TextBoxFechaNac);
             this.panel1.Controls.Add(this.TextBoxNumContacto);
             this.panel1.Controls.Add(this.TextBoxNombreNiño);
-            this.panel1.Location = new System.Drawing.Point(70, 94);
+            this.panel1.Location = new System.Drawing.Point(52, 76);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(563, 192);
+            this.panel1.Size = new System.Drawing.Size(422, 214);
             this.panel1.TabIndex = 16;
+            // 
+            // TextBoxBuscar
+            // 
+            this.TextBoxBuscar.Location = new System.Drawing.Point(17, 37);
+            this.TextBoxBuscar.Name = "TextBoxBuscar";
+            this.TextBoxBuscar.Size = new System.Drawing.Size(100, 20);
+            this.TextBoxBuscar.TabIndex = 22;
+            // 
+            // LbxNombreNiño
+            // 
+            this.LbxNombreNiño.FormattingEnabled = true;
+            this.LbxNombreNiño.Location = new System.Drawing.Point(123, 8);
+            this.LbxNombreNiño.Name = "LbxNombreNiño";
+            this.LbxNombreNiño.Size = new System.Drawing.Size(120, 82);
+            this.LbxNombreNiño.TabIndex = 21;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(10, 19);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(104, 15);
+            this.label7.TabIndex = 20;
+            this.label7.Text = "Nombre del Niño:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(217, 150);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(32, 13);
+            this.label6.TabIndex = 19;
+            this.label6.Text = "Edad";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(217, 93);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(42, 13);
+            this.label5.TabIndex = 18;
+            this.label5.Text = "Genero";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(11, 151);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(104, 13);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "Numero de contacto";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(11, 114);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(106, 13);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "Fecha de nacimiento";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(14, 78);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(44, 13);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Nombre";
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.IndianRed;
-            this.button1.Location = new System.Drawing.Point(282, 292);
+            this.button1.Location = new System.Drawing.Point(215, 294);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(121, 28);
+            this.button1.Size = new System.Drawing.Size(91, 23);
             this.button1.TabIndex = 17;
             this.button1.Text = "Dar de baja ";
             this.button1.UseVisualStyleBackColor = false;
@@ -143,9 +213,10 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.LightSkyBlue;
             this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(198, 31);
+            this.label1.Location = new System.Drawing.Point(148, 25);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(291, 35);
+            this.label1.Size = new System.Drawing.Size(227, 29);
             this.label1.TabIndex = 19;
             this.label1.Text = "Información del niño";
             // 
@@ -153,78 +224,33 @@
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ControlText;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 345);
+            this.panel2.Location = new System.Drawing.Point(0, 333);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(705, 19);
+            this.panel2.Size = new System.Drawing.Size(529, 15);
             this.panel2.TabIndex = 20;
             // 
-            // label2
+            // MaskedTextBoxFechaNac
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(20, 45);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 16);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Nombre";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 90);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(132, 16);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "Fecha de nacimiento";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(16, 136);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(128, 16);
-            this.label4.TabIndex = 17;
-            this.label4.Text = "Numero de contacto";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(283, 67);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 16);
-            this.label5.TabIndex = 18;
-            this.label5.Text = "Genero";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(282, 117);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(40, 16);
-            this.label6.TabIndex = 19;
-            this.label6.Text = "Edad";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(32, 17);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(84, 18);
-            this.label7.TabIndex = 20;
-            this.label7.Text = "ID del Niño:";
+            this.MaskedTextBoxFechaNac.Location = new System.Drawing.Point(14, 130);
+            this.MaskedTextBoxFechaNac.Mask = "####-##-##";
+            this.MaskedTextBoxFechaNac.Name = "MaskedTextBoxFechaNac";
+            this.MaskedTextBoxFechaNac.Size = new System.Drawing.Size(100, 20);
+            this.MaskedTextBoxFechaNac.TabIndex = 23;
+            this.MaskedTextBoxFechaNac.ValidatingType = typeof(System.DateTime);
             // 
             // IDNiños
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(705, 364);
+            this.ClientSize = new System.Drawing.Size(529, 348);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.ComBoxIDCliente);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "IDNiños";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "IDNiños";
@@ -237,9 +263,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.ComboBox ComBoxIDCliente;
         private System.Windows.Forms.TextBox TextBoxNombreNiño;
-        private System.Windows.Forms.TextBox TextBoxFechaNac;
         private System.Windows.Forms.TextBox TextBoxEdad;
         private System.Windows.Forms.TextBox TextBoxGenero;
         private System.Windows.Forms.PictureBox PicBoxFaceChild;
@@ -254,5 +278,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ListBox LbxNombreNiño;
+        private System.Windows.Forms.TextBox TextBoxBuscar;
+        private System.Windows.Forms.MaskedTextBox MaskedTextBoxFechaNac;
     }
 }

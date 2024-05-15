@@ -1,74 +1,92 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace RDGweb
 {
     public partial class IDNiños : Form
     {
+        private List<string> nombresNiños = new List<string>(); // Lista para almacenar los nombres de los niños
+
         public IDNiños()
         {
             InitializeComponent();
-            LoadIdCliente();
-            ComBoxIDCliente.SelectedIndexChanged += ComBoxIDCliente_SelectedIndexChanged;
+            LoadNombresNiños(); // Cambiar el nombre del método para cargar los nombres de los niños
+            LbxNombreNiño.SelectedIndexChanged += LbxNombreNiño_SelectedIndexChanged; // Agregar evento para manejar la selección en el ListBox
+            TextBoxBuscar.TextChanged += TextBoxBuscar_TextChanged; // Agregar evento para manejar el cambio de texto en el TextBox de búsqueda
+
+            // Configurar TextBoxes como solo lectura
+            TextBoxNombreNiño.ReadOnly = true;
+            TextBoxGenero.ReadOnly = true;
+            TextBoxEdad.ReadOnly = true;
+            MaskedTextBoxFechaNac.ReadOnly = true;
+            TextBoxNumContacto.ReadOnly = true;
         }
-        private void ComBoxIDCliente_SelectedIndexChanged(object sender, EventArgs e)
+
+
+        private void TextBoxBuscar_TextChanged(object sender, EventArgs e)
         {
-            if (ComBoxIDCliente.SelectedItem != null)
+            string searchText = TextBoxBuscar.Text.ToLower(); // Convertir el texto de búsqueda a minúsculas para hacer la comparación de manera insensible a mayúsculas/minúsculas
+
+            // Filtrar los elementos del ListBox para mostrar solo aquellos que contienen el texto de búsqueda
+            LbxNombreNiño.Items.Clear();
+            foreach (var item in nombresNiños)
             {
-                int selectedIdCliente = Convert.ToInt32(ComBoxIDCliente.SelectedItem.ToString());
-                NombreCliente(selectedIdCliente);
-                EdadCliente(selectedIdCliente); 
-                GeneroCliente(selectedIdCliente);
-                FechaNacCliente(selectedIdCliente);
-                NumCliente(selectedIdCliente);
+                if (item.ToLower().Contains(searchText))
+                {
+                    LbxNombreNiño.Items.Add(item);
+                }
+            }
+        }
+        
+        private void LbxNombreNiño_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (LbxNombreNiño.SelectedItem != null)
+            {
+                // Obtener el nombre del niño seleccionado y cargar sus datos
+                string selectedNombreNiño = LbxNombreNiño.SelectedItem.ToString();
+                CargarDatosNiño(selectedNombreNiño);
             }
         }
 
-        private void LoadIdCliente()
+        private void LoadNombresNiños() // Cambiar el nombre del método para cargar los nombres de los niños
         {
             string connectionString = "server=localhost;user=root;password=;database=guarderia;";
-            string query = "SELECT idNiño FROM niños;";  // Consulta para obtener los IDs
+            string query = "SELECT Nombre FROM niños;";
 
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 try
                 {
-                    conn.Open();  // Abrir la conexión a la base de datos
+                    conn.Open();
 
                     MySqlCommand cmd = new MySqlCommand(query, conn);
                     MySqlDataReader reader = cmd.ExecuteReader();
 
-                    ComBoxIDCliente.Items.Clear();  // Limpiar el ComboBox antes de llenarlo
+                    LbxNombreNiño.Items.Clear();
 
                     while (reader.Read())
                     {
-                        // Añadir cada idIncidencia al ComboBox
-                        ComBoxIDCliente.Items.Add(reader["idNiño"].ToString());
+                        string nombre = reader["Nombre"].ToString();
+                        nombresNiños.Add(nombre); // Agregar el nombre a la lista
+                        LbxNombreNiño.Items.Add(reader["Nombre"].ToString());
                     }
 
-                    reader.Close();  // Cerrar el lector
+                    reader.Close();
                 }
                 catch (Exception ex)
                 {
-                    // Mostrar mensaje de error en caso de fallo
-                    MessageBox.Show("Error al cargar los datos: " + ex.Message);
+                    MessageBox.Show("Error al cargar los nombres de los niños: " + ex.Message);
                 }
             }
-
         }
 
-        private void NombreCliente(int idNiño)
+        private void CargarDatosNiño(string nombreNiño)
         {
             string connectionString = "server=localhost;user=root;password=;database=guarderia;";
-            string query = "SELECT Nombre FROM niños WHERE idNiño = @idNiño;";
+            string query = "SELECT * FROM niños WHERE Nombre = @NombreNiño;";
 
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
@@ -76,163 +94,68 @@ namespace RDGweb
                 {
                     conn.Open();
                     MySqlCommand cmd = new MySqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@idNiño", idNiño);
+                    cmd.Parameters.AddWithValue("@NombreNiño", nombreNiño);
 
                     MySqlDataReader reader = cmd.ExecuteReader();
                     if (reader.Read())
                     {
                         TextBoxNombreNiño.Text = reader["Nombre"].ToString();
-                    }
-                    else
-                    {
-                        TextBoxNombreNiño.Text = "No se encontró descripción.";
-                    }
-
-                    reader.Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error al cargar el nombre: " + ex.Message);
-                }
-            }
-
-        }
-
-        private void GeneroCliente(int idNiño)
-        {
-            string connectionString = "server=localhost;user=root;password=;database=guarderia;";
-            string query = "SELECT Genero FROM niños WHERE idNiño = @idNiño;";
-
-            using (MySqlConnection conn = new MySqlConnection(connectionString))
-            {
-                try
-                {
-                    conn.Open();
-                    MySqlCommand cmd = new MySqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@idNiño", idNiño);
-
-                    MySqlDataReader reader = cmd.ExecuteReader();
-                    if (reader.Read())
-                    {
                         TextBoxGenero.Text = reader["Genero"].ToString();
-                    }
-                    else
-                    {
-                        TextBoxGenero.Text = "No se encontró descripción.";
-                    }
+                        TextBoxEdad.Text = reader["Edad"].ToString() + " años";
+                        // Debug: Imprimir el valor de la fecha de nacimiento obtenido de la base de datos
+                        Console.WriteLine("Valor de Fecha de Nacimiento desde la base de datos: " + reader["Fecha de Nacimiento"]);
 
-                    reader.Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error al cargar la edad: " + ex.Message);
-                }
-            }
-
-        }
-
-
-        private void EdadCliente(int idNiño)
-        {
-            string connectionString = "server=localhost;user=root;password=;database=guarderia;";
-            string query = "SELECT Edad FROM niños WHERE idNiño = @idNiño;";
-
-            using (MySqlConnection conn = new MySqlConnection(connectionString))
-            {
-                try
-                {
-                    conn.Open();
-                    MySqlCommand cmd = new MySqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@idNiño", idNiño);
-
-                    MySqlDataReader reader = cmd.ExecuteReader();
-                    if (reader.Read())
-                    {
-                        TextBoxEdad.Text = reader["Edad"].ToString() + "  años";
-                    }
-                    else
-                    {
-                        TextBoxEdad.Text = "No se encontró descripción.";
-                    }
-
-                    reader.Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error al cargar la edad: " + ex.Message);
-                }
-            }
-
-        }
-
-        private void FechaNacCliente(int idNiño)
-        {
-            string connectionString = "server=localhost;user=root;password=;database=guarderia;";
-            string query = "SELECT `FechaNacimiento` FROM niños WHERE idNiño = @idNiño;";
-
-            using (MySqlConnection conn = new MySqlConnection(connectionString))
-            {
-                try
-                {
-                    conn.Open();
-                    MySqlCommand cmd = new MySqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@idNiño", idNiño);
-
-                    using (MySqlDataReader reader = cmd.ExecuteReader())
-                    {
-                        if (reader.Read())
+                        // Verificar si el valor de la fecha de nacimiento es válido
+                        if (reader["Fecha de Nacimiento"] != DBNull.Value)
                         {
-                            TextBoxFechaNac.Text = reader["FechaNacimiento"].ToString();
+                            // Intentar convertir la fecha y establecerla en el MaskedTextBox
+                            try
+                            {
+                                DateTime fechaNacimiento = Convert.ToDateTime(reader["Fecha de Nacimiento"]);
+                                MaskedTextBoxFechaNac.Text = fechaNacimiento.ToString("yyyy-MM-dd");
+                            }
+                            catch (FormatException)
+                            {
+                                // Si hay un error de formato al convertir la fecha, establecer el texto en blanco
+                                MaskedTextBoxFechaNac.Text = "";
+                            }
                         }
                         else
                         {
-                            TextBoxFechaNac.Text = "No se encontró la fecha de nacimiento.";
+                            // Si el valor es DBNull, establecer el texto en blanco
+                            MaskedTextBoxFechaNac.Text = "";
                         }
-                    } 
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error al cargar la fecha de nacimiento: " + ex.Message);
-                }
-            } 
-        }
 
-        private void NumCliente(int idNiño)
-        {
-            string connectionString = "server=localhost;user=root;password=;database=guarderia;";
-            string query = "SELECT NumContacto FROM niños WHERE idNiño = @idNiño;";
-
-            using (MySqlConnection conn = new MySqlConnection(connectionString))
-            {
-                try
-                {
-                    conn.Open();
-                    MySqlCommand cmd = new MySqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@idNiño", idNiño);
-
-                    MySqlDataReader reader = cmd.ExecuteReader();
-                    if (reader.Read())
-                    {
                         TextBoxNumContacto.Text = reader["NumContacto"].ToString();
                     }
                     else
                     {
-                        TextBoxNumContacto.Text = "No se encontró numero.";
+                        LimpiarCampos();
                     }
 
                     reader.Close();
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error al cargar el numero: " + ex.Message);
+                    MessageBox.Show("Error al cargar los datos del niño: " + ex.Message);
                 }
             }
-
         }
-        private void DarDeBaja(int idNiño)
+
+        private void LimpiarCampos()
+        {
+            TextBoxNombreNiño.Text = "";
+            TextBoxGenero.Text = "";
+            TextBoxEdad.Text = "";
+            // Limpiar también el contenido del MaskedTextBox
+            MaskedTextBoxFechaNac.Text = "";
+            TextBoxNumContacto.Text = "";
+        }
+
+        private void DarDeBaja(string nombreNiño)
         {
             string connectionString = "server=localhost;user=root;password=;database=guarderia;";
-            string query = "DELETE FROM niños WHERE idNiño = @idNiño;";
+            string query = "DELETE FROM niños WHERE Nombre = @NombreNiño;";
 
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
@@ -240,35 +163,46 @@ namespace RDGweb
                 {
                     conn.Open();
                     MySqlCommand cmd = new MySqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@idNiño", idNiño);
+                    cmd.Parameters.AddWithValue("@NombreNiño", nombreNiño);
 
                     int rowsAffected = cmd.ExecuteNonQuery();
 
                     if (rowsAffected > 0)
                     {
-                        MessageBox.Show("La fila se eliminó correctamente.");
-                        // Puedes agregar aquí cualquier otra lógica que necesites después de eliminar la fila.
+                        MessageBox.Show("El niño se eliminó correctamente.");
                     }
                     else
                     {
-                        MessageBox.Show("No se encontró ninguna fila para eliminar con el ID proporcionado.");
+                        MessageBox.Show("No se encontró ningún niño con el nombre proporcionado.");
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error al eliminar la fila: " + ex.Message);
+                    MessageBox.Show("Error al eliminar al niño: " + ex.Message);
                 }
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (ComBoxIDCliente.SelectedItem != null)
+            if (LbxNombreNiño.SelectedItem != null)
             {
-                int selectedIdCliente = Convert.ToInt32(ComBoxIDCliente.SelectedItem.ToString());
-                DarDeBaja(selectedIdCliente);
+                string selectedNombreNiño = LbxNombreNiño.SelectedItem.ToString();
+                DarDeBaja(selectedNombreNiño);
+
+                LimpiarDatos();
+                LoadNombresNiños();
+
             }
         }
-    }
 
+        private void LimpiarDatos()
+        {
+            TextBoxNombreNiño.Clear();
+            TextBoxGenero.Clear();
+            TextBoxEdad.Clear();
+            MaskedTextBoxFechaNac.Clear();
+            TextBoxNumContacto.Clear();
+        }
+    }
 }
