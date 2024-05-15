@@ -3,11 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\Aram\\source\\repos\\JesusRCCastro\\WBDweb\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{845CD035-EC15-45EC-BC71-E8DE3281C33C}|RDGweb.csproj|C:\\Users\\Aram\\source\\repos\\JesusRCCastro\\WBDweb\\idni\u00F1os.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{845CD035-EC15-45EC-BC71-E8DE3281C33C}|RDGweb.csproj|solutionrelative:idni\u00F1os.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{845CD035-EC15-45EC-BC71-E8DE3281C33C}|RDGweb.csproj|C:\\Users\\Aram\\source\\repos\\JesusRCCastro\\WBDweb\\idni\u00F1os.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{845CD035-EC15-45EC-BC71-E8DE3281C33C}|RDGweb.csproj|c:\\users\\aram\\source\\repos\\jesusrccastro\\wbdweb\\idni\u00F1os.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{845CD035-EC15-45EC-BC71-E8DE3281C33C}|RDGweb.csproj|solutionrelative:idni\u00F1os.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -30,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -70,20 +66,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
+              "Title": "IDNi\u00F1os.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Aram\\source\\repos\\JesusRCCastro\\WBDweb\\IDNi\u00F1os.cs",
+              "RelativeDocumentMoniker": "IDNi\u00F1os.cs",
+              "ToolTip": "C:\\Users\\Aram\\source\\repos\\JesusRCCastro\\WBDweb\\IDNi\u00F1os.cs [Dise\u00F1o]",
+              "RelativeToolTip": "IDNi\u00F1os.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T19:16:57.021Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Clientes.cs",
               "DocumentMoniker": "C:\\Users\\Aram\\source\\repos\\JesusRCCastro\\WBDweb\\Clientes.cs",
               "RelativeDocumentMoniker": "Clientes.cs",
               "ToolTip": "C:\\Users\\Aram\\source\\repos\\JesusRCCastro\\WBDweb\\Clientes.cs",
               "RelativeToolTip": "Clientes.cs",
-              "ViewState": "AQIAAHMBAAAAAAAAAAAAAKEBAAAAAAAA",
+              "ViewState": "AQIAAJUAAAAAAAAAAAAAAIEAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-15T17:04:04.183Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Clientes.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Aram\\source\\repos\\JesusRCCastro\\WBDweb\\Clientes.cs",
               "RelativeDocumentMoniker": "Clientes.cs",
@@ -95,32 +103,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "IDNi\u00F1os.cs",
-              "DocumentMoniker": "C:\\Users\\Aram\\source\\repos\\JesusRCCastro\\WBDweb\\IDNi\u00F1os.cs",
-              "RelativeDocumentMoniker": "IDNi\u00F1os.cs",
-              "ToolTip": "C:\\Users\\Aram\\source\\repos\\JesusRCCastro\\WBDweb\\IDNi\u00F1os.cs",
-              "RelativeToolTip": "IDNi\u00F1os.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAuwBkAAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-15T05:16:39.662Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IDNi\u00F1os.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Aram\\source\\repos\\JesusRCCastro\\WBDweb\\IDNi\u00F1os.cs",
-              "RelativeDocumentMoniker": "IDNi\u00F1os.cs",
-              "ToolTip": "C:\\Users\\Aram\\source\\repos\\JesusRCCastro\\WBDweb\\IDNi\u00F1os.cs [Dise\u00F1o]",
-              "RelativeToolTip": "IDNi\u00F1os.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-15T05:15:08.384Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "MenuPrincipal.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Aram\\source\\repos\\JesusRCCastro\\WBDweb\\MenuPrincipal.cs",
               "RelativeDocumentMoniker": "MenuPrincipal.cs",

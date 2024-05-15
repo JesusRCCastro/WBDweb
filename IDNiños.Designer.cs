@@ -35,6 +35,8 @@
             this.PicBoxFaceChild = new System.Windows.Forms.PictureBox();
             this.TextBoxNumContacto = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.IdPadre = new System.Windows.Forms.TextBox();
             this.MaskedTextBoxFechaNac = new System.Windows.Forms.MaskedTextBox();
             this.TextBoxBuscar = new System.Windows.Forms.TextBox();
             this.LbxNombreNiño = new System.Windows.Forms.ListBox();
@@ -47,8 +49,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.IdPadre = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PicBoxFaceChild)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -128,6 +128,22 @@
             this.panel1.Size = new System.Drawing.Size(563, 263);
             this.panel1.TabIndex = 16;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(424, 159);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(127, 16);
+            this.label8.TabIndex = 25;
+            this.label8.Text = "ID del Padre o Tutor";
+            // 
+            // IdPadre
+            // 
+            this.IdPadre.Location = new System.Drawing.Point(463, 182);
+            this.IdPadre.Name = "IdPadre";
+            this.IdPadre.Size = new System.Drawing.Size(52, 22);
+            this.IdPadre.TabIndex = 24;
+            // 
             // MaskedTextBoxFechaNac
             // 
             this.MaskedTextBoxFechaNac.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -141,6 +157,7 @@
             // 
             // TextBoxBuscar
             // 
+            this.TextBoxBuscar.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.TextBoxBuscar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TextBoxBuscar.Location = new System.Drawing.Point(23, 46);
             this.TextBoxBuscar.Margin = new System.Windows.Forms.Padding(4);
@@ -246,22 +263,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(705, 18);
             this.panel2.TabIndex = 20;
-            // 
-            // IdPadre
-            // 
-            this.IdPadre.Location = new System.Drawing.Point(463, 182);
-            this.IdPadre.Name = "IdPadre";
-            this.IdPadre.Size = new System.Drawing.Size(52, 22);
-            this.IdPadre.TabIndex = 24;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(424, 159);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(127, 16);
-            this.label8.TabIndex = 25;
-            this.label8.Text = "ID del Padre o Tutor";
             // 
             // IDNiños
             // 

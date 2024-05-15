@@ -53,6 +53,7 @@
             // 
             // TbxBuscarEmpleado
             // 
+            this.TbxBuscarEmpleado.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.TbxBuscarEmpleado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TbxBuscarEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TbxBuscarEmpleado.Location = new System.Drawing.Point(444, 46);

@@ -185,6 +185,8 @@
             // 
             // CbxRoles
             // 
+            this.CbxRoles.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.CbxRoles.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.CbxRoles.FormattingEnabled = true;
             this.CbxRoles.Location = new System.Drawing.Point(294, 195);
             this.CbxRoles.Name = "CbxRoles";
