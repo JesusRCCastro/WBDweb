@@ -191,6 +191,12 @@ namespace RDGweb
             this.Hide();
         }
 
+        private void BtnAgregarNiño_Click(object sender, EventArgs e)
+        {
+            AgregarNiño agregarNiñoForm = new AgregarNiño(); // Crear una instancia del formulario AgregarNiño
+            agregarNiñoForm.ShowDialog();
+        }
+
 
         //----------------------------------------------------------------------------------------------------------//
 

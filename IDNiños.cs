@@ -24,6 +24,7 @@ namespace RDGweb
             MaskedTextBoxFechaNac.ReadOnly = true;
             TextBoxNumContacto.ReadOnly = true;
             IdPadre.ReadOnly = true;
+            tbxidniño.ReadOnly = true;
         }
 
 
@@ -129,6 +130,7 @@ namespace RDGweb
 
                         TextBoxNumContacto.Text = reader["NumContacto"].ToString();
                         IdPadre.Text = reader["id_Padre"].ToString();
+                        tbxidniño.Text = reader["idNiño"].ToString();
                     }
                     else
                     {
@@ -153,6 +155,7 @@ namespace RDGweb
             MaskedTextBoxFechaNac.Text = "";
             TextBoxNumContacto.Text = "";
             IdPadre.Text = "";
+            tbxidniño.Text = "";
         }
 
         private void DarDeBaja(string nombreNiño)
@@ -243,6 +246,7 @@ namespace RDGweb
             TextBoxEdad.Clear();
             MaskedTextBoxFechaNac.Clear();
             TextBoxNumContacto.Clear();
+            tbxidniño.Clear();
         }
     }
 }

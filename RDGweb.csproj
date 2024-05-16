@@ -117,6 +117,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgregarNiño.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarNiño.Designer.cs">
+      <DependentUpon>AgregarNiño.cs</DependentUpon>
+    </Compile>
     <Compile Include="Asistencia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -197,6 +203,9 @@
     <Compile Include="Trabajadores.Designer.cs">
       <DependentUpon>Trabajadores.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AgregarNiño.resx">
+      <DependentUpon>AgregarNiño.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Asistencia.resx">
       <DependentUpon>Asistencia.cs</DependentUpon>
     </EmbeddedResource>

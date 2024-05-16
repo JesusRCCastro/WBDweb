@@ -11,6 +11,70 @@ namespace RDGweb
         public NuevoCliente()
         {
             InitializeComponent();
+            ObtenerSiguienteID();
+            ObtenerSiguienteIDNiño();
+        }
+
+        private void ObtenerSiguienteIDNiño()
+        {
+            try
+            {
+                using (MySqlConnection conexion = new MySqlConnection("server=localhost;user=root;password=;database=guarderia;"))
+                {
+                    conexion.Open();
+                    string query = "SELECT MAX(idNiño) AS max_id FROM niños"; // Cambia a la tabla de niños
+                    using (MySqlCommand comando = new MySqlCommand(query, conexion))
+                    {
+                        object result = comando.ExecuteScalar();
+                        if (result != DBNull.Value)
+                        {
+                            int maxID = Convert.ToInt32(result);
+                            tbxIdniño.Text = (maxID + 1).ToString(); // Asigna el siguiente ID al TextBox
+                        }
+                        else
+                        {
+                            tbxIdniño.Text = "1"; // Si no hay ningún registro, comienza desde 1
+                        }
+                    }
+                }
+
+                // Establecer el TextBox como de solo lectura
+                tbxIdniño.ReadOnly = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al obtener el siguiente ID del niño: " + ex.Message);
+            }
+        }
+
+        private void ObtenerSiguienteID()
+        {
+            try
+            {
+                using (MySqlConnection conexion = new MySqlConnection("server=localhost;user=root;password=;database=guarderia;"))
+                {
+                    conexion.Open();
+                    string query = "SELECT MAX(idCliente) AS max_id FROM cliente"; // Cambia a la tabla de cliente
+                    using (MySqlCommand comando = new MySqlCommand(query, conexion))
+                    {
+                        object result = comando.ExecuteScalar();
+                        if (result != DBNull.Value)
+                        {
+                            int maxID = Convert.ToInt32(result);
+                            tbxIdpadre.Text = (maxID + 1).ToString(); // Asigna el siguiente ID al TextBox
+                        }
+                        else
+                        {
+                            tbxIdpadre.Text = "1"; // Si no hay ningún registro, comienza desde 1
+                        }
+                    }
+                }
+                tbxIdpadre.ReadOnly = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al obtener el siguiente ID: " + ex.Message);
+            }
         }
 
         private void BtnNuevoCliente_Click(object sender, EventArgs e)
@@ -48,9 +112,9 @@ namespace RDGweb
                 return;
             }
 
-            if (!int.TryParse(TextBoxNuevaEdadNiño.Text, out _))
+            if (!int.TryParse(TextBoxNuevaEdadNiño.Text, out int edad) || edad > 4)
             {
-                MessageBox.Show("La edad del niño debe ser un número entero.");
+                MessageBox.Show("La edad del niño debe ser un número entero y no puede ser mayor a 4 años.");
                 return;
             }
 
