@@ -161,7 +161,6 @@ namespace RDGweb
         private void DarDeBaja(string nombreNiño)
         {
             string connectionString = "server=localhost;user=root;password=;database=guarderia;";
-            
 
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
@@ -174,27 +173,27 @@ namespace RDGweb
 
                     try
                     {
-                        cmd.CommandText = "SELECT id_padre FROM niños WHERE Nombre = @NombreNiño";
+                        cmd.CommandText = "SELECT id_Padre FROM niños WHERE Nombre = @NombreNiño";
                         cmd.Parameters.AddWithValue("@NombreNiño", nombreNiño);
 
                         int? idPadre = (int?)cmd.ExecuteScalar();
 
                         if (idPadre != null)
                         {
-                            // Paso 2: Eliminar el niño
+                            // Eliminar al niño
                             cmd.CommandText = "DELETE FROM niños WHERE Nombre = @NombreNiño";
                             cmd.ExecuteNonQuery();
 
-                            // Paso 3: Contar los niños restantes del padre
-                            cmd.CommandText = "SELECT COUNT(*) FROM niños WHERE id_padre = @idPadre";
+                            // Contar los niños restantes del padre
+                            cmd.CommandText = "SELECT COUNT(*) FROM niños WHERE id_Padre = @idPadre";
                             cmd.Parameters.Clear();
                             cmd.Parameters.AddWithValue("@idPadre", idPadre);
                             int numNinos = Convert.ToInt32(cmd.ExecuteScalar());
 
-                            // Paso 4: Si no tiene más niños, eliminar al padre
+                            // Si el padre no tiene más niños, eliminar al padre
                             if (numNinos == 0)
                             {
-                                cmd.CommandText = "DELETE FROM Clientes WHERE idCliente = @idPadre";
+                                cmd.CommandText = "DELETE FROM cliente WHERE idCliente = @idPadre";
                                 cmd.ExecuteNonQuery();
                             }
 
@@ -213,7 +212,6 @@ namespace RDGweb
                         transaction.Rollback();
                         MessageBox.Show("Ocurrió un error: " + ex.Message);
                     }
-                    
                 }
                 catch (Exception ex)
                 {
@@ -221,6 +219,8 @@ namespace RDGweb
                 }
             }
         }
+
+
 
         private void button1_Click(object sender, EventArgs e)
         {
