@@ -3,32 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\araml\\source\\repos\\JesusRCCastro\\WBDweb\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{845CD035-EC15-45EC-BC71-E8DE3281C33C}|RDGweb.csproj|c:\\users\\araml\\source\\repos\\jesusrccastro\\wbdweb\\agregarni\u00F1o.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{845CD035-EC15-45EC-BC71-E8DE3281C33C}|RDGweb.csproj|solutionrelative:agregarni\u00F1o.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{845CD035-EC15-45EC-BC71-E8DE3281C33C}|RDGweb.csproj|c:\\users\\araml\\source\\repos\\jesusrccastro\\wbdweb\\menuprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{845CD035-EC15-45EC-BC71-E8DE3281C33C}|RDGweb.csproj|solutionrelative:menuprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{845CD035-EC15-45EC-BC71-E8DE3281C33C}|RDGweb.csproj|c:\\users\\araml\\source\\repos\\jesusrccastro\\wbdweb\\nuevosclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{845CD035-EC15-45EC-BC71-E8DE3281C33C}|RDGweb.csproj|solutionrelative:nuevosclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{845CD035-EC15-45EC-BC71-E8DE3281C33C}|RDGweb.csproj|c:\\users\\araml\\source\\repos\\jesusrccastro\\wbdweb\\personaltrabajo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{845CD035-EC15-45EC-BC71-E8DE3281C33C}|RDGweb.csproj|solutionrelative:personaltrabajo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{845CD035-EC15-45EC-BC71-E8DE3281C33C}|RDGweb.csproj|C:\\Users\\araml\\source\\repos\\JesusRCCastro\\WBDweb\\nuevosclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{845CD035-EC15-45EC-BC71-E8DE3281C33C}|RDGweb.csproj|solutionrelative:nuevosclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{845CD035-EC15-45EC-BC71-E8DE3281C33C}|RDGweb.csproj|c:\\users\\araml\\source\\repos\\jesusrccastro\\wbdweb\\personaltrabajo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{845CD035-EC15-45EC-BC71-E8DE3281C33C}|RDGweb.csproj|solutionrelative:personaltrabajo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{845CD035-EC15-45EC-BC71-E8DE3281C33C}|RDGweb.csproj|c:\\users\\araml\\source\\repos\\jesusrccastro\\wbdweb\\clientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{845CD035-EC15-45EC-BC71-E8DE3281C33C}|RDGweb.csproj|solutionrelative:clientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{845CD035-EC15-45EC-BC71-E8DE3281C33C}|RDGweb.csproj|c:\\users\\araml\\source\\repos\\jesusrccastro\\wbdweb\\trabajadores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{845CD035-EC15-45EC-BC71-E8DE3281C33C}|RDGweb.csproj|solutionrelative:trabajadores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{845CD035-EC15-45EC-BC71-E8DE3281C33C}|RDGweb.csproj|c:\\users\\araml\\source\\repos\\jesusrccastro\\wbdweb\\agregarni\u00F1o.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{845CD035-EC15-45EC-BC71-E8DE3281C33C}|RDGweb.csproj|solutionrelative:agregarni\u00F1o.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{845CD035-EC15-45EC-BC71-E8DE3281C33C}|RDGweb.csproj|c:\\users\\araml\\source\\repos\\jesusrccastro\\wbdweb\\trabajadores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{845CD035-EC15-45EC-BC71-E8DE3281C33C}|RDGweb.csproj|solutionrelative:trabajadores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{845CD035-EC15-45EC-BC71-E8DE3281C33C}|RDGweb.csproj|c:\\users\\araml\\source\\repos\\jesusrccastro\\wbdweb\\clientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{845CD035-EC15-45EC-BC71-E8DE3281C33C}|RDGweb.csproj|solutionrelative:clientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{845CD035-EC15-45EC-BC71-E8DE3281C33C}|RDGweb.csproj|c:\\users\\araml\\source\\repos\\jesusrccastro\\wbdweb\\idni\u00F1os.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{845CD035-EC15-45EC-BC71-E8DE3281C33C}|RDGweb.csproj|solutionrelative:idni\u00F1os.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{845CD035-EC15-45EC-BC71-E8DE3281C33C}|RDGweb.csproj|c:\\users\\araml\\source\\repos\\jesusrccastro\\wbdweb\\menuprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{845CD035-EC15-45EC-BC71-E8DE3281C33C}|RDGweb.csproj|solutionrelative:menuprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 12,
           "Children": [
             {
               "$type": "Bookmark",
@@ -75,90 +71,77 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "NuevosClientes.cs",
-              "DocumentMoniker": "C:\\Users\\araml\\source\\repos\\JesusRCCastro\\WBDweb\\NuevosClientes.cs",
-              "RelativeDocumentMoniker": "NuevosClientes.cs",
-              "ToolTip": "C:\\Users\\araml\\source\\repos\\JesusRCCastro\\WBDweb\\NuevosClientes.cs",
-              "RelativeToolTip": "NuevosClientes.cs",
-              "ViewState": "AQIAAGcAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "PersonalTrabajo.cs",
+              "DocumentMoniker": "C:\\Users\\araml\\source\\repos\\JesusRCCastro\\WBDweb\\PersonalTrabajo.cs",
+              "RelativeDocumentMoniker": "PersonalTrabajo.cs",
+              "ToolTip": "C:\\Users\\araml\\source\\repos\\JesusRCCastro\\WBDweb\\PersonalTrabajo.cs",
+              "RelativeToolTip": "PersonalTrabajo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-16T02:32:56.663Z",
+              "WhenOpened": "2024-05-16T02:55:03.145Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AgregarNi\u00F1o.cs",
-              "DocumentMoniker": "C:\\Users\\araml\\source\\repos\\JesusRCCastro\\WBDweb\\AgregarNi\u00F1o.cs",
-              "RelativeDocumentMoniker": "AgregarNi\u00F1o.cs",
-              "ToolTip": "C:\\Users\\araml\\source\\repos\\JesusRCCastro\\WBDweb\\AgregarNi\u00F1o.cs*",
-              "RelativeToolTip": "AgregarNi\u00F1o.cs*",
-              "ViewState": "AQIAAGUAAAAAAAAAAAAAAH4AAAAAAAAA",
+              "DocumentIndex": 2,
+              "Title": "PersonalTrabajo.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\araml\\source\\repos\\JesusRCCastro\\WBDweb\\PersonalTrabajo.cs",
+              "RelativeDocumentMoniker": "PersonalTrabajo.cs",
+              "ToolTip": "C:\\Users\\araml\\source\\repos\\JesusRCCastro\\WBDweb\\PersonalTrabajo.cs [Dise\u00F1o]",
+              "RelativeToolTip": "PersonalTrabajo.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-16T01:30:28.09Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AgregarNi\u00F1o.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\araml\\source\\repos\\JesusRCCastro\\WBDweb\\AgregarNi\u00F1o.cs",
-              "RelativeDocumentMoniker": "AgregarNi\u00F1o.cs",
-              "ToolTip": "C:\\Users\\araml\\source\\repos\\JesusRCCastro\\WBDweb\\AgregarNi\u00F1o.cs [Dise\u00F1o]*",
-              "RelativeToolTip": "AgregarNi\u00F1o.cs [Dise\u00F1o]*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-15T21:51:23.414Z",
+              "WhenOpened": "2024-05-16T02:54:59.912Z",
               "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Clientes.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\araml\\source\\repos\\JesusRCCastro\\WBDweb\\Clientes.cs",
-              "RelativeDocumentMoniker": "Clientes.cs",
-              "ToolTip": "C:\\Users\\araml\\source\\repos\\JesusRCCastro\\WBDweb\\Clientes.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Clientes.cs [Dise\u00F1o]",
+              "Title": "Trabajadores.cs",
+              "DocumentMoniker": "C:\\Users\\araml\\source\\repos\\JesusRCCastro\\WBDweb\\Trabajadores.cs",
+              "RelativeDocumentMoniker": "Trabajadores.cs",
+              "ToolTip": "C:\\Users\\araml\\source\\repos\\JesusRCCastro\\WBDweb\\Trabajadores.cs",
+              "RelativeToolTip": "Trabajadores.cs",
+              "ViewState": "AQIAAIwAAAAAAAAAAAAjwKIAAABIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-15T21:48:58.562Z",
+              "WhenOpened": "2024-05-16T02:53:35.968Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Trabajadores.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\araml\\source\\repos\\JesusRCCastro\\WBDweb\\Trabajadores.cs",
+              "RelativeDocumentMoniker": "Trabajadores.cs",
+              "ToolTip": "C:\\Users\\araml\\source\\repos\\JesusRCCastro\\WBDweb\\Trabajadores.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Trabajadores.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T02:53:31.131Z",
               "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "NuevosClientes.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\araml\\source\\repos\\JesusRCCastro\\WBDweb\\NuevosClientes.cs",
-              "RelativeDocumentMoniker": "NuevosClientes.cs",
-              "ToolTip": "C:\\Users\\araml\\source\\repos\\JesusRCCastro\\WBDweb\\NuevosClientes.cs [Dise\u00F1o]",
-              "RelativeToolTip": "NuevosClientes.cs [Dise\u00F1o]",
+              "DocumentIndex": 0,
+              "Title": "MenuPrincipal.cs",
+              "DocumentMoniker": "C:\\Users\\araml\\source\\repos\\JesusRCCastro\\WBDweb\\MenuPrincipal.cs",
+              "RelativeDocumentMoniker": "MenuPrincipal.cs",
+              "ToolTip": "C:\\Users\\araml\\source\\repos\\JesusRCCastro\\WBDweb\\MenuPrincipal.cs*",
+              "RelativeToolTip": "MenuPrincipal.cs*",
+              "ViewState": "AQIAAHUAAAAAAAAAAAAqwIYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-15T19:25:05.792Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2024-05-16T02:42:24.383Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Clientes.cs",
-              "DocumentMoniker": "C:\\Users\\araml\\source\\repos\\JesusRCCastro\\WBDweb\\Clientes.cs",
-              "RelativeDocumentMoniker": "Clientes.cs",
-              "ToolTip": "C:\\Users\\araml\\source\\repos\\JesusRCCastro\\WBDweb\\Clientes.cs",
-              "RelativeToolTip": "Clientes.cs",
-              "ViewState": "AQIAAEcAAAAAAAAAAAAAAB8AAAARAAAA",
+              "Title": "MenuPrincipal.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\araml\\source\\repos\\JesusRCCastro\\WBDweb\\MenuPrincipal.cs",
+              "RelativeDocumentMoniker": "MenuPrincipal.cs",
+              "ToolTip": "C:\\Users\\araml\\source\\repos\\JesusRCCastro\\WBDweb\\MenuPrincipal.cs [Dise\u00F1o]*",
+              "RelativeToolTip": "MenuPrincipal.cs [Dise\u00F1o]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-15T21:50:13.294Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "IDNi\u00F1os.cs",
-              "DocumentMoniker": "C:\\Users\\araml\\source\\repos\\JesusRCCastro\\WBDweb\\IDNi\u00F1os.cs",
-              "RelativeDocumentMoniker": "IDNi\u00F1os.cs",
-              "ToolTip": "C:\\Users\\araml\\source\\repos\\JesusRCCastro\\WBDweb\\IDNi\u00F1os.cs",
-              "RelativeToolTip": "IDNi\u00F1os.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-15T21:42:21.818Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-16T02:42:22.363Z",
+              "EditorCaption": " [Dise\u00F1o]"
             }
           ]
         }

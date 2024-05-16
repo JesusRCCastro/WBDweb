@@ -170,14 +170,6 @@ namespace RDGweb
                 }
             }
         }
-        private void BtnEliminarPadre_Click(object sender, EventArgs e)
-        {
-            if (CombBoxNombreNiño.SelectedItem != null)
-            {
-                string selectedNombreNiño = CombBoxNombreNiño.SelectedItem.ToString();
-                EliminarPadre(selectedNombreNiño);
-            }
-        }
 
         //----------------------------------------------------------------------------------------------------------//
 
@@ -191,10 +183,19 @@ namespace RDGweb
             this.Hide();
         }
 
-        private void BtnAgregarNiño_Click(object sender, EventArgs e)
+        private void BtnAgregarNiño1_Click(object sender, EventArgs e)
         {
             AgregarNiño agregarNiñoForm = new AgregarNiño(); // Crear una instancia del formulario AgregarNiño
             agregarNiñoForm.ShowDialog();
+        }
+
+        private void BtnEliminarPadre_Click_1(object sender, EventArgs e)
+        {
+            if (CombBoxNombreNiño.SelectedItem != null)
+            {
+                string selectedNombreNiño = CombBoxNombreNiño.SelectedItem.ToString();
+                EliminarPadre(selectedNombreNiño);
+            }
         }
 
 

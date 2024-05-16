@@ -49,7 +49,7 @@
             this.BtnEliminarPadre = new System.Windows.Forms.Button();
             this.IDPadres = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.BtnAgregarNiño = new System.Windows.Forms.Button();
+            this.BtnAgregarNiño1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,7 +60,7 @@
             this.CombBoxNombreNiño.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CombBoxNombreNiño.FormattingEnabled = true;
             this.CombBoxNombreNiño.Location = new System.Drawing.Point(318, 29);
-            this.CombBoxNombreNiño.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CombBoxNombreNiño.Margin = new System.Windows.Forms.Padding(2);
             this.CombBoxNombreNiño.Name = "CombBoxNombreNiño";
             this.CombBoxNombreNiño.Size = new System.Drawing.Size(92, 25);
             this.CombBoxNombreNiño.TabIndex = 0;
@@ -68,7 +68,7 @@
             // TextBoxNombrePadre
             // 
             this.TextBoxNombrePadre.Location = new System.Drawing.Point(15, 128);
-            this.TextBoxNombrePadre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TextBoxNombrePadre.Margin = new System.Windows.Forms.Padding(2);
             this.TextBoxNombrePadre.Name = "TextBoxNombrePadre";
             this.TextBoxNombrePadre.Size = new System.Drawing.Size(116, 20);
             this.TextBoxNombrePadre.TabIndex = 1;
@@ -80,7 +80,7 @@
             this.panel1.Controls.Add(this.CombBoxNombreNiño);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(428, 81);
             this.panel1.TabIndex = 2;
@@ -111,7 +111,7 @@
             // TextBoxEdadPadre
             // 
             this.TextBoxEdadPadre.Location = new System.Drawing.Point(185, 128);
-            this.TextBoxEdadPadre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TextBoxEdadPadre.Margin = new System.Windows.Forms.Padding(2);
             this.TextBoxEdadPadre.Name = "TextBoxEdadPadre";
             this.TextBoxEdadPadre.Size = new System.Drawing.Size(95, 20);
             this.TextBoxEdadPadre.TabIndex = 4;
@@ -119,7 +119,7 @@
             // TextBoxDireccionPadre
             // 
             this.TextBoxDireccionPadre.Location = new System.Drawing.Point(17, 177);
-            this.TextBoxDireccionPadre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TextBoxDireccionPadre.Margin = new System.Windows.Forms.Padding(2);
             this.TextBoxDireccionPadre.Name = "TextBoxDireccionPadre";
             this.TextBoxDireccionPadre.Size = new System.Drawing.Size(116, 20);
             this.TextBoxDireccionPadre.TabIndex = 5;
@@ -127,7 +127,7 @@
             // TextBoxNSS
             // 
             this.TextBoxNSS.Location = new System.Drawing.Point(17, 225);
-            this.TextBoxNSS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TextBoxNSS.Margin = new System.Windows.Forms.Padding(2);
             this.TextBoxNSS.Name = "TextBoxNSS";
             this.TextBoxNSS.Size = new System.Drawing.Size(116, 20);
             this.TextBoxNSS.TabIndex = 6;
@@ -135,7 +135,7 @@
             // TextBoxCelularPadre
             // 
             this.TextBoxCelularPadre.Location = new System.Drawing.Point(185, 177);
-            this.TextBoxCelularPadre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TextBoxCelularPadre.Margin = new System.Windows.Forms.Padding(2);
             this.TextBoxCelularPadre.Name = "TextBoxCelularPadre";
             this.TextBoxCelularPadre.Size = new System.Drawing.Size(95, 20);
             this.TextBoxCelularPadre.TabIndex = 7;
@@ -143,7 +143,7 @@
             // TextBoxCorreo
             // 
             this.TextBoxCorreo.Location = new System.Drawing.Point(17, 272);
-            this.TextBoxCorreo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TextBoxCorreo.Margin = new System.Windows.Forms.Padding(2);
             this.TextBoxCorreo.Name = "TextBoxCorreo";
             this.TextBoxCorreo.Size = new System.Drawing.Size(116, 20);
             this.TextBoxCorreo.TabIndex = 8;
@@ -151,7 +151,7 @@
             // TextBoxOficio
             // 
             this.TextBoxOficio.Location = new System.Drawing.Point(185, 225);
-            this.TextBoxOficio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TextBoxOficio.Margin = new System.Windows.Forms.Padding(2);
             this.TextBoxOficio.Name = "TextBoxOficio";
             this.TextBoxOficio.Size = new System.Drawing.Size(74, 20);
             this.TextBoxOficio.TabIndex = 9;
@@ -231,7 +231,7 @@
             // BtnAgregarCliente
             // 
             this.BtnAgregarCliente.Location = new System.Drawing.Point(312, 127);
-            this.BtnAgregarCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnAgregarCliente.Margin = new System.Windows.Forms.Padding(2);
             this.BtnAgregarCliente.Name = "BtnAgregarCliente";
             this.BtnAgregarCliente.Size = new System.Drawing.Size(103, 22);
             this.BtnAgregarCliente.TabIndex = 20;
@@ -242,17 +242,18 @@
             // BtnEliminarPadre
             // 
             this.BtnEliminarPadre.Location = new System.Drawing.Point(312, 201);
-            this.BtnEliminarPadre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnEliminarPadre.Margin = new System.Windows.Forms.Padding(2);
             this.BtnEliminarPadre.Name = "BtnEliminarPadre";
             this.BtnEliminarPadre.Size = new System.Drawing.Size(103, 22);
             this.BtnEliminarPadre.TabIndex = 22;
             this.BtnEliminarPadre.Text = "Eliminar cliente";
             this.BtnEliminarPadre.UseVisualStyleBackColor = true;
+            this.BtnEliminarPadre.Click += new System.EventHandler(this.BtnEliminarPadre_Click_1);
             // 
             // IDPadres
             // 
             this.IDPadres.Location = new System.Drawing.Point(188, 272);
-            this.IDPadres.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.IDPadres.Margin = new System.Windows.Forms.Padding(2);
             this.IDPadres.Name = "IDPadres";
             this.IDPadres.Size = new System.Drawing.Size(55, 20);
             this.IDPadres.TabIndex = 23;
@@ -268,15 +269,15 @@
             this.label9.TabIndex = 24;
             this.label9.Text = "ID del Padre";
             // 
-            // BtnAgregarNiño
+            // BtnAgregarNiño1
             // 
-            this.BtnAgregarNiño.Location = new System.Drawing.Point(312, 162);
-            this.BtnAgregarNiño.Name = "BtnAgregarNiño";
-            this.BtnAgregarNiño.Size = new System.Drawing.Size(103, 23);
-            this.BtnAgregarNiño.TabIndex = 25;
-            this.BtnAgregarNiño.Text = "Agregar Niño";
-            this.BtnAgregarNiño.UseVisualStyleBackColor = true;
-            this.BtnAgregarNiño.Click += new System.EventHandler(this.BtnAgregarNiño_Click);
+            this.BtnAgregarNiño1.Location = new System.Drawing.Point(312, 162);
+            this.BtnAgregarNiño1.Name = "BtnAgregarNiño1";
+            this.BtnAgregarNiño1.Size = new System.Drawing.Size(103, 23);
+            this.BtnAgregarNiño1.TabIndex = 25;
+            this.BtnAgregarNiño1.Text = "Agregar Niño";
+            this.BtnAgregarNiño1.UseVisualStyleBackColor = true;
+            this.BtnAgregarNiño1.Click += new System.EventHandler(this.BtnAgregarNiño1_Click);
             // 
             // Clientes
             // 
@@ -285,7 +286,7 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(428, 342);
-            this.Controls.Add(this.BtnAgregarNiño);
+            this.Controls.Add(this.BtnAgregarNiño1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.IDPadres);
             this.Controls.Add(this.BtnEliminarPadre);
@@ -305,7 +306,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.TextBoxNombrePadre);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Clientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Clientes";
@@ -339,6 +340,6 @@
         private System.Windows.Forms.Button BtnEliminarPadre;
         private System.Windows.Forms.TextBox IDPadres;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button BtnAgregarNiño;
+        private System.Windows.Forms.Button BtnAgregarNiño1;
     }
 }
