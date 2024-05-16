@@ -24,7 +24,9 @@ namespace RDGweb
             this.KeyPreview = true;
 
             this.KeyDown += FormLogin_KeyDown;
-           // this.CancelButton = BtnCancel;
+            // this.CancelButton = BtnCancel;
+            button1.MouseDown += button1_MouseDown;
+            button1.MouseUp += button1_MouseUp;
         }
         private void FormLogin_KeyDown(object sender, KeyEventArgs e)
         { 
@@ -105,5 +107,16 @@ namespace RDGweb
         {
             TbxPassword.PasswordChar = '*';
         }
+        private void button1_MouseDown(object sender, MouseEventArgs e)
+        {
+            // Mostrar la contraseña cuando se mantenga presionado el botón
+            TbxPassword.PasswordChar = '\0';
+        }
+
+        private void button1_MouseUp(object sender, MouseEventArgs e)
+        {
+            // Volver a ocultar la contraseña cuando se suelte el botón
+            TbxPassword.PasswordChar = '*';
+        }   
     }
 }

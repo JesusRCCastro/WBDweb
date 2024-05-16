@@ -10,6 +10,7 @@ namespace RDGweb
         public FormRegistro()
         {
             InitializeComponent();
+            TbxRegistroUser.TextChanged += TbxRegistroUser_TextChanged;
         }
 
         private void BtnGuardarDatos_Click(object sender, EventArgs e)
@@ -109,6 +110,16 @@ namespace RDGweb
             this.Hide();
             FormLogin Login = new FormLogin();
             Login.Show();
+        }
+
+        private void TbxRegistroUser_TextChanged(object sender, EventArgs e)
+        {
+            if (TbxRegistroUser.Text.Length > 12)
+            {
+                MessageBox.Show("El máximo permitido es de 12 caracteres", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                TbxRegistroUser.Text = TbxRegistroUser.Text.Substring(0, 12);
+                TbxRegistroUser.SelectionStart = 12; // Coloca el cursor al final del texto.
+            }
         }
     }
 }

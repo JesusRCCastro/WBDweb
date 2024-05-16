@@ -157,7 +157,7 @@
             // 
             // BtnListaEmpleados
             // 
-            this.BtnListaEmpleados.Location = new System.Drawing.Point(12, 3);
+            this.BtnListaEmpleados.Location = new System.Drawing.Point(12, 7);
             this.BtnListaEmpleados.Name = "BtnListaEmpleados";
             this.BtnListaEmpleados.Size = new System.Drawing.Size(147, 43);
             this.BtnListaEmpleados.TabIndex = 24;

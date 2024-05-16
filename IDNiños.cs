@@ -248,5 +248,6 @@ namespace RDGweb
             TextBoxNumContacto.Clear();
             tbxidniño.Clear();
         }
+
     }
 }

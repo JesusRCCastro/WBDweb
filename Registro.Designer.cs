@@ -60,6 +60,7 @@
             this.TbxRegistroUser.Name = "TbxRegistroUser";
             this.TbxRegistroUser.Size = new System.Drawing.Size(175, 22);
             this.TbxRegistroUser.TabIndex = 2;
+            this.TbxRegistroUser.TextChanged += new System.EventHandler(this.TbxRegistroUser_TextChanged);
             // 
             // TbxRegistroPassword
             // 

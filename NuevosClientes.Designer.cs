@@ -54,10 +54,7 @@
             this.BtnNuevoCliente = new System.Windows.Forms.Button();
             this.TextBoxActividad = new System.Windows.Forms.ComboBox();
             this.TextBoxNuevaFechaNiño = new System.Windows.Forms.MaskedTextBox();
-            this.tbxIdpadre = new System.Windows.Forms.TextBox();
-            this.tbxIdniño = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label8
@@ -183,7 +180,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(9, 30);
+            this.label1.Location = new System.Drawing.Point(28, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(398, 38);
             this.label1.TabIndex = 30;
@@ -292,47 +289,22 @@
             this.TextBoxNuevaFechaNiño.Size = new System.Drawing.Size(100, 22);
             this.TextBoxNuevaFechaNiño.TabIndex = 43;
             // 
-            // tbxIdpadre
+            // label16
             // 
-            this.tbxIdpadre.Location = new System.Drawing.Point(281, 292);
-            this.tbxIdpadre.Name = "tbxIdpadre";
-            this.tbxIdpadre.Size = new System.Drawing.Size(64, 22);
-            this.tbxIdpadre.TabIndex = 44;
-            // 
-            // tbxIdniño
-            // 
-            this.tbxIdniño.Location = new System.Drawing.Point(281, 534);
-            this.tbxIdniño.Name = "tbxIdniño";
-            this.tbxIdniño.Size = new System.Drawing.Size(64, 22);
-            this.tbxIdniño.TabIndex = 45;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(281, 272);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(81, 16);
-            this.label14.TabIndex = 46;
-            this.label14.Text = "ID del padre";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(281, 515);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(73, 16);
-            this.label15.TabIndex = 47;
-            this.label15.Text = "ID del Niño";
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(28, 331);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(225, 38);
+            this.label16.TabIndex = 48;
+            this.label16.Text = "Datos del niño";
             // 
             // NuevoCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(458, 637);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.tbxIdniño);
-            this.Controls.Add(this.tbxIdpadre);
+            this.Controls.Add(this.label16);
             this.Controls.Add(this.TextBoxNuevaFechaNiño);
             this.Controls.Add(this.TextBoxActividad);
             this.Controls.Add(this.BtnNuevoCliente);
@@ -395,9 +367,6 @@
         private System.Windows.Forms.Button BtnNuevoCliente;
         private System.Windows.Forms.ComboBox TextBoxActividad;
         private System.Windows.Forms.MaskedTextBox TextBoxNuevaFechaNiño;
-        private System.Windows.Forms.TextBox tbxIdpadre;
-        private System.Windows.Forms.TextBox tbxIdniño;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
     }
 }

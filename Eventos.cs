@@ -24,6 +24,21 @@ namespace RDGweb
             string cadenaConexion = "server=localhost;user=root;password=;database=guarderia;";
             conexion = new MySqlConnection(cadenaConexion);
             LlenarGridConActividades();
+            // Configurar el DataGridView como de solo lectura
+            DgvEventos.ReadOnly = true;
+
+            // Opcional: Configurar cada columna como de solo lectura
+            foreach (DataGridViewColumn column in DgvEventos.Columns)
+            {
+                column.ReadOnly = true;
+            }
+
+            // Deshabilitar la edición
+            DgvEventos.AllowUserToAddRows = false;    // Deshabilitar la adición de filas por el usuario
+            DgvEventos.AllowUserToDeleteRows = false; // Deshabilitar la eliminación de filas por el usuario
+            DgvEventos.AllowUserToOrderColumns = false; // Deshabilitar la reordenación de columnas por el usuario
+            DgvEventos.AllowUserToResizeColumns = false; // Deshabilitar el redimensionamiento de columnas por el usuario
+            DgvEventos.AllowUserToResizeRows = false; // Deshabilitar el redimensionamiento de filas por el usuario
 
         }
         private void LlenarGridConActividades()
@@ -94,5 +109,6 @@ namespace RDGweb
                 MessageBox.Show("Error al guardar los datos: " + ex.Message);
             }
         }
+
     }  
 }

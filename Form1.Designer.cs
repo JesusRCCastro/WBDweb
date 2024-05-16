@@ -40,6 +40,7 @@
             this.LklRegistro = new System.Windows.Forms.LinkLabel();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -48,19 +49,19 @@
             // TbxUser
             // 
             this.TbxUser.BackColor = System.Drawing.Color.White;
-            this.TbxUser.Location = new System.Drawing.Point(66, 214);
-            this.TbxUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TbxUser.Location = new System.Drawing.Point(88, 263);
+            this.TbxUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TbxUser.Name = "TbxUser";
-            this.TbxUser.Size = new System.Drawing.Size(146, 20);
+            this.TbxUser.Size = new System.Drawing.Size(193, 22);
             this.TbxUser.TabIndex = 1;
             // 
             // TbxPassword
             // 
             this.TbxPassword.BackColor = System.Drawing.Color.White;
-            this.TbxPassword.Location = new System.Drawing.Point(66, 261);
-            this.TbxPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TbxPassword.Location = new System.Drawing.Point(88, 321);
+            this.TbxPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TbxPassword.Name = "TbxPassword";
-            this.TbxPassword.Size = new System.Drawing.Size(146, 20);
+            this.TbxPassword.Size = new System.Drawing.Size(193, 22);
             this.TbxPassword.TabIndex = 2;
             this.TbxPassword.TextChanged += new System.EventHandler(this.TbxPassword_TextChanged);
             // 
@@ -68,10 +69,10 @@
             // 
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(30, 193);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Location = new System.Drawing.Point(40, 238);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(32, 41);
+            this.pictureBox2.Size = new System.Drawing.Size(43, 50);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
@@ -81,10 +82,9 @@
             this.LblUser.AutoSize = true;
             this.LblUser.BackColor = System.Drawing.Color.Transparent;
             this.LblUser.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblUser.Location = new System.Drawing.Point(66, 194);
-            this.LblUser.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LblUser.Location = new System.Drawing.Point(88, 239);
             this.LblUser.Name = "LblUser";
-            this.LblUser.Size = new System.Drawing.Size(105, 16);
+            this.LblUser.Size = new System.Drawing.Size(129, 19);
             this.LblUser.TabIndex = 4;
             this.LblUser.Text = "Ingrese su usuario";
             // 
@@ -93,20 +93,19 @@
             this.LblPassword.AutoSize = true;
             this.LblPassword.BackColor = System.Drawing.Color.Transparent;
             this.LblPassword.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblPassword.Location = new System.Drawing.Point(66, 242);
-            this.LblPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LblPassword.Location = new System.Drawing.Point(88, 298);
             this.LblPassword.Name = "LblPassword";
-            this.LblPassword.Size = new System.Drawing.Size(126, 16);
+            this.LblPassword.Size = new System.Drawing.Size(155, 19);
             this.LblPassword.TabIndex = 5;
             this.LblPassword.Text = "Ingrese su Contraseña";
             // 
             // BtnInicioSesion
             // 
             this.BtnInicioSesion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnInicioSesion.Location = new System.Drawing.Point(94, 298);
-            this.BtnInicioSesion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnInicioSesion.Location = new System.Drawing.Point(125, 367);
+            this.BtnInicioSesion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnInicioSesion.Name = "BtnInicioSesion";
-            this.BtnInicioSesion.Size = new System.Drawing.Size(88, 20);
+            this.BtnInicioSesion.Size = new System.Drawing.Size(117, 25);
             this.BtnInicioSesion.TabIndex = 6;
             this.BtnInicioSesion.Text = "Iniciar Sesión";
             this.BtnInicioSesion.UseVisualStyleBackColor = true;
@@ -116,10 +115,10 @@
             // 
             this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(30, 243);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Location = new System.Drawing.Point(40, 299);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(32, 33);
+            this.pictureBox3.Size = new System.Drawing.Size(43, 41);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 8;
             this.pictureBox3.TabStop = false;
@@ -127,10 +126,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(88, 328);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(117, 404);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 13);
+            this.label1.Size = new System.Drawing.Size(0, 16);
             this.label1.TabIndex = 9;
             // 
             // LklRegistro
@@ -139,10 +137,9 @@
             this.LklRegistro.AutoSize = true;
             this.LklRegistro.BackColor = System.Drawing.Color.Transparent;
             this.LklRegistro.LinkColor = System.Drawing.Color.White;
-            this.LklRegistro.Location = new System.Drawing.Point(109, 360);
-            this.LklRegistro.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LklRegistro.Location = new System.Drawing.Point(145, 443);
             this.LklRegistro.Name = "LklRegistro";
-            this.LklRegistro.Size = new System.Drawing.Size(63, 13);
+            this.LklRegistro.Size = new System.Drawing.Size(81, 16);
             this.LklRegistro.TabIndex = 10;
             this.LklRegistro.TabStop = true;
             this.LklRegistro.Text = "Registrarme";
@@ -152,10 +149,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(88, 341);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(117, 420);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(113, 13);
+            this.label2.Size = new System.Drawing.Size(142, 16);
             this.label2.TabIndex = 11;
             this.label2.Text = "¿No estás registtrado?";
             // 
@@ -165,21 +161,32 @@
             this.pictureBox1.ErrorImage = global::RDGweb.Properties.Resources.logo22;
             this.pictureBox1.Image = global::RDGweb.Properties.Resources.logo22;
             this.pictureBox1.InitialImage = global::RDGweb.Properties.Resources.logo22;
-            this.pictureBox1.Location = new System.Drawing.Point(32, 10);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(43, 12);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(180, 179);
+            this.pictureBox1.Size = new System.Drawing.Size(240, 220);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;
             // 
+            // button1
+            // 
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.Location = new System.Drawing.Point(287, 319);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(24, 24);
+            this.button1.TabIndex = 15;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // FormLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(264, 399);
+            this.ClientSize = new System.Drawing.Size(352, 491);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.LklRegistro);
@@ -191,7 +198,7 @@
             this.Controls.Add(this.TbxPassword);
             this.Controls.Add(this.TbxUser);
             this.Controls.Add(this.pictureBox2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -216,6 +223,7 @@
         private System.Windows.Forms.LinkLabel LklRegistro;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button1;
     }
 }
 

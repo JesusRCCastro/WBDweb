@@ -20,6 +20,13 @@ namespace RDGweb
             BtnCerrarSesion.Click += BtnCerrarSesion_Click;
             lblUsername.Text = usuario;
             this.FormClosing += MenuPrincipal_FormClosing;
+
+            dateTimePicker1.Format = DateTimePickerFormat.Custom;
+            dateTimePicker1.CustomFormat = "dd/MM/yyyy";
+
+            // Suscribir eventos
+            dateTimePicker1.ValueChanged += dateTimePicker1_ValueChanged;
+            dateTimePicker1.KeyPress += dateTimePicker1_KeyPress;
         }
         private void MenuPrincipal_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -118,6 +125,16 @@ namespace RDGweb
         {
             MostrarFormulario(new Trabajadores());
         }
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            // Mantener la hora actual
+            dateTimePicker1.Value = DateTime.Now;
+        }
 
+        private void dateTimePicker1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Prevenir la edición manual
+            e.Handled = true;
+        }
     }
 }

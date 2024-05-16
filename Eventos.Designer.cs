@@ -33,11 +33,11 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.BtnagregarEvento = new System.Windows.Forms.Button();
-            this.TbxEstablecerFecha = new System.Windows.Forms.TextBox();
             this.TbxNombreActividad = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.DgvEventos = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
+            this.TbxEstablecerFecha = new System.Windows.Forms.MaskedTextBox();
+            this.DgvEventos = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvEventos)).BeginInit();
             this.SuspendLayout();
@@ -46,10 +46,10 @@
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel1.Controls.Add(this.TbxEstablecerFecha);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.BtnagregarEvento);
-            this.panel1.Controls.Add(this.TbxEstablecerFecha);
             this.panel1.Controls.Add(this.TbxNombreActividad);
             this.panel1.Location = new System.Drawing.Point(77, 325);
             this.panel1.Name = "panel1";
@@ -91,14 +91,6 @@
             this.BtnagregarEvento.UseVisualStyleBackColor = true;
             this.BtnagregarEvento.Click += new System.EventHandler(this.BtnagregarEvento_Click);
             // 
-            // TbxEstablecerFecha
-            // 
-            this.TbxEstablecerFecha.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.TbxEstablecerFecha.Location = new System.Drawing.Point(291, 41);
-            this.TbxEstablecerFecha.Name = "TbxEstablecerFecha";
-            this.TbxEstablecerFecha.Size = new System.Drawing.Size(131, 22);
-            this.TbxEstablecerFecha.TabIndex = 2;
-            // 
             // TbxNombreActividad
             // 
             this.TbxNombreActividad.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -119,17 +111,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Agregar Actividad";
             // 
-            // DgvEventos
-            // 
-            this.DgvEventos.BackgroundColor = System.Drawing.Color.SteelBlue;
-            this.DgvEventos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvEventos.Location = new System.Drawing.Point(152, 64);
-            this.DgvEventos.Name = "DgvEventos";
-            this.DgvEventos.RowHeadersWidth = 51;
-            this.DgvEventos.RowTemplate.Height = 24;
-            this.DgvEventos.Size = new System.Drawing.Size(479, 196);
-            this.DgvEventos.TabIndex = 5;
-            // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -142,6 +123,28 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Actividades";
             // 
+            // TbxEstablecerFecha
+            // 
+            this.TbxEstablecerFecha.AllowPromptAsInput = false;
+            this.TbxEstablecerFecha.Location = new System.Drawing.Point(307, 41);
+            this.TbxEstablecerFecha.Mask = "####-##-##";
+            this.TbxEstablecerFecha.Name = "TbxEstablecerFecha";
+            this.TbxEstablecerFecha.Size = new System.Drawing.Size(100, 22);
+            this.TbxEstablecerFecha.TabIndex = 7;
+            this.TbxEstablecerFecha.ValidatingType = typeof(System.DateTime);
+            // 
+            // DgvEventos
+            // 
+            this.DgvEventos.AllowUserToAddRows = false;
+            this.DgvEventos.AllowUserToDeleteRows = false;
+            this.DgvEventos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvEventos.Location = new System.Drawing.Point(158, 79);
+            this.DgvEventos.Name = "DgvEventos";
+            this.DgvEventos.RowHeadersWidth = 51;
+            this.DgvEventos.RowTemplate.Height = 24;
+            this.DgvEventos.Size = new System.Drawing.Size(479, 184);
+            this.DgvEventos.TabIndex = 7;
+            // 
             // Eventos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -150,8 +153,8 @@
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(661, 486);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.DgvEventos);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Name = "Eventos";
@@ -168,12 +171,12 @@
         #endregion
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button BtnagregarEvento;
-        private System.Windows.Forms.TextBox TbxEstablecerFecha;
         private System.Windows.Forms.TextBox TbxNombreActividad;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridView DgvEventos;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.MaskedTextBox TbxEstablecerFecha;
+        private System.Windows.Forms.DataGridView DgvEventos;
     }
 }
