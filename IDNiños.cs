@@ -173,44 +173,28 @@ namespace RDGweb
 
                     try
                     {
-                        cmd.CommandText = "SELECT id_Padre FROM niños WHERE Nombre = @NombreNiño";
+                        // Eliminar al niño
+                        cmd.CommandText = "DELETE FROM niños WHERE Nombre = @NombreNiño";
                         cmd.Parameters.AddWithValue("@NombreNiño", nombreNiño);
+                        int rowsAffected = cmd.ExecuteNonQuery();
 
-                        int? idPadre = (int?)cmd.ExecuteScalar();
-
-                        if (idPadre != null)
+                        if (rowsAffected > 0)
                         {
-                            // Eliminar al niño
-                            cmd.CommandText = "DELETE FROM niños WHERE Nombre = @NombreNiño";
-                            cmd.ExecuteNonQuery();
-
-                            // Contar los niños restantes del padre
-                            cmd.CommandText = "SELECT COUNT(*) FROM niños WHERE id_Padre = @idPadre";
-                            cmd.Parameters.Clear();
-                            cmd.Parameters.AddWithValue("@idPadre", idPadre);
-                            int numNinos = Convert.ToInt32(cmd.ExecuteScalar());
-
-                            // Si el padre no tiene más niños, eliminar al padre
-                            if (numNinos == 0)
-                            {
-                                cmd.CommandText = "DELETE FROM cliente WHERE idCliente = @idPadre";
-                                cmd.ExecuteNonQuery();
-                            }
-
                             // Confirmar la transacción
                             transaction.Commit();
-                            MessageBox.Show("El niño y, si aplica, el padre han sido eliminados correctamente.");
+                            MessageBox.Show("El niño ha sido eliminado correctamente.");
                         }
                         else
                         {
-                            MessageBox.Show("No se encontró el padre del niño.");
+                            // Si no se encontró el niño, mostrar un mensaje
+                            MessageBox.Show("No se encontró el niño.");
                         }
                     }
                     catch (Exception ex)
                     {
                         // Revertir la transacción en caso de error
                         transaction.Rollback();
-                        MessageBox.Show("Ocurrió un error: " + ex.Message);
+                        MessageBox.Show("Ocurrió un error al eliminar al niño: " + ex.Message);
                     }
                 }
                 catch (Exception ex)
@@ -219,6 +203,7 @@ namespace RDGweb
                 }
             }
         }
+
 
 
 
