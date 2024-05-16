@@ -69,6 +69,7 @@
             this.TextBoxNombreCliente.Location = new System.Drawing.Point(20, 158);
             this.TextBoxNombreCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TextBoxNombreCliente.Name = "TextBoxNombreCliente";
+            this.TextBoxNombreCliente.ReadOnly = true;
             this.TextBoxNombreCliente.Size = new System.Drawing.Size(153, 22);
             this.TextBoxNombreCliente.TabIndex = 1;
             // 
@@ -122,6 +123,7 @@
             this.TextBoxEdadCliente.Location = new System.Drawing.Point(247, 158);
             this.TextBoxEdadCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TextBoxEdadCliente.Name = "TextBoxEdadCliente";
+            this.TextBoxEdadCliente.ReadOnly = true;
             this.TextBoxEdadCliente.Size = new System.Drawing.Size(125, 22);
             this.TextBoxEdadCliente.TabIndex = 4;
             // 
@@ -130,6 +132,7 @@
             this.TextBoxDireccionPadre.Location = new System.Drawing.Point(23, 218);
             this.TextBoxDireccionPadre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TextBoxDireccionPadre.Name = "TextBoxDireccionPadre";
+            this.TextBoxDireccionPadre.ReadOnly = true;
             this.TextBoxDireccionPadre.Size = new System.Drawing.Size(153, 22);
             this.TextBoxDireccionPadre.TabIndex = 5;
             // 
@@ -138,6 +141,7 @@
             this.TextBoxNSS.Location = new System.Drawing.Point(23, 277);
             this.TextBoxNSS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TextBoxNSS.Name = "TextBoxNSS";
+            this.TextBoxNSS.ReadOnly = true;
             this.TextBoxNSS.Size = new System.Drawing.Size(153, 22);
             this.TextBoxNSS.TabIndex = 6;
             // 
@@ -146,6 +150,7 @@
             this.TextBoxCelularPadre.Location = new System.Drawing.Point(247, 218);
             this.TextBoxCelularPadre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TextBoxCelularPadre.Name = "TextBoxCelularPadre";
+            this.TextBoxCelularPadre.ReadOnly = true;
             this.TextBoxCelularPadre.Size = new System.Drawing.Size(125, 22);
             this.TextBoxCelularPadre.TabIndex = 7;
             // 
@@ -154,6 +159,7 @@
             this.TextBoxCorreo.Location = new System.Drawing.Point(23, 335);
             this.TextBoxCorreo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TextBoxCorreo.Name = "TextBoxCorreo";
+            this.TextBoxCorreo.ReadOnly = true;
             this.TextBoxCorreo.Size = new System.Drawing.Size(153, 22);
             this.TextBoxCorreo.TabIndex = 8;
             // 
@@ -162,6 +168,7 @@
             this.TextBoxOficio.Location = new System.Drawing.Point(247, 277);
             this.TextBoxOficio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TextBoxOficio.Name = "TextBoxOficio";
+            this.TextBoxOficio.ReadOnly = true;
             this.TextBoxOficio.Size = new System.Drawing.Size(97, 22);
             this.TextBoxOficio.TabIndex = 9;
             // 

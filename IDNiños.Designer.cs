@@ -37,8 +37,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.tbxidniño = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.IdPadre = new System.Windows.Forms.TextBox();
             this.MaskedTextBoxFechaNac = new System.Windows.Forms.MaskedTextBox();
             this.TextBoxBuscar = new System.Windows.Forms.TextBox();
             this.LbxNombreNiño = new System.Windows.Forms.ListBox();
@@ -110,8 +108,6 @@
             this.panel1.BackColor = System.Drawing.Color.LightSkyBlue;
             this.panel1.Controls.Add(this.tbxidniño);
             this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.IdPadre);
             this.panel1.Controls.Add(this.MaskedTextBoxFechaNac);
             this.panel1.Controls.Add(this.TextBoxBuscar);
             this.panel1.Controls.Add(this.LbxNombreNiño);
@@ -134,7 +130,7 @@
             // 
             // tbxidniño
             // 
-            this.tbxidniño.Location = new System.Drawing.Point(461, 140);
+            this.tbxidniño.Location = new System.Drawing.Point(460, 179);
             this.tbxidniño.Margin = new System.Windows.Forms.Padding(4);
             this.tbxidniño.Name = "tbxidniño";
             this.tbxidniño.Size = new System.Drawing.Size(61, 22);
@@ -143,29 +139,12 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(457, 120);
+            this.label9.Location = new System.Drawing.Point(456, 159);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(73, 16);
             this.label9.TabIndex = 26;
             this.label9.Text = "ID del Niño";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(431, 186);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(127, 16);
-            this.label8.TabIndex = 25;
-            this.label8.Text = "ID del Padre o Tutor";
-            // 
-            // IdPadre
-            // 
-            this.IdPadre.Location = new System.Drawing.Point(470, 209);
-            this.IdPadre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.IdPadre.Name = "IdPadre";
-            this.IdPadre.Size = new System.Drawing.Size(52, 22);
-            this.IdPadre.TabIndex = 24;
             // 
             // MaskedTextBoxFechaNac
             // 
@@ -329,8 +308,6 @@
         private System.Windows.Forms.ListBox LbxNombreNiño;
         private System.Windows.Forms.TextBox TextBoxBuscar;
         private System.Windows.Forms.MaskedTextBox MaskedTextBoxFechaNac;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox IdPadre;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox tbxidniño;
     }

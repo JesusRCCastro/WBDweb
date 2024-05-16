@@ -23,7 +23,7 @@ namespace RDGweb
             TextBoxEdad.ReadOnly = true;
             MaskedTextBoxFechaNac.ReadOnly = true;
             TextBoxNumContacto.ReadOnly = true;
-            IdPadre.ReadOnly = true;
+            //IdPadre.ReadOnly = true;
             tbxidniño.ReadOnly = true;
         }
 
@@ -129,7 +129,7 @@ namespace RDGweb
                         }
 
                         TextBoxNumContacto.Text = reader["NumContacto"].ToString();
-                        IdPadre.Text = reader["id_Padre"].ToString();
+                        //IdPadre.Text = reader["id_Padre"].ToString();
                         tbxidniño.Text = reader["idNiño"].ToString();
                     }
                     else
@@ -154,7 +154,7 @@ namespace RDGweb
             // Limpiar también el contenido del MaskedTextBox
             MaskedTextBoxFechaNac.Text = "";
             TextBoxNumContacto.Text = "";
-            IdPadre.Text = "";
+            //IdPadre.Text = "";
             tbxidniño.Text = "";
         }
 

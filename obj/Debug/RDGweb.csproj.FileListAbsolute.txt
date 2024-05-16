@@ -213,3 +213,4 @@ C:\Users\Aram\Source\Repos\JesusRCCastro\WBDweb\obj\Debug\RDGweb.AñadirIncidenc
 C:\Users\araml\Source\Repos\JesusRCCastro\WBDweb\obj\Debug\RDGweb.AñadirIncidencias.resources
 C:\Users\araml\Source\Repos\JesusRCCastro\WBDweb\obj\Debug\RDGweb.AgregarNiño.resources
 C:\Users\angel\Source\Repos\JesusRCCastro\WBDweb\obj\Debug\RDGweb.AgregarNiño.resources
+C:\Users\Jesus Castro\Source\Repos\WBDweb\obj\Debug\RDGweb.AgregarNiño.resources

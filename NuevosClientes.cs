@@ -91,11 +91,24 @@ namespace RDGweb
             string queryCliente = "INSERT INTO cliente (Nombre, Edad, Dirección, Telefono, NSS, Oficio, Correo) VALUES (@Nombre, @Edad, @Dirección, @Telefono, @NSS, @Oficio, @Correo)";
             string queryNiños = "INSERT INTO niños (Nombre, `Fecha de Nacimiento`, NumContacto, Edad, Genero) VALUES (@NombreNiño, @FechaNacimiento, @NumContacto, @EdadNiño, @GeneroNiño)";
 
+            // Validar si el número de teléfono ya existe en la base de datos
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 try
                 {
                     conn.Open();
+
+                    string queryCheckTelefono = "SELECT COUNT(*) FROM cliente WHERE Telefono = @Telefono";
+                    using (MySqlCommand cmdCheckTelefono = new MySqlCommand(queryCheckTelefono, conn))
+                    {
+                        cmdCheckTelefono.Parameters.AddWithValue("@Telefono", TextBoxNuevoCelularCliente.Text);
+                        int count = Convert.ToInt32(cmdCheckTelefono.ExecuteScalar());
+                        if (count > 0)
+                        {
+                            MessageBox.Show("El número de teléfono ya existe en la base de datos.");
+                            return;
+                        }
+                    }
 
                     // Insertando en la tabla cliente
                     using (MySqlCommand cmd = new MySqlCommand(queryCliente, conn))
